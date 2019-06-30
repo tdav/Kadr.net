@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="14.1.6.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="rpAllDb" Version="14.1" PaperKind="A5Rotated" PageWidth="827" PageHeight="583" Margins="14, 17, 0, 27">
+  <Bands>
+    <Item1 Ref="1" ControlType="TopMarginBand" Name="TopMargin" Padding="0,0,0,0,100" HeightF="0">
+      <StylePriority Ref="2" UsePadding="false" />
+    </Item1>
+    <Item2 Ref="3" ControlType="BottomMarginBand" Name="BottomMargin" Padding="0,0,0,0,100" HeightF="27.29155">
+      <StylePriority Ref="4" UsePadding="false" />
+    </Item2>
+    <Item3 Ref="5" Name="DetailReport" ControlType="DetailReportBand" Level="0">
+      <Bands>
+        <Item1 Ref="6" ControlType="DetailBand" Name="Detail1111" PageBreak="AfterBand" HeightF="511.9585">
+          <Controls>
+            <Item1 Ref="7" Name="xrLabel1" ControlType="XRLabel" SizeF="100,23" LocationFloat="407.2917, 433.4582" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Гараж:">
+              <StylePriority Ref="8" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="9" Name="xrLabel2" ControlType="XRLabel" SizeF="14.58333,22.99997" LocationFloat="515.2085, 434.4582" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="23">
+              <StylePriority Ref="10" UsePadding="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="11" Name="lbNasp" ControlType="XRLabel" SizeF="244.9582,23" LocationFloat="545.042, 340.2915" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <StylePriority Ref="12" UsePadding="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="13" Name="label79" ControlType="XRLabel" SizeF="100,23" LocationFloat="668.3125, 488.9585" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="14" PropertyName="Text" DataMember="TB_DATEVREM" />
+              </DataBindings>
+              <StylePriority Ref="15" UsePadding="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="16" Name="label88" ControlType="XRLabel" SizeF="65.08331,23" LocationFloat="603.2291, 488.9585" TextAlignment="MiddleLeft" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Муддати:">
+              <StylePriority Ref="17" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="18" Name="label108" ControlType="XRLabel" SizeF="112.0833,23" LocationFloat="491.1458, 488.9583" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="19" PropertyName="Text" DataMember="TB_TEL" />
+              </DataBindings>
+              <StylePriority Ref="20" UsePadding="false" UseTextAlignment="false" />
+            </Item6>
+            <Item7 Ref="21" Name="label34" ControlType="XRLabel" SizeF="332.7709,23" LocationFloat="146.9166, 488.9585" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="22" PropertyName="Text" DataMember="TB_COMMENT" />
+              </DataBindings>
+              <StylePriority Ref="23" UsePadding="false" UseTextAlignment="false" />
+            </Item7>
+            <Item8 Ref="24" Name="label18" ControlType="XRLabel" SizeF="135.4167,23" LocationFloat="6.124997, 488.9585" TextAlignment="MiddleLeft" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Кушимча маълумот:">
+              <StylePriority Ref="25" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item8>
+            <Item9 Ref="26" Name="label70" ControlType="XRLabel" SizeF="100,23" LocationFloat="681.0835, 461.4583" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="27" PropertyName="Text" DataMember="TB_BLNUM" />
+              </DataBindings>
+              <StylePriority Ref="28" UsePadding="false" UseTextAlignment="false" />
+            </Item9>
+            <Item10 Ref="29" Name="label52" ControlType="XRLabel" SizeF="100,23" LocationFloat="579.854, 461.4583" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="30" PropertyName="Text" DataMember="TB_BLSERY" />
+              </DataBindings>
+              <StylePriority Ref="31" UsePadding="false" UseTextAlignment="false" />
+            </Item10>
+            <Item11 Ref="32" Name="label89" ControlType="XRLabel" SizeF="10.68738,23" LocationFloat="569.1666, 461.4583" TextAlignment="MiddleLeft" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="/">
+              <StylePriority Ref="33" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item11>
+            <Item12 Ref="34" Name="label71" ControlType="XRLabel" SizeF="144.5624,23" LocationFloat="424.6042, 461.4583" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="35" PropertyName="Text" DataMember="TB_HCHEEF" />
+              </DataBindings>
+              <StylePriority Ref="36" UsePadding="false" UseTextAlignment="false" />
+            </Item12>
+            <Item13 Ref="37" Name="label53" ControlType="XRLabel" SizeF="88.54163,23" LocationFloat="332.4167, 461.4583" TextAlignment="MiddleLeft" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Асос хужжат:">
+              <StylePriority Ref="38" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item13>
+            <Item14 Ref="39" Name="label35" ControlType="XRLabel" SizeF="200.9999,23" LocationFloat="124.4167, 461.4583" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="40" PropertyName="Text" DataMember="TB_AL_BELGIKARI" />
+              </DataBindings>
+              <StylePriority Ref="41" UsePadding="false" UseTextAlignment="false" />
+            </Item14>
+            <Item15 Ref="42" Name="label17" ControlType="XRLabel" SizeF="118.2917,23" LocationFloat="6.124997, 461.4583" TextAlignment="MiddleLeft" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Алохида белгилар:">
+              <StylePriority Ref="43" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item15>
+            <Item16 Ref="44" Name="line2" ControlType="XRLine" SizeF="788.0001,4" LocationFloat="2.000002, 457.4583" Padding="0,0,0,0,100">
+              <StylePriority Ref="45" UsePadding="false" />
+            </Item16>
+            <Item17 Ref="46" Name="label90" ControlType="XRLabel" SizeF="244.9582,23" LocationFloat="545.0417, 410.4582" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="47" PropertyName="Text" DataMember="TB_FLAT" />
+              </DataBindings>
+              <StylePriority Ref="48" UsePadding="false" UseTextAlignment="false" />
+            </Item17>
+            <Item18 Ref="49" Name="label104" ControlType="XRLabel" SizeF="14.58333,22.99997" LocationFloat="515.6251, 410.4582" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="22">
+              <StylePriority Ref="50" UsePadding="false" UseTextAlignment="false" />
+            </Item18>
+            <Item19 Ref="51" Name="label65" ControlType="XRLabel" SizeF="100,23" LocationFloat="407.7083, 410.4582" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Хонадон:">
+              <StylePriority Ref="52" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item19>
+            <Item20 Ref="53" Name="label36" ControlType="XRLabel" SizeF="197.1667,23.00003" LocationFloat="203.1666, 413.4583" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="54" PropertyName="Text" DataMember="TB_XABARNUM" />
+              </DataBindings>
+              <StylePriority Ref="55" UsePadding="false" UseTextAlignment="false" />
+            </Item20>
+            <Item21 Ref="56" Name="label3" ControlType="XRLabel" SizeF="33.33334,22.99997" LocationFloat="157.3332, 413.4583" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="57" PropertyName="Text" DataMember="TB_XABARSERY" />
+              </DataBindings>
+              <StylePriority Ref="58" UsePadding="false" UseTextAlignment="false" />
+            </Item21>
+            <Item22 Ref="59" Name="label16" ControlType="XRLabel" SizeF="100,23" LocationFloat="24.41666, 413.4583" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Хабарнома:">
+              <StylePriority Ref="60" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item22>
+            <Item23 Ref="61" Name="label85" ControlType="XRLabel" SizeF="244.9582,23" LocationFloat="545.0417, 386.8749" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="62" PropertyName="Text" DataMember="TB_HOUSE" />
+              </DataBindings>
+              <StylePriority Ref="63" UsePadding="false" UseTextAlignment="false" />
+            </Item23>
+            <Item24 Ref="64" Name="label105" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="515.6251, 386.8749" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="21">
+              <StylePriority Ref="65" UsePadding="false" UseTextAlignment="false" />
+            </Item24>
+            <Item25 Ref="66" Name="label66" ControlType="XRLabel" SizeF="100,23" LocationFloat="407.7083, 386.8749" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Уй:">
+              <StylePriority Ref="67" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item25>
+            <Item26 Ref="68" Name="label54" ControlType="XRLabel" SizeF="197.1667,23" LocationFloat="203.1666, 389.875" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="69" PropertyName="Text" DataMember="TB_NUMBER" />
+              </DataBindings>
+              <StylePriority Ref="70" UsePadding="false" UseTextAlignment="false" />
+            </Item26>
+            <Item27 Ref="71" Name="label49" ControlType="XRLabel" SizeF="33.33334,22.99997" LocationFloat="157.3332, 389.875" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="72" PropertyName="Text" DataMember="TB_SERY" />
+              </DataBindings>
+              <StylePriority Ref="73" UsePadding="false" UseTextAlignment="false" />
+            </Item27>
+            <Item28 Ref="74" Name="label31" ControlType="XRLabel" SizeF="14.58333,22.99997" LocationFloat="131.9583, 389.875" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="11">
+              <StylePriority Ref="75" UsePadding="false" UseTextAlignment="false" />
+            </Item28>
+            <Item29 Ref="76" Name="label15" ControlType="XRLabel" SizeF="100,23" LocationFloat="24.41666, 389.875" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Гувохнома:">
+              <StylePriority Ref="77" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item29>
+            <Item30 Ref="78" Name="label86" ControlType="XRLabel" SizeF="244.9582,23" LocationFloat="545.0417, 363.2916" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="79" PropertyName="Text" DataMember="TB_STREET" />
+              </DataBindings>
+              <StylePriority Ref="80" UsePadding="false" UseTextAlignment="false" />
+            </Item30>
+            <Item31 Ref="81" Name="label106" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="515.6251, 363.2916" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="20">
+              <StylePriority Ref="82" UsePadding="false" UseTextAlignment="false" />
+            </Item31>
+            <Item32 Ref="83" Name="label67" ControlType="XRLabel" SizeF="100,23" LocationFloat="407.7083, 363.2916" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Куча:">
+              <StylePriority Ref="84" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item32>
+            <Item33 Ref="85" Name="label50" ControlType="XRLabel" SizeF="243,23" LocationFloat="157.3332, 366.2917" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="86" PropertyName="Text" DataMember="COLOR" />
+              </DataBindings>
+              <StylePriority Ref="87" UsePadding="false" UseTextAlignment="false" />
+            </Item33>
+            <Item34 Ref="88" Name="label32" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="131.9583, 366.2917" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="10а">
+              <StylePriority Ref="89" UsePadding="false" UseTextAlignment="false" />
+            </Item34>
+            <Item35 Ref="90" Name="label14" ControlType="XRLabel" SizeF="100,23" LocationFloat="24.41666, 366.2917" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Ранг хили:">
+              <StylePriority Ref="91" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item35>
+            <Item36 Ref="92" Name="label101" ControlType="XRLabel" SizeF="27.08331,23" LocationFloat="515.6251, 340.2916" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="19а">
+              <StylePriority Ref="93" UsePadding="false" UseTextAlignment="false" />
+            </Item36>
+            <Item37 Ref="94" Name="label62" ControlType="XRLabel" SizeF="100,23" LocationFloat="407.7083, 340.2916" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Манзил:">
+              <StylePriority Ref="95" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item37>
+            <Item38 Ref="96" Name="label51" ControlType="XRLabel" SizeF="243,22.99997" LocationFloat="157.3332, 343.2917" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="97" PropertyName="Text" DataMember="TB_VSUBCOLOR" />
+              </DataBindings>
+              <StylePriority Ref="98" UsePadding="false" UseTextAlignment="false" />
+            </Item38>
+            <Item39 Ref="99" Name="label33" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="131.9583, 343.2917" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="10">
+              <StylePriority Ref="100" UsePadding="false" UseTextAlignment="false" />
+            </Item39>
+            <Item40 Ref="101" Name="label13" ControlType="XRLabel" SizeF="100,23" LocationFloat="24.41666, 343.2917" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Ранги:">
+              <StylePriority Ref="102" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item40>
+            <Item41 Ref="103" Name="label82" ControlType="XRLabel" SizeF="244.9582,23" LocationFloat="545.0417, 317.2916" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="104" PropertyName="Text" DataMember="RAYON" />
+              </DataBindings>
+              <StylePriority Ref="105" UsePadding="false" UseTextAlignment="false" />
+            </Item41>
+            <Item42 Ref="106" Name="label102" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="515.6251, 317.2916" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="19">
+              <StylePriority Ref="107" UsePadding="false" UseTextAlignment="false" />
+            </Item42>
+            <Item43 Ref="108" Name="label63" ControlType="XRLabel" SizeF="100,23" LocationFloat="407.7083, 317.2916" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Туман:">
+              <StylePriority Ref="109" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item43>
+            <Item44 Ref="110" Name="label46" ControlType="XRLabel" SizeF="243,23" LocationFloat="157.3332, 320.2917" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="111" PropertyName="Text" DataMember="TB_KUZOVNUM" />
+              </DataBindings>
+              <StylePriority Ref="112" UsePadding="false" UseTextAlignment="false" />
+            </Item44>
+            <Item45 Ref="113" Name="label28" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="131.9583, 320.2917" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="9">
+              <StylePriority Ref="114" UsePadding="false" UseTextAlignment="false" />
+            </Item45>
+            <Item46 Ref="115" Name="label12" ControlType="XRLabel" SizeF="100,23" LocationFloat="24.41666, 320.2917" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Кузов №:">
+              <StylePriority Ref="116" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item46>
+            <Item47 Ref="117" Name="label83" ControlType="XRLabel" SizeF="244.9582,23" LocationFloat="545.0417, 293.7917" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="118" PropertyName="Text" DataMember="OBLAST" />
+              </DataBindings>
+              <StylePriority Ref="119" UsePadding="false" UseTextAlignment="false" />
+            </Item47>
+            <Item48 Ref="120" Name="label103" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="515.6251, 293.7917" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="18">
+              <StylePriority Ref="121" UsePadding="false" UseTextAlignment="false" />
+            </Item48>
+            <Item49 Ref="122" Name="label64" ControlType="XRLabel" SizeF="100,23" LocationFloat="407.7083, 293.7917" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Вилоят:">
+              <StylePriority Ref="123" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item49>
+            <Item50 Ref="124" Name="label47" ControlType="XRLabel" SizeF="243,23" LocationFloat="157.3332, 296.7918" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="125" PropertyName="Text" DataMember="TB_SHASSINUM" />
+              </DataBindings>
+              <StylePriority Ref="126" UsePadding="false" UseTextAlignment="false" />
+            </Item50>
+            <Item51 Ref="127" Name="label29" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="131.9583, 296.7918" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="8">
+              <StylePriority Ref="128" UsePadding="false" UseTextAlignment="false" />
+            </Item51>
+            <Item52 Ref="129" Name="label11" ControlType="XRLabel" SizeF="100,23" LocationFloat="24.41666, 296.7918" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Шасси №:">
+              <StylePriority Ref="130" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item52>
+            <Item53 Ref="131" Name="label84" ControlType="XRLabel" SizeF="244.9582,23.00002" LocationFloat="545.0417, 270.2917" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="132" PropertyName="Text" DataMember="COUNTRY" />
+              </DataBindings>
+              <StylePriority Ref="133" UsePadding="false" UseTextAlignment="false" />
+            </Item53>
+            <Item54 Ref="134" Name="label98" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="515.6251, 270.2917" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="17">
+              <StylePriority Ref="135" UsePadding="false" UseTextAlignment="false" />
+            </Item54>
+            <Item55 Ref="136" Name="label59" ControlType="XRLabel" SizeF="88.4791,18.29161" LocationFloat="419.2292, 270.2917" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Multiline="true" Text="Мамлакат:">
+              <StylePriority Ref="137" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item55>
+            <Item56 Ref="138" Name="label48" ControlType="XRLabel" SizeF="243,23.00002" LocationFloat="157.3332, 272.2918" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="139" PropertyName="Text" DataMember="TB_MOTORNUM" />
+              </DataBindings>
+              <StylePriority Ref="140" UsePadding="false" UseTextAlignment="false" />
+            </Item56>
+            <Item57 Ref="141" Name="label30" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="131.9583, 272.2918" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="7">
+              <StylePriority Ref="142" UsePadding="false" UseTextAlignment="false" />
+            </Item57>
+            <Item58 Ref="143" Name="label10" ControlType="XRLabel" SizeF="100,23" LocationFloat="24.41666, 272.2918" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Двигатель №:">
+              <StylePriority Ref="144" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item58>
+            <Item59 Ref="145" Name="label68" ControlType="XRLabel" SizeF="305.9375,22.99998" LocationFloat="419.2292, 245.2917" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="МАНЗИЛГОХИ">
+              <StylePriority Ref="146" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item59>
+            <Item60 Ref="147" Name="label43" ControlType="XRLabel" SizeF="243,23" LocationFloat="157.3332, 245.2917" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="148" PropertyName="Text" DataMember="CAR_YEAR" />
+              </DataBindings>
+              <StylePriority Ref="149" UsePadding="false" UseTextAlignment="false" />
+            </Item60>
+            <Item61 Ref="150" Name="label25" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="131.9583, 245.2917" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="6">
+              <StylePriority Ref="151" UsePadding="false" UseTextAlignment="false" />
+            </Item61>
+            <Item62 Ref="152" Name="label9" ControlType="XRLabel" SizeF="123.625,23" LocationFloat="2, 245.2917" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Multiline="true" Text="Ишлаб чик. йили:">
+              <StylePriority Ref="153" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item62>
+            <Item63 Ref="154" Name="label80" ControlType="XRLabel" SizeF="244.9582,23" LocationFloat="545.0417, 220.2917" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="155" PropertyName="Text" DataMember="COUNTRYCIT" />
+              </DataBindings>
+              <StylePriority Ref="156" UsePadding="false" UseTextAlignment="false" />
+            </Item63>
+            <Item64 Ref="157" Name="label99" ControlType="XRLabel" SizeF="27.08331,23" LocationFloat="515.6251, 220.2917" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="16б">
+              <StylePriority Ref="158" UsePadding="false" UseTextAlignment="false" />
+            </Item64>
+            <Item65 Ref="159" Name="label60" ControlType="XRLabel" SizeF="100.0002,22.99998" LocationFloat="407.7083, 220.2917" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Multiline="true" Text="Фукаролиги:">
+              <StylePriority Ref="160" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item65>
+            <Item66 Ref="161" Name="label44" ControlType="XRLabel" SizeF="243,23" LocationFloat="157.3332, 220.2917" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="162" PropertyName="Text" DataMember="MADE" />
+              </DataBindings>
+              <StylePriority Ref="163" UsePadding="false" UseTextAlignment="false" />
+            </Item66>
+            <Item67 Ref="164" Name="label26" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="131.9583, 220.2917" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="5б">
+              <StylePriority Ref="165" UsePadding="false" UseTextAlignment="false" />
+            </Item67>
+            <Item68 Ref="166" Name="label8" ControlType="XRLabel" SizeF="118.2917,22.99997" LocationFloat="6.124997, 220.2917" TextAlignment="TopLeft" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Multiline="true" Text="Ишлаб чик.  жойи:">
+              <StylePriority Ref="167" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item68>
+            <Item69 Ref="168" Name="label81" ControlType="XRLabel" SizeF="244.9582,23" LocationFloat="545.0417, 196.2917" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="169" PropertyName="Text" DataMember="BIRTHPLACE" />
+              </DataBindings>
+              <StylePriority Ref="170" UsePadding="false" UseTextAlignment="false" />
+            </Item69>
+            <Item70 Ref="171" Name="label100" ControlType="XRLabel" SizeF="27.08331,23" LocationFloat="515.6251, 196.2917" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="16а">
+              <StylePriority Ref="172" UsePadding="false" UseTextAlignment="false" />
+            </Item70>
+            <Item71 Ref="173" Name="label61" ControlType="XRLabel" SizeF="100,23" LocationFloat="407.7083, 196.2917" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Тугилган жойи:">
+              <StylePriority Ref="174" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item71>
+            <Item72 Ref="175" Name="label45" ControlType="XRLabel" SizeF="243,23" LocationFloat="157.3332, 196.2917" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="176" PropertyName="Text" DataMember="AUTOTYPE" />
+              </DataBindings>
+              <StylePriority Ref="177" UsePadding="false" UseTextAlignment="false" />
+            </Item72>
+            <Item73 Ref="178" Name="label27" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="131.9583, 196.2917" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="5а">
+              <StylePriority Ref="179" UsePadding="false" UseTextAlignment="false" />
+            </Item73>
+            <Item74 Ref="180" Name="label7" ControlType="XRLabel" SizeF="100,23" LocationFloat="24.41666, 196.2917" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="А/М тури:">
+              <StylePriority Ref="181" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item74>
+            <Item75 Ref="182" Name="label107" ControlType="XRLabel" SizeF="169.4583,23" LocationFloat="620.5417, 171.7084" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="183" PropertyName="Text" DataMember="TB_PASPNUM" />
+              </DataBindings>
+              <StylePriority Ref="184" UsePadding="false" UseTextAlignment="false" />
+            </Item75>
+            <Item76 Ref="185" Name="label76" ControlType="XRLabel" SizeF="73.64587,23" LocationFloat="545.0417, 171.7084" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="186" PropertyName="Text" DataMember="TB_PASPSERY" />
+              </DataBindings>
+              <StylePriority Ref="187" UsePadding="false" UseTextAlignment="false" />
+            </Item76>
+            <Item77 Ref="188" Name="label95" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="515.6251, 171.7084" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="16">
+              <StylePriority Ref="189" UsePadding="false" UseTextAlignment="false" />
+            </Item77>
+            <Item78 Ref="190" Name="label56" ControlType="XRLabel" SizeF="100,23" LocationFloat="407.7083, 171.7084" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Паспорт Серия:">
+              <StylePriority Ref="191" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item78>
+            <Item79 Ref="192" Name="label40" ControlType="XRLabel" SizeF="243,23" LocationFloat="157.3332, 171.7084" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="193" PropertyName="Text" DataMember="TB_VMODEL" />
+              </DataBindings>
+              <StylePriority Ref="194" UsePadding="false" UseTextAlignment="false" />
+            </Item79>
+            <Item80 Ref="195" Name="label22" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="131.9583, 171.7084" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="5">
+              <StylePriority Ref="196" UsePadding="false" UseTextAlignment="false" />
+            </Item80>
+            <Item81 Ref="197" Name="label6" ControlType="XRLabel" SizeF="100,23" LocationFloat="24.41666, 171.7084" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Русуми:">
+              <StylePriority Ref="198" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item81>
+            <Item82 Ref="199" Name="label77" ControlType="XRLabel" SizeF="244.9582,23" LocationFloat="545.0417, 145.2083" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="200" PropertyName="Text" DataMember="TB_DATEBIRTH" />
+              </DataBindings>
+              <StylePriority Ref="201" UsePadding="false" UseTextAlignment="false" />
+            </Item82>
+            <Item83 Ref="202" Name="label96" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="515.6251, 145.2083" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="15">
+              <StylePriority Ref="203" UsePadding="false" UseTextAlignment="false" />
+            </Item83>
+            <Item84 Ref="204" Name="label57" ControlType="XRLabel" SizeF="100.4167,23.00002" LocationFloat="407.2917, 145.2083" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" AutoWidth="true" Multiline="true" Text="Тугилган йили:">
+              <StylePriority Ref="205" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item84>
+            <Item85 Ref="206" Name="label41" ControlType="XRLabel" SizeF="243,23" LocationFloat="157.3332, 145.2083" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="207" PropertyName="Text" DataMember="TB_OLDGOSNUM" />
+              </DataBindings>
+              <StylePriority Ref="208" UsePadding="false" UseTextAlignment="false" />
+            </Item85>
+            <Item86 Ref="209" Name="label23" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="131.9583, 145.2083" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="4">
+              <StylePriority Ref="210" UsePadding="false" UseTextAlignment="false" />
+            </Item86>
+            <Item87 Ref="211" Name="label5" ControlType="XRLabel" SizeF="115.625,22.99998" LocationFloat="8.791662, 145.2083" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Multiline="true" Text="Аввалги ДРБ:">
+              <StylePriority Ref="212" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item87>
+            <Item88 Ref="213" Name="label78" ControlType="XRLabel" SizeF="244.9582,23" LocationFloat="545.0417, 121.2397" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="214" PropertyName="Text" DataMember="F3" />
+              </DataBindings>
+              <StylePriority Ref="215" UsePadding="false" UseTextAlignment="false" />
+            </Item88>
+            <Item89 Ref="216" Name="label97" ControlType="XRLabel" SizeF="14.58333,22.99998" LocationFloat="515.6251, 121.2397" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="14">
+              <StylePriority Ref="217" UsePadding="false" UseTextAlignment="false" />
+            </Item89>
+            <Item90 Ref="218" Name="label58" ControlType="XRLabel" SizeF="100,23" LocationFloat="407.7083, 121.2397" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Отасининг исми:">
+              <StylePriority Ref="219" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item90>
+            <Item91 Ref="220" Name="label42" ControlType="XRLabel" SizeF="243,23" LocationFloat="157.3332, 121.2397" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="221" PropertyName="Text" DataMember="TB_GOSNUM" />
+              </DataBindings>
+              <StylePriority Ref="222" UsePadding="false" UseTextAlignment="false" />
+            </Item91>
+            <Item92 Ref="223" Name="label24" ControlType="XRLabel" SizeF="14.58333,22.99998" LocationFloat="131.9583, 121.2397" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="3">
+              <StylePriority Ref="224" UsePadding="false" UseTextAlignment="false" />
+            </Item92>
+            <Item93 Ref="225" Name="label4" ControlType="XRLabel" SizeF="100,23" LocationFloat="24.41666, 121.2397" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Давлат белгиси:">
+              <StylePriority Ref="226" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item93>
+            <Item94 Ref="227" Name="label75" ControlType="XRLabel" SizeF="244.9582,22.99999" LocationFloat="545.0417, 98.23969" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="228" PropertyName="Text" DataMember="F2" />
+              </DataBindings>
+              <StylePriority Ref="229" UsePadding="false" UseTextAlignment="false" />
+            </Item94>
+            <Item95 Ref="230" Name="label72" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="515.6251, 98.23969" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="13">
+              <StylePriority Ref="231" UsePadding="false" UseTextAlignment="false" />
+            </Item95>
+            <Item96 Ref="232" Name="label55" ControlType="XRLabel" SizeF="44.06253,22.99999" LocationFloat="463.6459, 98.23969" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Исми">
+              <StylePriority Ref="233" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item96>
+            <Item97 Ref="234" Name="label39" ControlType="XRLabel" SizeF="243,22.99999" LocationFloat="157.3332, 98.23969" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="235" PropertyName="Text" DataMember="TB_DATEREG" />
+              </DataBindings>
+              <StylePriority Ref="236" UsePadding="false" UseTextAlignment="false" />
+            </Item97>
+            <Item98 Ref="237" Name="label21" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="131.9583, 98.23969" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="2">
+              <StylePriority Ref="238" UsePadding="false" UseTextAlignment="false" />
+            </Item98>
+            <Item99 Ref="239" Name="label2" ControlType="XRLabel" SizeF="118.2917,23" LocationFloat="6.124997, 98.23969" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Кайд этиш вакти:">
+              <StylePriority Ref="240" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item99>
+            <Item100 Ref="241" Name="label74" ControlType="XRLabel" SizeF="244.9582,23" LocationFloat="545.0417, 74.93757" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="242" PropertyName="Text" DataMember="F1" />
+              </DataBindings>
+              <StylePriority Ref="243" UsePadding="false" UseTextAlignment="false" />
+            </Item100>
+            <Item101 Ref="244" Name="label69" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="515.6251, 74.93757" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="12">
+              <StylePriority Ref="245" UsePadding="false" UseTextAlignment="false" />
+            </Item101>
+            <Item102 Ref="246" Name="label37" ControlType="XRLabel" SizeF="72.79166,23" LocationFloat="434.9166, 74.93757" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Фамилияси">
+              <StylePriority Ref="247" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item102>
+            <Item103 Ref="248" Name="label38" ControlType="XRLabel" SizeF="243,23" LocationFloat="157.3332, 74.93757" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="249" PropertyName="Text" DataMember="JARAYON" />
+              </DataBindings>
+              <StylePriority Ref="250" UsePadding="false" UseTextAlignment="false" />
+            </Item103>
+            <Item104 Ref="251" Name="label20" ControlType="XRLabel" SizeF="14.58333,23" LocationFloat="131.9583, 74.93757" TextAlignment="MiddleCenter" Padding="0,0,0,0,100" Text="1">
+              <StylePriority Ref="252" UsePadding="false" UseTextAlignment="false" />
+            </Item104>
+            <Item105 Ref="253" Name="label1" ControlType="XRLabel" SizeF="125.9167,23" LocationFloat="2, 74.93757" TextAlignment="MiddleRight" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Технологик жараён:">
+              <StylePriority Ref="254" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item105>
+            <Item106 Ref="255" Name="label73" ControlType="XRLabel" SizeF="371.7917,23" LocationFloat="409.2917, 51.43751" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="ТРАНСПОРТ ЭГАСИ ХАКИДА МАЪЛУМОТ">
+              <StylePriority Ref="256" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item106>
+            <Item107 Ref="257" Name="label19" ControlType="XRLabel" SizeF="392.2083,23" LocationFloat="8.125011, 51.43751" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="258" PropertyName="Text" DataMember="CARDTYPE" />
+              </DataBindings>
+              <StylePriority Ref="259" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item107>
+            <Item108 Ref="260" Name="line3" ControlType="XRLine" SizeF="4.833344,402.0208" LocationFloat="402.4584, 51.43754" LineDirection="Vertical" />
+            <Item109 Ref="261" Name="line1" ControlType="XRLine" SizeF="784.5001,4" LocationFloat="5.49999, 47.00001" Padding="0,0,0,0,100">
+              <StylePriority Ref="262" UsePadding="false" />
+            </Item109>
+            <Item110 Ref="263" Name="label92" ControlType="XRLabel" SizeF="360.7917,23" LocationFloat="146.9169, 22" TextAlignment="MiddleLeft" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="264" PropertyName="Text" DataMember="DIVISION" />
+              </DataBindings>
+              <StylePriority Ref="265" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item110>
+            <Item111 Ref="266" Name="label91" ControlType="XRLabel" SizeF="115.625,23" LocationFloat="6.124997, 22.19792" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="267" PropertyName="Text" DataMember="ACTIVE" />
+              </DataBindings>
+              <StylePriority Ref="268" UsePadding="false" UseTextAlignment="false" />
+            </Item111>
+            <Item112 Ref="269" Name="label94" ControlType="XRLabel" SizeF="136.4583,23" LocationFloat="653.5416, 22" TextAlignment="MiddleLeft" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="270" PropertyName="Text" DataMember="TB_GOSNUM" />
+              </DataBindings>
+              <StylePriority Ref="271" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item112>
+            <Item113 Ref="272" Name="label93" ControlType="XRLabel" SizeF="100,23" LocationFloat="543.125, 22" TextAlignment="MiddleLeft" Font="Times New Roman, 9.75pt, style=Bold" Padding="0,0,0,0,100" Text="Давлат белгиси:">
+              <StylePriority Ref="273" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item113>
+            <Item114 Ref="274" Name="label87" ControlType="XRLabel" SizeF="244.9582,22.99997" LocationFloat="545.0421, 434.4582" TextAlignment="MiddleLeft" Padding="0,0,0,0,100">
+              <DataBindings>
+                <Item1 Ref="275" PropertyName="Text" DataMember="TB_GARAJ" />
+              </DataBindings>
+              <StylePriority Ref="276" UsePadding="false" UseTextAlignment="false" />
+            </Item114>
+          </Controls>
+          <StylePriority Ref="277" UseBorderColor="false" UseBorders="false" />
+        </Item1>
+      </Bands>
+      <ReportPrintOptions Ref="278" PrintOnEmptyDataSource="false" />
+    </Item3>
+    <Item4 Ref="279" ControlType="DetailBand" Name="detailBand1" HeightF="0">
+      <StylePriority Ref="280" UseBorders="false" />
+    </Item4>
+  </Bands>
+</XtraReportsLayoutSerializer>

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B85C162-8B44-4B79-B01D-90FCAF5FADD6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Domain</RootNamespace>
+    <AssemblyName>Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.Firebird, Version=5.0.5.0, Culture=neutral, PublicKeyToken=42d22d092898e5f8, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Firebird.5.0.5\lib\net40-client\EntityFramework.Firebird.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=4.5.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.4.5.0.0\lib\net40-client\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Compile Include="SaAtestaciyaRe.cs" />
+    <Compile Include="Mapping\SaAtestaciyaReMapping.cs" />
+    <Compile Include="SaAtestaciyaYn.cs" />
+    <Compile Include="Mapping\SaAtestaciyaYnMapping.cs" />
+    <Compile Include="SaCountry.cs" />
+    <Compile Include="Mapping\SaCountryMapping.cs" />
+    <Compile Include="SaDoljnost.cs" />
+    <Compile Include="Mapping\SaDoljnostMapping.cs" />
+    <Compile Include="SaHarbiyUnvon.cs" />
+    <Compile Include="Mapping\SaHarbiyUnvonMapping.cs" />
+    <Compile Include="SaKollej.cs" />
+    <Compile Include="Mapping\SaKollejMapping.cs" />
+    <Compile Include="SaLang.cs" />
+    <Compile Include="Mapping\SaLangMapping.cs" />
+    <Compile Include="SaLicey.cs" />
+    <Compile Include="Mapping\SaLiceyMapping.cs" />
+    <Compile Include="SaMarried.cs" />
+    <Compile Include="Mapping\SaMarriedMapping.cs" />
+    <Compile Include="SaMasterKategoriya.cs" />
+    <Compile Include="Mapping\SaMasterKategoriyaMapping.cs" />
+    <Compile Include="SaNagrada.cs" />
+    <Compile Include="Mapping\SaNagradaMapping.cs" />
+    <Compile Include="SaNat.cs" />
+    <Compile Include="Mapping\SaNatMapping.cs" />
+    <Compile Include="SaObjlang.cs" />
+    <Compile Include="Mapping\SaObjlangMapping.cs" />
+    <Compile Include="SaOblast.cs" />
+    <Compile Include="Mapping\SaOblastMapping.cs" />
+    <Compile Include="SaObrazovaniya.cs" />
+    <Compile Include="Mapping\SaObrazovaniyaMapping.cs" />
+    <Compile Include="SaPartiya.cs" />
+    <Compile Include="Mapping\SaPartiyaMapping.cs" />
+    <Compile Include="SaPedagogYn.cs" />
+    <Compile Include="Mapping\SaPedagogYnMapping.cs" />
+    <Compile Include="SaPedobrazovanie.cs" />
+    <Compile Include="Mapping\SaPedobrazovanieMapping.cs" />
+    <Compile Include="SaPedperepod.cs" />
+    <Compile Include="Mapping\SaPedperepodMapping.cs" />
+    <Compile Include="SaPinyatNaRabotu.cs" />
+    <Compile Include="Mapping\SaPinyatNaRabotuMapping.cs" />
+    <Compile Include="SaPoShatatu.cs" />
+    <Compile Include="Mapping\SaPoShatatuMapping.cs" />
+    <Compile Include="SaPredmet.cs" />
+    <Compile Include="Mapping\SaPredmetMapping.cs" />
+    <Compile Include="SaProhodilYn.cs" />
+    <Compile Include="Mapping\SaProhodilYnMapping.cs" />
+    <Compile Include="SaRabotaetYn.cs" />
+    <Compile Include="Mapping\SaRabotaetYnMapping.cs" />
+    <Compile Include="SaRayon.cs" />
+    <Compile Include="Mapping\SaRayonMapping.cs" />
+    <Compile Include="SaRodstvennik.cs" />
+    <Compile Include="Mapping\SaRodstvennikMapping.cs" />
+    <Compile Include="SaScstatus.cs" />
+    <Compile Include="Mapping\SaScstatusMapping.cs" />
+    <Compile Include="SaSex.cs" />
+    <Compile Include="Mapping\SaSexMapping.cs" />
+    <Compile Include="SaSpecialistYn.cs" />
+    <Compile Include="Mapping\SaSpecialistYnMapping.cs" />
+    <Compile Include="SaSpeciality.cs" />
+    <Compile Include="Mapping\SaSpecialityMapping.cs" />
+    <Compile Include="SaUcheniyStepen.cs" />
+    <Compile Include="Mapping\SaUcheniyStepenMapping.cs" />
+    <Compile Include="SaVidObucheniya.cs" />
+    <Compile Include="Mapping\SaVidObucheniyaMapping.cs" />
+    <Compile Include="SaVidPredmeta.cs" />
+    <Compile Include="Mapping\SaVidPredmetaMapping.cs" />
+    <Compile Include="SaVidUcherejdeni.cs" />
+    <Compile Include="Mapping\SaVidUcherejdeniMapping.cs" />
+    <Compile Include="SaVidUcherejdeniDiplom.cs" />
+    <Compile Include="Mapping\SaVidUcherejdeniDiplomMapping.cs" />
+    <Compile Include="SaVuz.cs" />
+    <Compile Include="Mapping\SaVuzMapping.cs" />
+    <Compile Include="SaYesno.cs" />
+    <Compile Include="Mapping\SaYesnoMapping.cs" />
+    <Compile Include="Scuser.cs" />
+    <Compile Include="Mapping\ScuserMapping.cs" />
+    <Compile Include="Tbatestatiya.cs" />
+    <Compile Include="Mapping\TbatestatiyaMapping.cs" />
+    <Compile Include="Tbdeputy.cs" />
+    <Compile Include="Mapping\TbdeputyMapping.cs" />
+    <Compile Include="Tbfoto.cs" />
+    <Compile Include="Mapping\TbfotoMapping.cs" />
+    <Compile Include="Tbgosnagradi.cs" />
+    <Compile Include="Mapping\TbgosnagradiMapping.cs" />
+    <Compile Include="Tbmain.cs" />
+    <Compile Include="Mapping\TbmainMapping.cs" />
+    <Compile Include="Tbmestorab.cs" />
+    <Compile Include="Mapping\TbmestorabMapping.cs" />
+    <Compile Include="Tbpovishkval.cs" />
+    <Compile Include="Mapping\TbpovishkvalMapping.cs" />
+    <Compile Include="Tbqarindosh.cs" />
+    <Compile Include="Mapping\TbqarindoshMapping.cs" />
+    <Compile Include="Tbshat.cs" />
+    <Compile Include="Mapping\TbshatMapping.cs" />
+    <Compile Include="Tbuniver.cs" />
+    <Compile Include="Mapping\TbuniverMapping.cs" />
+    <Compile Include="DomainContext.cs" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

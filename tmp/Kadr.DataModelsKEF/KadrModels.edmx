@@ -1,0 +1,2328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="FirebirdSql.Data.FirebirdClient" ProviderManifestToken="2.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Firebird.Firebird.DBOPERATOR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="DBOPERATOR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="MAINID" Type="int" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="VAL" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="MASKA" Type="varchar" MaxLength="50" Unicode="true" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Firebird.Firebird.DBSTRUCT' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="DBSTRUCT">
+          <Property Name="TABLENAME" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="FIELDNAME" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="FIELDTYPE" Type="varchar" MaxLength="10" Unicode="true" />
+          <Property Name="DISPLAYNAMERU" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="DISPLAYNAMEUZ" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="SPTTABLE" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="SPTKOD" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="SPTLIST" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="OPERAT" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="VAL" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="ORDERINDEX" Type="int" />
+        </EntityType>-->
+        <EntityType Name="SA_ATESTACIYA_RES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_ATESTACIYA_YN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_COUNTRY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="200" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="200" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_DOLJNOST">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_HARBIY_UNVON">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="350" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="350" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_KOLLEJ">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+          <Property Name="OBL" Type="int" />
+          <Property Name="RAYON" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="TURI" Type="varchar" MaxLength="100" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SA_LANGS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="300" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="300" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_MARRIED">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="1000" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="1000" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_MASTER_KATEGORIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_NAGRADA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="1000" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="1000" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_NAT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="350" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="350" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_OBJLANG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_OBLAST">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="COUNTRY_ID" Type="int" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="350" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="350" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_OBRAZOVANIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="350" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="350" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_PARTIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="450" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="450" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_PEDAGOG_YN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_PEDOBRAZOVANIE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_PEDPEREPOD">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_PINYAT_NA_RABOTU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_PO_SHATATU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_PREDMET">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_PROHODIL_YN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_RABOTAET_YN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_RAYON">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="OBL" Type="int" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="400" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="400" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_RODSTVENNIK">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="200" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="200" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+          <Property Name="ORDERINDEX" Type="int" />
+          <Property Name="RDSIGN" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_SCSTATUS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_SEX">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="10" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="10" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_SPECIALIST_YN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_SPECIALITY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="400" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="400" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_UCHENIY_STEPEN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_VID_OBUCHENIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_VID_PREDMETA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_VID_UCHEREJDENI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_VID_UCHEREJDENI_DIPLOM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_VUZ">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SA_YESNO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAMEUZ" Type="varchar" MaxLength="300" Unicode="true" />
+          <Property Name="NAMERU" Type="varchar" MaxLength="300" Unicode="true" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="SCUSERS">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="int" Nullable="false" />
+          <Property Name="LOGINNAME" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="FULLNAME" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="LASTACCESS" Type="date" />
+          <Property Name="ENABLED" Type="int" />
+          <Property Name="CREATEDDATE" Type="date" />
+          <Property Name="LASTACCTIME" Type="date" />
+          <Property Name="CREATEDTIME" Type="date" />
+          <Property Name="ACCESSCOUNT" Type="int" />
+          <Property Name="LANG" Type="varchar" MaxLength="2" Unicode="true" />
+          <Property Name="ACSESS" Type="varchar" MaxLength="1000" Unicode="true" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Firebird.Firebird.SETUP' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SETUP">
+          <Property Name="EKIH" Type="bigint" />
+          <Property Name="P1" Type="varchar" MaxLength="200" Unicode="true" />
+          <Property Name="P2" Type="varchar" MaxLength="200" Unicode="true" />
+          <Property Name="P3" Type="varchar" MaxLength="200" Unicode="true" />
+          <Property Name="P4" Type="varchar" MaxLength="200" Unicode="true" />
+          <Property Name="DIVISIONID" Type="int" />
+        </EntityType>-->
+        <EntityType Name="TBATESTATIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="MAINID" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="PRIVLICHEN_YN" Type="int" />
+          <Property Name="DATE_AT" Type="date" />
+          <Property Name="RESULT_AA" Type="int" />
+          <Property Name="DOLJNOST_POSLE" Type="int" />
+          <Property Name="PICHINA_NE_PRIVLICHENIYA" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="EDITDATE" Type="date" />
+          <Property Name="EDITUSER" Type="int" />
+          <Property Name="PICHINA_NE_PRIVLICHENIYA_RU" Type="varchar" MaxLength="500" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBDEPUTY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="MAINID" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="DEPUTY" Type="varchar" MaxLength="600" Unicode="true" />
+          <Property Name="DATE1" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="DATE2" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="EDITDATE" Type="date" />
+          <Property Name="EDITUSER" Type="int" />
+          <Property Name="DEPUTY_RU" Type="varchar" MaxLength="600" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBFOTO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="MAINID" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="FOTO" Type="blob" />
+          <Property Name="EDITDATE" Type="date" />
+          <Property Name="EDITUSER" Type="int" />
+          <Property Name="ACTIVE" Type="int" />
+        </EntityType>
+        <EntityType Name="TBGOSNAGRADI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="MAINID" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="DATE_GN" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="NAZVANIE" Type="varchar" MaxLength="400" Unicode="true" />
+          <Property Name="EDITDATE" Type="date" />
+          <Property Name="EDITUSER" Type="int" />
+          <Property Name="NAZVANIE_RU" Type="varchar" MaxLength="400" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBMAIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="50" Unicode="true" Nullable="false" />
+          <Property Name="FIRSTNAME" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="LASTNAME" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="PATRONYMIC" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="FIO_REL" Type="varchar" MaxLength="200" Unicode="true" />
+          <Property Name="BIRTHDATE" Type="date" />
+          <Property Name="BIRTHCOUNTRY" Type="int" />
+          <Property Name="BIRTHREGION" Type="int" />
+          <Property Name="BIRTHTOWN" Type="int" />
+          <Property Name="NATIONALITY" Type="int" />
+          <Property Name="POST" Type="int" />
+          <Property Name="SEX" Type="int" />
+          <Property Name="OBJLANG" Type="char" MaxLength="2" Unicode="false" />
+          <Property Name="MARRIED" Type="int" />
+          <Property Name="LANGS" Type="varchar" MaxLength="150" Unicode="true" />
+          <Property Name="STATEPRIZES" Type="int" />
+          <Property Name="CONTRY_PROPISKA" Type="int" />
+          <Property Name="REGION_PROPISKA" Type="int" />
+          <Property Name="RAYON_PROPISKA" Type="int" />
+          <Property Name="QISHLOQ_PROPISKA" Type="varchar" MaxLength="150" Unicode="true" />
+          <Property Name="KUCHA_PROPISKA" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="UY_PROPISKA" Type="varchar" MaxLength="150" Unicode="true" />
+          <Property Name="HONADON_PROPISKA" Type="varchar" MaxLength="10" Unicode="true" />
+          <Property Name="CWORKDATE" Type="date" />
+          <Property Name="CWORKLEAVEDATE" Type="date" />
+          <Property Name="CWORKPLACE" Type="int" />
+          <Property Name="CWORKDEPART" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="OBJWORKPLACE" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="WORKPHONE" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="HOMEPHONE" Type="varchar" MaxLength="25" Unicode="true" />
+          <Property Name="CELLPHONE" Type="varchar" MaxLength="25" Unicode="true" />
+          <Property Name="FAXNUMBER" Type="varchar" MaxLength="25" Unicode="true" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="PASS_SERIES" Type="varchar" MaxLength="10" Unicode="true" />
+          <Property Name="PASS_NUMBER" Type="varchar" MaxLength="20" Unicode="true" />
+          <Property Name="PASS_GIVENDATE" Type="date" />
+          <Property Name="PASS_GIVENBY" Type="varchar" MaxLength="150" Unicode="true" />
+          <Property Name="PARTY" Type="int" />
+          <Property Name="EDUCATION" Type="int" />
+          <Property Name="VUZ" Type="int" />
+          <Property Name="SPECIALITY" Type="int" />
+          <Property Name="SCSTATUS" Type="int" />
+          <Property Name="SCDEGREE" Type="varchar" MaxLength="250" Unicode="true" />
+          <Property Name="SERVICE" Type="int" />
+          <Property Name="ZVANIE" Type="int" />
+          <Property Name="SUDIMOST_RODST" Type="varchar" MaxLength="250" Unicode="true" />
+          <Property Name="CARDNUM" Type="varchar" MaxLength="20" Unicode="true" />
+          <Property Name="EDITDATE" Type="date" />
+          <Property Name="CREATEDATE" Type="date" />
+          <Property Name="EDITUSER" Type="int" />
+          <Property Name="CREATEUSER" Type="int" />
+          <Property Name="ACTIVE" Type="int" />
+          <Property Name="CARDSTATE" Type="int" />
+          <Property Name="ST_REGION" Type="int" />
+          <Property Name="ST_RAYON" Type="int" />
+          <Property Name="ST_VIDUCHEREJDENIYA" Type="int" />
+          <Property Name="VID_GRAJDANSTVO" Type="int" />
+          <Property Name="VOZROST" Type="int" />
+          <Property Name="DETI_KOL" Type="int" />
+          <Property Name="VID_DOLJNOST" Type="int" />
+          <Property Name="KATEGORIYA_MASTERA" Type="int" />
+          <Property Name="VID_PRIN_NA_RABOTU" Type="int" />
+          <Property Name="NUM_PRIKAZA" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="DATA_PRIKAZA" Type="date" />
+          <Property Name="PO_SHTATU" Type="int" />
+          <Property Name="OBSHIY_STAJ" Type="int" />
+          <Property Name="PED_STAJ" Type="int" />
+          <Property Name="DAN_DOLJ_STAJ" Type="int" />
+          <Property Name="VID_PRED_OS_PREDMET" Type="int" />
+          <Property Name="NAIM_PRED_OS_PREDMET" Type="int" />
+          <Property Name="YAZIK_OS_PREPODAET" Type="int" />
+          <Property Name="SPEC_OS_PREDMET" Type="int" />
+          <Property Name="VID_PRED_DP_PREDMET" Type="int" />
+          <Property Name="NAIM_PRED_DP_PREDMET" Type="int" />
+          <Property Name="YAZIK_DP_PREPODAET" Type="int" />
+          <Property Name="SPEC_DP_PREDMET" Type="int" />
+          <Property Name="KOL_CHAS_PRED_OS_PREDMET" Type="numeric" Precision="3" Scale="2" />
+          <Property Name="KOL_CHAS_PRED_DP_PREDMET" Type="numeric" Precision="3" Scale="2" />
+          <Property Name="VSEGO_KOL_CHASOV" Type="int" />
+          <Property Name="PED_OBRAZ" Type="int" />
+          <Property Name="PED_PEREPOD" Type="int" />
+          <Property Name="PED_PEREPOD_GDE" Type="int" />
+          <Property Name="DATA_PED_PEREPOD" Type="date" />
+          <Property Name="NUMDIPLOM_PED_PERE" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="PRIVLECHENIE_ATTECTAC" Type="int" />
+          <Property Name="DATA_POSLED_ATTECTAC" Type="int" />
+          <Property Name="RES_ATTECTAC" Type="int" />
+          <Property Name="DOLJNOST_ATTECTAC" Type="int" />
+          <Property Name="PRICHINI_NE_PRIV_ATTECTAC" Type="int" />
+          <Property Name="INOST_YAZIK" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="ZANYA_KOMPUTERA" Type="int" />
+          <Property Name="DANNIY_OTCH_PERIODE" Type="int" />
+          <Property Name="PRICHINA" Type="varchar" MaxLength="400" Unicode="true" />
+          <Property Name="STAVKA_CHAS" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="TOIFA" Type="int" />
+          <Property Name="KOLORLIC" Type="int" />
+          <Property Name="QISHLOQ_PROPISKA_RU" Type="varchar" MaxLength="150" Unicode="true" />
+          <Property Name="KUCHA_PROPISKA_RU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="UY_PROPISKA_RU" Type="varchar" MaxLength="150" Unicode="true" />
+          <Property Name="HONADON_PROPISKA_RU" Type="varchar" MaxLength="10" Unicode="true" />
+          <Property Name="CWORKDEPART_RU" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="OBJWORKPLACE_RU" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="WORKPHONE_RU" Type="varchar" MaxLength="100" Unicode="true" />
+          <Property Name="HOMEPHONE_RU" Type="varchar" MaxLength="25" Unicode="true" />
+          <Property Name="CELLPHONE_RU" Type="varchar" MaxLength="25" Unicode="true" />
+          <Property Name="FAXNUMBER_RU" Type="varchar" MaxLength="25" Unicode="true" />
+          <Property Name="PASS_GIVENBY_RU" Type="varchar" MaxLength="150" Unicode="true" />
+          <Property Name="SUDIMOST_RODST_RU" Type="varchar" MaxLength="250" Unicode="true" />
+          <Property Name="PRICHINA_RU" Type="varchar" MaxLength="400" Unicode="true" />
+          <Property Name="DP_INFO" Type="clob" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBMESTORAB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="MAINID" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="DATE1" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="DATE2" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="ISHJOYI" Type="varchar" MaxLength="150" Unicode="true" />
+          <Property Name="WORKPLACE" Type="int" />
+          <Property Name="LAVOZIM" Type="varchar" MaxLength="500" Unicode="true" />
+          <Property Name="EDITDATE" Type="date" />
+          <Property Name="EDITUSER" Type="int" />
+          <Property Name="ISHJOYI_RU" Type="varchar" MaxLength="150" Unicode="true" />
+          <Property Name="LAVOZIM_RU" Type="varchar" MaxLength="500" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBPOVISHKVAL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="MAINID" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="DATE_PK" Type="date" />
+          <Property Name="MESTO_PK" Type="int" />
+          <Property Name="POSLEDNIY_PK" Type="int" />
+          <Property Name="NUM_SERTIFICAT" Type="varchar" MaxLength="15" Unicode="true" />
+          <Property Name="SROK_PALN_PK" Type="int" />
+          <Property Name="PEDOBRAZOVANIEPK" Type="int" />
+          <Property Name="EDITDATE" Type="date" />
+          <Property Name="EDITUSER" Type="int" />
+        </EntityType>
+        <EntityType Name="TBQARINDOSH">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="MAINID" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="LASTNAME" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="FIRSTNAME" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="PATRONYMIC" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="QARINDOSHLIGI" Type="int" />
+          <Property Name="DATAROJ" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="BIRTHCOUNTRY" Type="varchar" MaxLength="300" Unicode="true" />
+          <Property Name="COUNTRY" Type="int" />
+          <Property Name="REGION" Type="int" />
+          <Property Name="RAYON" Type="int" />
+          <Property Name="YASHASHJOYI" Type="varchar" MaxLength="400" Unicode="true" />
+          <Property Name="ISHJOYI" Type="varchar" MaxLength="400" Unicode="true" />
+          <Property Name="DEATH" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="EDITDATE" Type="date" />
+          <Property Name="EDITUSER" Type="int" />
+          <Property Name="YASHASHJOYI_RU" Type="varchar" MaxLength="400" Unicode="true" />
+          <Property Name="ISHJOYI_RU" Type="varchar" MaxLength="400" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBSHAT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="OBLAST" Type="int" />
+          <Property Name="RAYON" Type="int" />
+          <Property Name="KOLEJ" Type="int" />
+          <Property Name="KOL_CHAS" Type="numeric" Precision="3" Scale="2" />
+          <Property Name="DOLJNOST" Type="int" />
+          <Property Name="PREDMET" Type="int" />
+          <Property Name="EDITDATE" Type="date" />
+          <Property Name="STATE" Type="int" />
+        </EntityType>
+        <EntityType Name="TBUNIVER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="MAINID" Type="varchar" MaxLength="50" Unicode="true" />
+          <Property Name="GOD_VIPUSKA" Type="varchar" MaxLength="4" Unicode="true" />
+          <Property Name="OBRAZOVATELNIY_UCHERJ" Type="int" />
+          <Property Name="SPECIALNOST_PODIPLOMU" Type="varchar" MaxLength="400" Unicode="true" />
+          <Property Name="VID_OBUCHENIYA" Type="int" />
+          <Property Name="PROFESIANAL_OBRAZ" Type="int" />
+          <Property Name="OB_TYPE" Type="int" />
+          <Property Name="SERIYA" Type="varchar" MaxLength="5" Unicode="true" />
+          <Property Name="NUM" Type="int" />
+          <Property Name="EDITDATE" Type="date" />
+          <Property Name="EDITUSER" Type="int" />
+          <Property Name="SPECIALNOST_PODIPLOMU_RU" Type="varchar" MaxLength="400" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="SA_ATESTACIYA_RES" EntityType="Self.SA_ATESTACIYA_RES" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_ATESTACIYA_YN" EntityType="Self.SA_ATESTACIYA_YN" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_COUNTRY" EntityType="Self.SA_COUNTRY" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_DOLJNOST" EntityType="Self.SA_DOLJNOST" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_HARBIY_UNVON" EntityType="Self.SA_HARBIY_UNVON" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_KOLLEJ" EntityType="Self.SA_KOLLEJ" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_LANGS" EntityType="Self.SA_LANGS" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_MARRIED" EntityType="Self.SA_MARRIED" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_MASTER_KATEGORIYA" EntityType="Self.SA_MASTER_KATEGORIYA" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_NAGRADA" EntityType="Self.SA_NAGRADA" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_NAT" EntityType="Self.SA_NAT" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_OBJLANG" EntityType="Self.SA_OBJLANG" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_OBLAST" EntityType="Self.SA_OBLAST" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_OBRAZOVANIYA" EntityType="Self.SA_OBRAZOVANIYA" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_PARTIYA" EntityType="Self.SA_PARTIYA" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_PEDAGOG_YN" EntityType="Self.SA_PEDAGOG_YN" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_PEDOBRAZOVANIE" EntityType="Self.SA_PEDOBRAZOVANIE" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_PEDPEREPOD" EntityType="Self.SA_PEDPEREPOD" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_PINYAT_NA_RABOTU" EntityType="Self.SA_PINYAT_NA_RABOTU" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_PO_SHATATU" EntityType="Self.SA_PO_SHATATU" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_PREDMET" EntityType="Self.SA_PREDMET" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_PROHODIL_YN" EntityType="Self.SA_PROHODIL_YN" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_RABOTAET_YN" EntityType="Self.SA_RABOTAET_YN" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_RAYON" EntityType="Self.SA_RAYON" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_RODSTVENNIK" EntityType="Self.SA_RODSTVENNIK" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_SCSTATUS" EntityType="Self.SA_SCSTATUS" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_SEX" EntityType="Self.SA_SEX" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_SPECIALIST_YN" EntityType="Self.SA_SPECIALIST_YN" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_SPECIALITY" EntityType="Self.SA_SPECIALITY" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_UCHENIY_STEPEN" EntityType="Self.SA_UCHENIY_STEPEN" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_VID_OBUCHENIYA" EntityType="Self.SA_VID_OBUCHENIYA" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_VID_PREDMETA" EntityType="Self.SA_VID_PREDMETA" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_VID_UCHEREJDENI" EntityType="Self.SA_VID_UCHEREJDENI" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_VID_UCHEREJDENI_DIPLOM" EntityType="Self.SA_VID_UCHEREJDENI_DIPLOM" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_VUZ" EntityType="Self.SA_VUZ" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SA_YESNO" EntityType="Self.SA_YESNO" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="SCUSERS" EntityType="Self.SCUSERS" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="TBATESTATIYA" EntityType="Self.TBATESTATIYA" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="TBDEPUTY" EntityType="Self.TBDEPUTY" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="TBFOTO" EntityType="Self.TBFOTO" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="TBGOSNAGRADI" EntityType="Self.TBGOSNAGRADI" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="TBMAIN" EntityType="Self.TBMAIN" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="TBMESTORAB" EntityType="Self.TBMESTORAB" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="TBPOVISHKVAL" EntityType="Self.TBPOVISHKVAL" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="TBQARINDOSH" EntityType="Self.TBQARINDOSH" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="TBSHAT" EntityType="Self.TBSHAT" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="TBUNIVER" EntityType="Self.TBUNIVER" Schema="Firebird" store:Type="Tables" />
+          <EntitySet Name="DBOPERATOR" EntityType="Self.DBOPERATOR" store:Type="Tables" store:Schema="Firebird">
+            <DefiningQuery>SELECT 
+"A"."ID" AS "ID", 
+"A"."MAINID" AS "MAINID", 
+"A"."NAMEUZ" AS "NAMEUZ", 
+"A"."NAMERU" AS "NAMERU", 
+"A"."VAL" AS "VAL", 
+"A"."MASKA" AS "MASKA"
+FROM "DBOPERATOR" AS "A"</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="TBATESTATIYA_SEL_Result">
+          <Property Name="ID" Type="Int32" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRIVLICHEN_YN" Type="Int32" />
+          <Property Name="DATE_AT" Type="DateTime" />
+          <Property Name="RESULT_AA" Type="Int32" />
+          <Property Name="DOLJNOST_POSLE" Type="Int32" />
+          <Property Name="PICHINA_NE_PRIVLICHENIYA" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="PICHINA_NE_PRIVLICHENIYA_RU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="TBDEPUTY_SEL_Result">
+          <Property Name="ID" Type="Int32" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DEPUTY" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="DATE1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="DATE2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+        </ComplexType>
+        <ComplexType Name="TBGOSNAGRADI_SEL_Result">
+          <Property Name="ID" Type="Int32" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_GN" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="NAZVANIE" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="NAZVANIE_RU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="TBMAIN_SEL_Result">
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FIRSTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LASTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PATRONYMIC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FIO_REL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BIRTHDATE" Type="DateTime" />
+          <Property Name="BIRTHCOUNTRY" Type="Int32" />
+          <Property Name="BIRTHREGION" Type="Int32" />
+          <Property Name="BIRTHTOWN" Type="Int32" />
+          <Property Name="NATIONALITY" Type="Int32" />
+          <Property Name="POST" Type="Int32" />
+          <Property Name="SEX" Type="Int32" />
+          <Property Name="OBJLANG" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="MARRIED" Type="Int32" />
+          <Property Name="LANGS" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="STATEPRIZES" Type="Int32" />
+          <Property Name="CONTRY_PROPISKA" Type="Int32" />
+          <Property Name="REGION_PROPISKA" Type="Int32" />
+          <Property Name="RAYON_PROPISKA" Type="Int32" />
+          <Property Name="QISHLOQ_PROPISKA" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="KUCHA_PROPISKA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UY_PROPISKA" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="HONADON_PROPISKA" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CWORKDATE" Type="DateTime" />
+          <Property Name="CWORKLEAVEDATE" Type="DateTime" />
+          <Property Name="CWORKPLACE" Type="Int32" />
+          <Property Name="CWORKDEPART" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OBJWORKPLACE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="WORKPHONE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HOMEPHONE" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CELLPHONE" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="FAXNUMBER" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PASS_SERIES" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PASS_NUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PASS_GIVENDATE" Type="DateTime" />
+          <Property Name="PASS_GIVENBY" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PARTY" Type="Int32" />
+          <Property Name="EDUCATION" Type="Int32" />
+          <Property Name="VUZ" Type="Int32" />
+          <Property Name="SPECIALITY" Type="Int32" />
+          <Property Name="SCSTATUS" Type="Int32" />
+          <Property Name="SCDEGREE" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SERVICE" Type="Int32" />
+          <Property Name="ZVANIE" Type="Int32" />
+          <Property Name="SUDIMOST_RODST" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CARDNUM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="CREATEDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="CREATEUSER" Type="Int32" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="CARDSTATE" Type="Int32" />
+          <Property Name="ST_REGION" Type="Int32" />
+          <Property Name="ST_RAYON" Type="Int32" />
+          <Property Name="ST_VIDUCHEREJDENIYA" Type="Int32" />
+          <Property Name="VID_GRAJDANSTVO" Type="Int32" />
+          <Property Name="VOZROST" Type="Int32" />
+          <Property Name="DETI_KOL" Type="Int32" />
+          <Property Name="VID_DOLJNOST" Type="Int32" />
+          <Property Name="KATEGORIYA_MASTERA" Type="Int32" />
+          <Property Name="VID_PRIN_NA_RABOTU" Type="Int32" />
+          <Property Name="NUM_PRIKAZA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATA_PRIKAZA" Type="DateTime" />
+          <Property Name="PO_SHTATU" Type="Int32" />
+          <Property Name="OBSHIY_STAJ" Type="Int32" />
+          <Property Name="PED_STAJ" Type="Int32" />
+          <Property Name="DAN_DOLJ_STAJ" Type="Int32" />
+          <Property Name="VID_PRED_OS_PREDMET" Type="Int32" />
+          <Property Name="NAIM_PRED_OS_PREDMET" Type="Int32" />
+          <Property Name="YAZIK_OS_PREPODAET" Type="Int32" />
+          <Property Name="SPEC_OS_PREDMET" Type="Int32" />
+          <Property Name="VID_PRED_DP_PREDMET" Type="Int32" />
+          <Property Name="NAIM_PRED_DP_PREDMET" Type="Int32" />
+          <Property Name="YAZIK_DP_PREPODAET" Type="Int32" />
+          <Property Name="SPEC_DP_PREDMET" Type="Int32" />
+          <Property Name="KOL_CHAS_PRED_OS_PREDMET" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="KOL_CHAS_PRED_DP_PREDMET" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="VSEGO_KOL_CHASOV" Type="Int32" />
+          <Property Name="PED_OBRAZ" Type="Int32" />
+          <Property Name="PED_PEREPOD" Type="Int32" />
+          <Property Name="PED_PEREPOD_GDE" Type="Int32" />
+          <Property Name="DATA_PED_PEREPOD" Type="DateTime" />
+          <Property Name="NUMDIPLOM_PED_PERE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRIVLECHENIE_ATTECTAC" Type="Int32" />
+          <Property Name="DATA_POSLED_ATTECTAC" Type="Int32" />
+          <Property Name="RES_ATTECTAC" Type="Int32" />
+          <Property Name="DOLJNOST_ATTECTAC" Type="Int32" />
+          <Property Name="PRICHINI_NE_PRIV_ATTECTAC" Type="Int32" />
+          <Property Name="INOST_YAZIK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ZANYA_KOMPUTERA" Type="Int32" />
+          <Property Name="DANNIY_OTCH_PERIODE" Type="Int32" />
+          <Property Name="PRICHINA" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="STAVKA_CHAS" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="TOIFA" Type="Int32" />
+          <Property Name="KOLORLIC" Type="Int32" />
+          <Property Name="QISHLOQ_PROPISKA_RU" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="KUCHA_PROPISKA_RU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UY_PROPISKA_RU" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="HONADON_PROPISKA_RU" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CWORKDEPART_RU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OBJWORKPLACE_RU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="WORKPHONE_RU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HOMEPHONE_RU" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CELLPHONE_RU" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="FAXNUMBER_RU" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="PASS_GIVENBY_RU" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SUDIMOST_RODST_RU" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PRICHINA_RU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="DP_INFO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="TBMESTORAB_SEL_Result">
+          <Property Name="ID" Type="Int32" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATE1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="DATE2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="ISHJOYI" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="WORKPLACE" Type="Int32" />
+          <Property Name="LAVOZIM" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="ISHJOYI_RU" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="LAVOZIM_RU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="TBPOVISHKVAL_SEL_Result">
+          <Property Name="ID" Type="Int32" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_PK" Type="DateTime" />
+          <Property Name="MESTO_PK" Type="Int32" />
+          <Property Name="POSLEDNIY_PK" Type="Int32" />
+          <Property Name="NUM_SERTIFICAT" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="SROK_PALN_PK" Type="Int32" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+        </ComplexType>
+        <ComplexType Name="TBQARINDOSH_SEL_Result">
+          <Property Name="ID" Type="Int32" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LASTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FIRSTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PATRONYMIC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="QARINDOSHLIGI" Type="Int32" />
+          <Property Name="DATAROJ" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="BIRTHCOUNTRY" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="COUNTRY" Type="Int32" />
+          <Property Name="REGION" Type="Int32" />
+          <Property Name="RAYON" Type="Int32" />
+          <Property Name="YASHASHJOYI" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="ISHJOYI" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="DEATH" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="YASHASHJOYI_RU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="ISHJOYI_RU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="TBSHAT_SEL_Result">
+          <Property Name="ID" Type="Int32" />
+          <Property Name="OBLAST" Type="Int32" />
+          <Property Name="RAYON" Type="Int32" />
+          <Property Name="KOLEJ" Type="Int32" />
+          <Property Name="KOL_CHAS" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="DOLJNOST" Type="Int32" />
+          <Property Name="PREDMET" Type="Int32" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="STATE" Type="Int32" />
+        </ComplexType>
+        <ComplexType Name="TBUNIVER_SEL_Result">
+          <Property Name="ID" Type="Int32" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GOD_VIPUSKA" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="OBRAZOVATELNIY_UCHERJ" Type="Int32" />
+          <Property Name="SPECIALNOST_PODIPLOMU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="VID_OBUCHENIYA" Type="Int32" />
+          <Property Name="PROFESIANAL_OBRAZ" Type="Int32" />
+          <Property Name="OB_TYPE" Type="Int32" />
+          <Property Name="SERIYA" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="NUM" Type="Int32" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="SPECIALNOST_PODIPLOMU_RU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <EntityType Name="SA_ATESTACIYA_RES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_ATESTACIYA_YN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_COUNTRY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_DOLJNOST">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMERU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_HARBIY_UNVON">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_KOLLEJ">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMERU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+          <Property Name="OBL" Type="Int32" />
+          <Property Name="RAYON" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TURI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SA_LANGS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_MARRIED">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_MASTER_KATEGORIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMERU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_NAGRADA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_NAT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_OBJLANG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMERU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_OBLAST">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="COUNTRY_ID" Type="Int32" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_OBRAZOVANIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_PARTIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_PEDAGOG_YN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_PEDOBRAZOVANIE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMERU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_PEDPEREPOD">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMERU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_PINYAT_NA_RABOTU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMERU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_PO_SHATATU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_PREDMET">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMERU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_PROHODIL_YN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_RABOTAET_YN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_RAYON">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="OBL" Type="Int32" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_RODSTVENNIK">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+          <Property Name="ORDERINDEX" Type="Int32" />
+          <Property Name="RDSIGN" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_SCSTATUS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_SEX">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_SPECIALIST_YN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_SPECIALITY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_UCHENIY_STEPEN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMERU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_VID_OBUCHENIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_VID_PREDMETA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMERU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_VID_UCHEREJDENI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMERU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_VID_UCHEREJDENI_DIPLOM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMERU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_VUZ">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SA_YESNO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SCUSER">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="Int32" Nullable="false" />
+          <Property Name="LOGINNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FULLNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LASTACCESS" Type="DateTime" />
+          <Property Name="ENABLED" Type="Int32" />
+          <Property Name="CREATEDDATE" Type="DateTime" />
+          <Property Name="LASTACCTIME" Type="DateTime" />
+          <Property Name="CREATEDTIME" Type="DateTime" />
+          <Property Name="ACCESSCOUNT" Type="Int32" />
+          <Property Name="LANG" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="ACSESS" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBATESTATIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRIVLICHEN_YN" Type="Int32" />
+          <Property Name="DATE_AT" Type="DateTime" />
+          <Property Name="RESULT_AA" Type="Int32" />
+          <Property Name="DOLJNOST_POSLE" Type="Int32" />
+          <Property Name="PICHINA_NE_PRIVLICHENIYA" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="PICHINA_NE_PRIVLICHENIYA_RU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBDEPUTY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DEPUTY" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="DATE1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="DATE2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="DEPUTY_RU" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBFOTO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="ACTIVE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TBGOSNAGRADI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_GN" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="NAZVANIE" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="NAZVANIE_RU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBMAIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FIRSTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LASTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PATRONYMIC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FIO_REL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BIRTHDATE" Type="DateTime" />
+          <Property Name="BIRTHCOUNTRY" Type="Int32" />
+          <Property Name="BIRTHREGION" Type="Int32" />
+          <Property Name="BIRTHTOWN" Type="Int32" />
+          <Property Name="NATIONALITY" Type="Int32" />
+          <Property Name="POST" Type="Int32" />
+          <Property Name="SEX" Type="Int32" />
+          <Property Name="OBJLANG" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="MARRIED" Type="Int32" />
+          <Property Name="LANGS" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="STATEPRIZES" Type="Int32" />
+          <Property Name="CONTRY_PROPISKA" Type="Int32" />
+          <Property Name="REGION_PROPISKA" Type="Int32" />
+          <Property Name="RAYON_PROPISKA" Type="Int32" />
+          <Property Name="QISHLOQ_PROPISKA" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="KUCHA_PROPISKA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UY_PROPISKA" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="HONADON_PROPISKA" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CWORKDATE" Type="DateTime" />
+          <Property Name="CWORKLEAVEDATE" Type="DateTime" />
+          <Property Name="CWORKPLACE" Type="Int32" />
+          <Property Name="CWORKDEPART" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OBJWORKPLACE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="WORKPHONE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HOMEPHONE" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CELLPHONE" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="FAXNUMBER" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PASS_SERIES" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PASS_NUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PASS_GIVENDATE" Type="DateTime" />
+          <Property Name="PASS_GIVENBY" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PARTY" Type="Int32" />
+          <Property Name="EDUCATION" Type="Int32" />
+          <Property Name="VUZ" Type="Int32" />
+          <Property Name="SPECIALITY" Type="Int32" />
+          <Property Name="SCSTATUS" Type="Int32" />
+          <Property Name="SCDEGREE" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SERVICE" Type="Int32" />
+          <Property Name="ZVANIE" Type="Int32" />
+          <Property Name="SUDIMOST_RODST" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CARDNUM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="CREATEDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="CREATEUSER" Type="Int32" />
+          <Property Name="ACTIVE" Type="Int32" />
+          <Property Name="CARDSTATE" Type="Int32" />
+          <Property Name="ST_REGION" Type="Int32" />
+          <Property Name="ST_RAYON" Type="Int32" />
+          <Property Name="ST_VIDUCHEREJDENIYA" Type="Int32" />
+          <Property Name="VID_GRAJDANSTVO" Type="Int32" />
+          <Property Name="VOZROST" Type="Int32" />
+          <Property Name="DETI_KOL" Type="Int32" />
+          <Property Name="VID_DOLJNOST" Type="Int32" />
+          <Property Name="KATEGORIYA_MASTERA" Type="Int32" />
+          <Property Name="VID_PRIN_NA_RABOTU" Type="Int32" />
+          <Property Name="NUM_PRIKAZA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATA_PRIKAZA" Type="DateTime" />
+          <Property Name="PO_SHTATU" Type="Int32" />
+          <Property Name="OBSHIY_STAJ" Type="Int32" />
+          <Property Name="PED_STAJ" Type="Int32" />
+          <Property Name="DAN_DOLJ_STAJ" Type="Int32" />
+          <Property Name="VID_PRED_OS_PREDMET" Type="Int32" />
+          <Property Name="NAIM_PRED_OS_PREDMET" Type="Int32" />
+          <Property Name="YAZIK_OS_PREPODAET" Type="Int32" />
+          <Property Name="SPEC_OS_PREDMET" Type="Int32" />
+          <Property Name="VID_PRED_DP_PREDMET" Type="Int32" />
+          <Property Name="NAIM_PRED_DP_PREDMET" Type="Int32" />
+          <Property Name="YAZIK_DP_PREPODAET" Type="Int32" />
+          <Property Name="SPEC_DP_PREDMET" Type="Int32" />
+          <Property Name="KOL_CHAS_PRED_OS_PREDMET" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="KOL_CHAS_PRED_DP_PREDMET" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="VSEGO_KOL_CHASOV" Type="Int32" />
+          <Property Name="PED_OBRAZ" Type="Int32" />
+          <Property Name="PED_PEREPOD" Type="Int32" />
+          <Property Name="PED_PEREPOD_GDE" Type="Int32" />
+          <Property Name="DATA_PED_PEREPOD" Type="DateTime" />
+          <Property Name="NUMDIPLOM_PED_PERE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PRIVLECHENIE_ATTECTAC" Type="Int32" />
+          <Property Name="DATA_POSLED_ATTECTAC" Type="Int32" />
+          <Property Name="RES_ATTECTAC" Type="Int32" />
+          <Property Name="DOLJNOST_ATTECTAC" Type="Int32" />
+          <Property Name="PRICHINI_NE_PRIV_ATTECTAC" Type="Int32" />
+          <Property Name="INOST_YAZIK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ZANYA_KOMPUTERA" Type="Int32" />
+          <Property Name="DANNIY_OTCH_PERIODE" Type="Int32" />
+          <Property Name="PRICHINA" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="STAVKA_CHAS" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="TOIFA" Type="Int32" />
+          <Property Name="KOLORLIC" Type="Int32" />
+          <Property Name="QISHLOQ_PROPISKA_RU" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="KUCHA_PROPISKA_RU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UY_PROPISKA_RU" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="HONADON_PROPISKA_RU" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CWORKDEPART_RU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OBJWORKPLACE_RU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="WORKPHONE_RU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HOMEPHONE_RU" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CELLPHONE_RU" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="FAXNUMBER_RU" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="PASS_GIVENBY_RU" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SUDIMOST_RODST_RU" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PRICHINA_RU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="DP_INFO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBMESTORAB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATE1" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="DATE2" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="ISHJOYI" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="WORKPLACE" Type="Int32" />
+          <Property Name="LAVOZIM" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="ISHJOYI_RU" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="LAVOZIM_RU" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBPOVISHKVAL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_PK" Type="DateTime" />
+          <Property Name="MESTO_PK" Type="Int32" />
+          <Property Name="POSLEDNIY_PK" Type="Int32" />
+          <Property Name="NUM_SERTIFICAT" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="SROK_PALN_PK" Type="Int32" />
+          <Property Name="PEDOBRAZOVANIEPK" Type="Int32" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TBQARINDOSH">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LASTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FIRSTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PATRONYMIC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="QARINDOSHLIGI" Type="Int32" />
+          <Property Name="DATAROJ" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="BIRTHCOUNTRY" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="COUNTRY" Type="Int32" />
+          <Property Name="REGION" Type="Int32" />
+          <Property Name="RAYON" Type="Int32" />
+          <Property Name="YASHASHJOYI" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="ISHJOYI" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="DEATH" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="YASHASHJOYI_RU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="ISHJOYI_RU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBSHAT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="OBLAST" Type="Int32" />
+          <Property Name="RAYON" Type="Int32" />
+          <Property Name="KOLEJ" Type="Int32" />
+          <Property Name="KOL_CHAS" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="DOLJNOST" Type="Int32" />
+          <Property Name="PREDMET" Type="Int32" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="STATE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TBUNIVER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="MAINID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GOD_VIPUSKA" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="OBRAZOVATELNIY_UCHERJ" Type="Int32" />
+          <Property Name="SPECIALNOST_PODIPLOMU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="VID_OBUCHENIYA" Type="Int32" />
+          <Property Name="PROFESIANAL_OBRAZ" Type="Int32" />
+          <Property Name="OB_TYPE" Type="Int32" />
+          <Property Name="SERIYA" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="NUM" Type="Int32" />
+          <Property Name="EDITDATE" Type="DateTime" />
+          <Property Name="EDITUSER" Type="Int32" />
+          <Property Name="SPECIALNOST_PODIPLOMU_RU" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DBOPERATOR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="MAINID" Type="Int32" />
+          <Property Name="NAMEUZ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NAMERU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MASKA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SA_ATESTACIYA_RES" EntityType="Self.SA_ATESTACIYA_RES" />
+          <EntitySet Name="SA_ATESTACIYA_YN" EntityType="Self.SA_ATESTACIYA_YN" />
+          <EntitySet Name="SA_COUNTRY" EntityType="Self.SA_COUNTRY" />
+          <EntitySet Name="SA_DOLJNOST" EntityType="Self.SA_DOLJNOST" />
+          <EntitySet Name="SA_HARBIY_UNVON" EntityType="Self.SA_HARBIY_UNVON" />
+          <EntitySet Name="SA_KOLLEJ" EntityType="Self.SA_KOLLEJ" />
+          <EntitySet Name="SA_LANGS" EntityType="Self.SA_LANGS" />
+          <EntitySet Name="SA_MARRIED" EntityType="Self.SA_MARRIED" />
+          <EntitySet Name="SA_MASTER_KATEGORIYA" EntityType="Self.SA_MASTER_KATEGORIYA" />
+          <EntitySet Name="SA_NAGRADA" EntityType="Self.SA_NAGRADA" />
+          <EntitySet Name="SA_NAT" EntityType="Self.SA_NAT" />
+          <EntitySet Name="SA_OBJLANG" EntityType="Self.SA_OBJLANG" />
+          <EntitySet Name="SA_OBLAST" EntityType="Self.SA_OBLAST" />
+          <EntitySet Name="SA_OBRAZOVANIYA" EntityType="Self.SA_OBRAZOVANIYA" />
+          <EntitySet Name="SA_PARTIYA" EntityType="Self.SA_PARTIYA" />
+          <EntitySet Name="SA_PEDAGOG_YN" EntityType="Self.SA_PEDAGOG_YN" />
+          <EntitySet Name="SA_PEDOBRAZOVANIE" EntityType="Self.SA_PEDOBRAZOVANIE" />
+          <EntitySet Name="SA_PEDPEREPOD" EntityType="Self.SA_PEDPEREPOD" />
+          <EntitySet Name="SA_PINYAT_NA_RABOTU" EntityType="Self.SA_PINYAT_NA_RABOTU" />
+          <EntitySet Name="SA_PO_SHATATU" EntityType="Self.SA_PO_SHATATU" />
+          <EntitySet Name="SA_PREDMET" EntityType="Self.SA_PREDMET" />
+          <EntitySet Name="SA_PROHODIL_YN" EntityType="Self.SA_PROHODIL_YN" />
+          <EntitySet Name="SA_RABOTAET_YN" EntityType="Self.SA_RABOTAET_YN" />
+          <EntitySet Name="SA_RAYON" EntityType="Self.SA_RAYON" />
+          <EntitySet Name="SA_RODSTVENNIK" EntityType="Self.SA_RODSTVENNIK" />
+          <EntitySet Name="SA_SCSTATUS" EntityType="Self.SA_SCSTATUS" />
+          <EntitySet Name="SA_SEX" EntityType="Self.SA_SEX" />
+          <EntitySet Name="SA_SPECIALIST_YN" EntityType="Self.SA_SPECIALIST_YN" />
+          <EntitySet Name="SA_SPECIALITY" EntityType="Self.SA_SPECIALITY" />
+          <EntitySet Name="SA_UCHENIY_STEPEN" EntityType="Self.SA_UCHENIY_STEPEN" />
+          <EntitySet Name="SA_VID_OBUCHENIYA" EntityType="Self.SA_VID_OBUCHENIYA" />
+          <EntitySet Name="SA_VID_PREDMETA" EntityType="Self.SA_VID_PREDMETA" />
+          <EntitySet Name="SA_VID_UCHEREJDENI" EntityType="Self.SA_VID_UCHEREJDENI" />
+          <EntitySet Name="SA_VID_UCHEREJDENI_DIPLOM" EntityType="Self.SA_VID_UCHEREJDENI_DIPLOM" />
+          <EntitySet Name="SA_VUZ" EntityType="Self.SA_VUZ" />
+          <EntitySet Name="SA_YESNO" EntityType="Self.SA_YESNO" />
+          <EntitySet Name="SCUSERS" EntityType="Self.SCUSER" />
+          <EntitySet Name="TBATESTATIYAs" EntityType="Self.TBATESTATIYA" />
+          <EntitySet Name="TBDEPUTies" EntityType="Self.TBDEPUTY" />
+          <EntitySet Name="TBFOTOes" EntityType="Self.TBFOTO" />
+          <EntitySet Name="TBGOSNAGRADIs" EntityType="Self.TBGOSNAGRADI" />
+          <EntitySet Name="TBMAINs" EntityType="Self.TBMAIN" />
+          <EntitySet Name="TBMESTORABs" EntityType="Self.TBMESTORAB" />
+          <EntitySet Name="TBPOVISHKVALs" EntityType="Self.TBPOVISHKVAL" />
+          <EntitySet Name="TBQARINDOSHes" EntityType="Self.TBQARINDOSH" />
+          <EntitySet Name="TBSHATs" EntityType="Self.TBSHAT" />
+          <EntitySet Name="TBUNIVERs" EntityType="Self.TBUNIVER" />
+          <EntitySet Name="DBOPERATORs" EntityType="Self.DBOPERATOR" />
+          <FunctionImport Name="TBATESTATIYA_SEL" IsComposable="true" ReturnType="Collection(Model.TBATESTATIYA_SEL_Result)" />
+          <FunctionImport Name="TBDEPUTY_SEL" IsComposable="true" ReturnType="Collection(Model.TBDEPUTY_SEL_Result)" />
+          <FunctionImport Name="TBGOSNAGRADI_SEL" IsComposable="true" ReturnType="Collection(Model.TBGOSNAGRADI_SEL_Result)" />
+          <FunctionImport Name="TBMAIN_SEL" IsComposable="true" ReturnType="Collection(Model.TBMAIN_SEL_Result)" />
+          <FunctionImport Name="TBMESTORAB_SEL" IsComposable="true" ReturnType="Collection(Model.TBMESTORAB_SEL_Result)" />
+          <FunctionImport Name="TBPOVISHKVAL_SEL" IsComposable="true" ReturnType="Collection(Model.TBPOVISHKVAL_SEL_Result)" />
+          <FunctionImport Name="TBQARINDOSH_SEL" IsComposable="true" ReturnType="Collection(Model.TBQARINDOSH_SEL_Result)" />
+          <FunctionImport Name="TBSHAT_SEL" IsComposable="true" ReturnType="Collection(Model.TBSHAT_SEL_Result)" />
+          <FunctionImport Name="TBUNIVER_SEL" IsComposable="true" ReturnType="Collection(Model.TBUNIVER_SEL_Result)" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="SA_ATESTACIYA_RES">
+            <EntityTypeMapping TypeName="Model.SA_ATESTACIYA_RES">
+              <MappingFragment StoreEntitySet="SA_ATESTACIYA_RES">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_ATESTACIYA_YN">
+            <EntityTypeMapping TypeName="Model.SA_ATESTACIYA_YN">
+              <MappingFragment StoreEntitySet="SA_ATESTACIYA_YN">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_COUNTRY">
+            <EntityTypeMapping TypeName="Model.SA_COUNTRY">
+              <MappingFragment StoreEntitySet="SA_COUNTRY">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_DOLJNOST">
+            <EntityTypeMapping TypeName="Model.SA_DOLJNOST">
+              <MappingFragment StoreEntitySet="SA_DOLJNOST">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_HARBIY_UNVON">
+            <EntityTypeMapping TypeName="Model.SA_HARBIY_UNVON">
+              <MappingFragment StoreEntitySet="SA_HARBIY_UNVON">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_KOLLEJ">
+            <EntityTypeMapping TypeName="Model.SA_KOLLEJ">
+              <MappingFragment StoreEntitySet="SA_KOLLEJ">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="OBL" ColumnName="OBL" />
+                <ScalarProperty Name="RAYON" ColumnName="RAYON" />
+                <ScalarProperty Name="TURI" ColumnName="TURI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_LANGS">
+            <EntityTypeMapping TypeName="Model.SA_LANGS">
+              <MappingFragment StoreEntitySet="SA_LANGS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_MARRIED">
+            <EntityTypeMapping TypeName="Model.SA_MARRIED">
+              <MappingFragment StoreEntitySet="SA_MARRIED">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_MASTER_KATEGORIYA">
+            <EntityTypeMapping TypeName="Model.SA_MASTER_KATEGORIYA">
+              <MappingFragment StoreEntitySet="SA_MASTER_KATEGORIYA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_NAGRADA">
+            <EntityTypeMapping TypeName="Model.SA_NAGRADA">
+              <MappingFragment StoreEntitySet="SA_NAGRADA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_NAT">
+            <EntityTypeMapping TypeName="Model.SA_NAT">
+              <MappingFragment StoreEntitySet="SA_NAT">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_OBJLANG">
+            <EntityTypeMapping TypeName="Model.SA_OBJLANG">
+              <MappingFragment StoreEntitySet="SA_OBJLANG">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_OBLAST">
+            <EntityTypeMapping TypeName="Model.SA_OBLAST">
+              <MappingFragment StoreEntitySet="SA_OBLAST">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="COUNTRY_ID" ColumnName="COUNTRY_ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_OBRAZOVANIYA">
+            <EntityTypeMapping TypeName="Model.SA_OBRAZOVANIYA">
+              <MappingFragment StoreEntitySet="SA_OBRAZOVANIYA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_PARTIYA">
+            <EntityTypeMapping TypeName="Model.SA_PARTIYA">
+              <MappingFragment StoreEntitySet="SA_PARTIYA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_PEDAGOG_YN">
+            <EntityTypeMapping TypeName="Model.SA_PEDAGOG_YN">
+              <MappingFragment StoreEntitySet="SA_PEDAGOG_YN">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_PEDOBRAZOVANIE">
+            <EntityTypeMapping TypeName="Model.SA_PEDOBRAZOVANIE">
+              <MappingFragment StoreEntitySet="SA_PEDOBRAZOVANIE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_PEDPEREPOD">
+            <EntityTypeMapping TypeName="Model.SA_PEDPEREPOD">
+              <MappingFragment StoreEntitySet="SA_PEDPEREPOD">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_PINYAT_NA_RABOTU">
+            <EntityTypeMapping TypeName="Model.SA_PINYAT_NA_RABOTU">
+              <MappingFragment StoreEntitySet="SA_PINYAT_NA_RABOTU">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_PO_SHATATU">
+            <EntityTypeMapping TypeName="Model.SA_PO_SHATATU">
+              <MappingFragment StoreEntitySet="SA_PO_SHATATU">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_PREDMET">
+            <EntityTypeMapping TypeName="Model.SA_PREDMET">
+              <MappingFragment StoreEntitySet="SA_PREDMET">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_PROHODIL_YN">
+            <EntityTypeMapping TypeName="Model.SA_PROHODIL_YN">
+              <MappingFragment StoreEntitySet="SA_PROHODIL_YN">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_RABOTAET_YN">
+            <EntityTypeMapping TypeName="Model.SA_RABOTAET_YN">
+              <MappingFragment StoreEntitySet="SA_RABOTAET_YN">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_RAYON">
+            <EntityTypeMapping TypeName="Model.SA_RAYON">
+              <MappingFragment StoreEntitySet="SA_RAYON">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OBL" ColumnName="OBL" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_RODSTVENNIK">
+            <EntityTypeMapping TypeName="Model.SA_RODSTVENNIK">
+              <MappingFragment StoreEntitySet="SA_RODSTVENNIK">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="ORDERINDEX" ColumnName="ORDERINDEX" />
+                <ScalarProperty Name="RDSIGN" ColumnName="RDSIGN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_SCSTATUS">
+            <EntityTypeMapping TypeName="Model.SA_SCSTATUS">
+              <MappingFragment StoreEntitySet="SA_SCSTATUS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_SEX">
+            <EntityTypeMapping TypeName="Model.SA_SEX">
+              <MappingFragment StoreEntitySet="SA_SEX">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_SPECIALIST_YN">
+            <EntityTypeMapping TypeName="Model.SA_SPECIALIST_YN">
+              <MappingFragment StoreEntitySet="SA_SPECIALIST_YN">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_SPECIALITY">
+            <EntityTypeMapping TypeName="Model.SA_SPECIALITY">
+              <MappingFragment StoreEntitySet="SA_SPECIALITY">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_UCHENIY_STEPEN">
+            <EntityTypeMapping TypeName="Model.SA_UCHENIY_STEPEN">
+              <MappingFragment StoreEntitySet="SA_UCHENIY_STEPEN">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_VID_OBUCHENIYA">
+            <EntityTypeMapping TypeName="Model.SA_VID_OBUCHENIYA">
+              <MappingFragment StoreEntitySet="SA_VID_OBUCHENIYA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_VID_PREDMETA">
+            <EntityTypeMapping TypeName="Model.SA_VID_PREDMETA">
+              <MappingFragment StoreEntitySet="SA_VID_PREDMETA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_VID_UCHEREJDENI">
+            <EntityTypeMapping TypeName="Model.SA_VID_UCHEREJDENI">
+              <MappingFragment StoreEntitySet="SA_VID_UCHEREJDENI">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_VID_UCHEREJDENI_DIPLOM">
+            <EntityTypeMapping TypeName="Model.SA_VID_UCHEREJDENI_DIPLOM">
+              <MappingFragment StoreEntitySet="SA_VID_UCHEREJDENI_DIPLOM">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_VUZ">
+            <EntityTypeMapping TypeName="Model.SA_VUZ">
+              <MappingFragment StoreEntitySet="SA_VUZ">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SA_YESNO">
+            <EntityTypeMapping TypeName="Model.SA_YESNO">
+              <MappingFragment StoreEntitySet="SA_YESNO">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCUSERS">
+            <EntityTypeMapping TypeName="Model.SCUSER">
+              <MappingFragment StoreEntitySet="SCUSERS">
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="LOGINNAME" ColumnName="LOGINNAME" />
+                <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="LASTACCESS" ColumnName="LASTACCESS" />
+                <ScalarProperty Name="ENABLED" ColumnName="ENABLED" />
+                <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+                <ScalarProperty Name="LASTACCTIME" ColumnName="LASTACCTIME" />
+                <ScalarProperty Name="CREATEDTIME" ColumnName="CREATEDTIME" />
+                <ScalarProperty Name="ACCESSCOUNT" ColumnName="ACCESSCOUNT" />
+                <ScalarProperty Name="LANG" ColumnName="LANG" />
+                <ScalarProperty Name="ACSESS" ColumnName="ACSESS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBATESTATIYAs">
+            <EntityTypeMapping TypeName="Model.TBATESTATIYA">
+              <MappingFragment StoreEntitySet="TBATESTATIYA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MAINID" ColumnName="MAINID" />
+                <ScalarProperty Name="PRIVLICHEN_YN" ColumnName="PRIVLICHEN_YN" />
+                <ScalarProperty Name="DATE_AT" ColumnName="DATE_AT" />
+                <ScalarProperty Name="RESULT_AA" ColumnName="RESULT_AA" />
+                <ScalarProperty Name="DOLJNOST_POSLE" ColumnName="DOLJNOST_POSLE" />
+                <ScalarProperty Name="PICHINA_NE_PRIVLICHENIYA" ColumnName="PICHINA_NE_PRIVLICHENIYA" />
+                <ScalarProperty Name="EDITDATE" ColumnName="EDITDATE" />
+                <ScalarProperty Name="EDITUSER" ColumnName="EDITUSER" />
+                <ScalarProperty Name="PICHINA_NE_PRIVLICHENIYA_RU" ColumnName="PICHINA_NE_PRIVLICHENIYA_RU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBDEPUTies">
+            <EntityTypeMapping TypeName="Model.TBDEPUTY">
+              <MappingFragment StoreEntitySet="TBDEPUTY">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MAINID" ColumnName="MAINID" />
+                <ScalarProperty Name="DEPUTY" ColumnName="DEPUTY" />
+                <ScalarProperty Name="DATE1" ColumnName="DATE1" />
+                <ScalarProperty Name="DATE2" ColumnName="DATE2" />
+                <ScalarProperty Name="EDITDATE" ColumnName="EDITDATE" />
+                <ScalarProperty Name="EDITUSER" ColumnName="EDITUSER" />
+                <ScalarProperty Name="DEPUTY_RU" ColumnName="DEPUTY_RU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBFOTOes">
+            <EntityTypeMapping TypeName="Model.TBFOTO">
+              <MappingFragment StoreEntitySet="TBFOTO">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MAINID" ColumnName="MAINID" />
+                <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+                <ScalarProperty Name="EDITDATE" ColumnName="EDITDATE" />
+                <ScalarProperty Name="EDITUSER" ColumnName="EDITUSER" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBGOSNAGRADIs">
+            <EntityTypeMapping TypeName="Model.TBGOSNAGRADI">
+              <MappingFragment StoreEntitySet="TBGOSNAGRADI">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MAINID" ColumnName="MAINID" />
+                <ScalarProperty Name="DATE_GN" ColumnName="DATE_GN" />
+                <ScalarProperty Name="NAZVANIE" ColumnName="NAZVANIE" />
+                <ScalarProperty Name="EDITDATE" ColumnName="EDITDATE" />
+                <ScalarProperty Name="EDITUSER" ColumnName="EDITUSER" />
+                <ScalarProperty Name="NAZVANIE_RU" ColumnName="NAZVANIE_RU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBMAINs">
+            <EntityTypeMapping TypeName="Model.TBMAIN">
+              <MappingFragment StoreEntitySet="TBMAIN">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+                <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+                <ScalarProperty Name="PATRONYMIC" ColumnName="PATRONYMIC" />
+                <ScalarProperty Name="FIO_REL" ColumnName="FIO_REL" />
+                <ScalarProperty Name="BIRTHDATE" ColumnName="BIRTHDATE" />
+                <ScalarProperty Name="BIRTHCOUNTRY" ColumnName="BIRTHCOUNTRY" />
+                <ScalarProperty Name="BIRTHREGION" ColumnName="BIRTHREGION" />
+                <ScalarProperty Name="BIRTHTOWN" ColumnName="BIRTHTOWN" />
+                <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+                <ScalarProperty Name="POST" ColumnName="POST" />
+                <ScalarProperty Name="SEX" ColumnName="SEX" />
+                <ScalarProperty Name="OBJLANG" ColumnName="OBJLANG" />
+                <ScalarProperty Name="MARRIED" ColumnName="MARRIED" />
+                <ScalarProperty Name="LANGS" ColumnName="LANGS" />
+                <ScalarProperty Name="STATEPRIZES" ColumnName="STATEPRIZES" />
+                <ScalarProperty Name="CONTRY_PROPISKA" ColumnName="CONTRY_PROPISKA" />
+                <ScalarProperty Name="REGION_PROPISKA" ColumnName="REGION_PROPISKA" />
+                <ScalarProperty Name="RAYON_PROPISKA" ColumnName="RAYON_PROPISKA" />
+                <ScalarProperty Name="QISHLOQ_PROPISKA" ColumnName="QISHLOQ_PROPISKA" />
+                <ScalarProperty Name="KUCHA_PROPISKA" ColumnName="KUCHA_PROPISKA" />
+                <ScalarProperty Name="UY_PROPISKA" ColumnName="UY_PROPISKA" />
+                <ScalarProperty Name="HONADON_PROPISKA" ColumnName="HONADON_PROPISKA" />
+                <ScalarProperty Name="CWORKDATE" ColumnName="CWORKDATE" />
+                <ScalarProperty Name="CWORKLEAVEDATE" ColumnName="CWORKLEAVEDATE" />
+                <ScalarProperty Name="CWORKPLACE" ColumnName="CWORKPLACE" />
+                <ScalarProperty Name="CWORKDEPART" ColumnName="CWORKDEPART" />
+                <ScalarProperty Name="OBJWORKPLACE" ColumnName="OBJWORKPLACE" />
+                <ScalarProperty Name="WORKPHONE" ColumnName="WORKPHONE" />
+                <ScalarProperty Name="HOMEPHONE" ColumnName="HOMEPHONE" />
+                <ScalarProperty Name="CELLPHONE" ColumnName="CELLPHONE" />
+                <ScalarProperty Name="FAXNUMBER" ColumnName="FAXNUMBER" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="PASS_SERIES" ColumnName="PASS_SERIES" />
+                <ScalarProperty Name="PASS_NUMBER" ColumnName="PASS_NUMBER" />
+                <ScalarProperty Name="PASS_GIVENDATE" ColumnName="PASS_GIVENDATE" />
+                <ScalarProperty Name="PASS_GIVENBY" ColumnName="PASS_GIVENBY" />
+                <ScalarProperty Name="PARTY" ColumnName="PARTY" />
+                <ScalarProperty Name="EDUCATION" ColumnName="EDUCATION" />
+                <ScalarProperty Name="VUZ" ColumnName="VUZ" />
+                <ScalarProperty Name="SPECIALITY" ColumnName="SPECIALITY" />
+                <ScalarProperty Name="SCSTATUS" ColumnName="SCSTATUS" />
+                <ScalarProperty Name="SCDEGREE" ColumnName="SCDEGREE" />
+                <ScalarProperty Name="SERVICE" ColumnName="SERVICE" />
+                <ScalarProperty Name="ZVANIE" ColumnName="ZVANIE" />
+                <ScalarProperty Name="SUDIMOST_RODST" ColumnName="SUDIMOST_RODST" />
+                <ScalarProperty Name="CARDNUM" ColumnName="CARDNUM" />
+                <ScalarProperty Name="EDITDATE" ColumnName="EDITDATE" />
+                <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+                <ScalarProperty Name="EDITUSER" ColumnName="EDITUSER" />
+                <ScalarProperty Name="CREATEUSER" ColumnName="CREATEUSER" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="CARDSTATE" ColumnName="CARDSTATE" />
+                <ScalarProperty Name="ST_REGION" ColumnName="ST_REGION" />
+                <ScalarProperty Name="ST_RAYON" ColumnName="ST_RAYON" />
+                <ScalarProperty Name="ST_VIDUCHEREJDENIYA" ColumnName="ST_VIDUCHEREJDENIYA" />
+                <ScalarProperty Name="VID_GRAJDANSTVO" ColumnName="VID_GRAJDANSTVO" />
+                <ScalarProperty Name="VOZROST" ColumnName="VOZROST" />
+                <ScalarProperty Name="DETI_KOL" ColumnName="DETI_KOL" />
+                <ScalarProperty Name="VID_DOLJNOST" ColumnName="VID_DOLJNOST" />
+                <ScalarProperty Name="KATEGORIYA_MASTERA" ColumnName="KATEGORIYA_MASTERA" />
+                <ScalarProperty Name="VID_PRIN_NA_RABOTU" ColumnName="VID_PRIN_NA_RABOTU" />
+                <ScalarProperty Name="NUM_PRIKAZA" ColumnName="NUM_PRIKAZA" />
+                <ScalarProperty Name="DATA_PRIKAZA" ColumnName="DATA_PRIKAZA" />
+                <ScalarProperty Name="PO_SHTATU" ColumnName="PO_SHTATU" />
+                <ScalarProperty Name="OBSHIY_STAJ" ColumnName="OBSHIY_STAJ" />
+                <ScalarProperty Name="PED_STAJ" ColumnName="PED_STAJ" />
+                <ScalarProperty Name="DAN_DOLJ_STAJ" ColumnName="DAN_DOLJ_STAJ" />
+                <ScalarProperty Name="VID_PRED_OS_PREDMET" ColumnName="VID_PRED_OS_PREDMET" />
+                <ScalarProperty Name="NAIM_PRED_OS_PREDMET" ColumnName="NAIM_PRED_OS_PREDMET" />
+                <ScalarProperty Name="YAZIK_OS_PREPODAET" ColumnName="YAZIK_OS_PREPODAET" />
+                <ScalarProperty Name="SPEC_OS_PREDMET" ColumnName="SPEC_OS_PREDMET" />
+                <ScalarProperty Name="VID_PRED_DP_PREDMET" ColumnName="VID_PRED_DP_PREDMET" />
+                <ScalarProperty Name="NAIM_PRED_DP_PREDMET" ColumnName="NAIM_PRED_DP_PREDMET" />
+                <ScalarProperty Name="YAZIK_DP_PREPODAET" ColumnName="YAZIK_DP_PREPODAET" />
+                <ScalarProperty Name="SPEC_DP_PREDMET" ColumnName="SPEC_DP_PREDMET" />
+                <ScalarProperty Name="KOL_CHAS_PRED_OS_PREDMET" ColumnName="KOL_CHAS_PRED_OS_PREDMET" />
+                <ScalarProperty Name="KOL_CHAS_PRED_DP_PREDMET" ColumnName="KOL_CHAS_PRED_DP_PREDMET" />
+                <ScalarProperty Name="VSEGO_KOL_CHASOV" ColumnName="VSEGO_KOL_CHASOV" />
+                <ScalarProperty Name="PED_OBRAZ" ColumnName="PED_OBRAZ" />
+                <ScalarProperty Name="PED_PEREPOD" ColumnName="PED_PEREPOD" />
+                <ScalarProperty Name="PED_PEREPOD_GDE" ColumnName="PED_PEREPOD_GDE" />
+                <ScalarProperty Name="DATA_PED_PEREPOD" ColumnName="DATA_PED_PEREPOD" />
+                <ScalarProperty Name="NUMDIPLOM_PED_PERE" ColumnName="NUMDIPLOM_PED_PERE" />
+                <ScalarProperty Name="PRIVLECHENIE_ATTECTAC" ColumnName="PRIVLECHENIE_ATTECTAC" />
+                <ScalarProperty Name="DATA_POSLED_ATTECTAC" ColumnName="DATA_POSLED_ATTECTAC" />
+                <ScalarProperty Name="RES_ATTECTAC" ColumnName="RES_ATTECTAC" />
+                <ScalarProperty Name="DOLJNOST_ATTECTAC" ColumnName="DOLJNOST_ATTECTAC" />
+                <ScalarProperty Name="PRICHINI_NE_PRIV_ATTECTAC" ColumnName="PRICHINI_NE_PRIV_ATTECTAC" />
+                <ScalarProperty Name="INOST_YAZIK" ColumnName="INOST_YAZIK" />
+                <ScalarProperty Name="ZANYA_KOMPUTERA" ColumnName="ZANYA_KOMPUTERA" />
+                <ScalarProperty Name="DANNIY_OTCH_PERIODE" ColumnName="DANNIY_OTCH_PERIODE" />
+                <ScalarProperty Name="PRICHINA" ColumnName="PRICHINA" />
+                <ScalarProperty Name="STAVKA_CHAS" ColumnName="STAVKA_CHAS" />
+                <ScalarProperty Name="TOIFA" ColumnName="TOIFA" />
+                <ScalarProperty Name="KOLORLIC" ColumnName="KOLORLIC" />
+                <ScalarProperty Name="QISHLOQ_PROPISKA_RU" ColumnName="QISHLOQ_PROPISKA_RU" />
+                <ScalarProperty Name="KUCHA_PROPISKA_RU" ColumnName="KUCHA_PROPISKA_RU" />
+                <ScalarProperty Name="UY_PROPISKA_RU" ColumnName="UY_PROPISKA_RU" />
+                <ScalarProperty Name="HONADON_PROPISKA_RU" ColumnName="HONADON_PROPISKA_RU" />
+                <ScalarProperty Name="CWORKDEPART_RU" ColumnName="CWORKDEPART_RU" />
+                <ScalarProperty Name="OBJWORKPLACE_RU" ColumnName="OBJWORKPLACE_RU" />
+                <ScalarProperty Name="WORKPHONE_RU" ColumnName="WORKPHONE_RU" />
+                <ScalarProperty Name="HOMEPHONE_RU" ColumnName="HOMEPHONE_RU" />
+                <ScalarProperty Name="CELLPHONE_RU" ColumnName="CELLPHONE_RU" />
+                <ScalarProperty Name="FAXNUMBER_RU" ColumnName="FAXNUMBER_RU" />
+                <ScalarProperty Name="PASS_GIVENBY_RU" ColumnName="PASS_GIVENBY_RU" />
+                <ScalarProperty Name="SUDIMOST_RODST_RU" ColumnName="SUDIMOST_RODST_RU" />
+                <ScalarProperty Name="PRICHINA_RU" ColumnName="PRICHINA_RU" />
+                <ScalarProperty Name="DP_INFO" ColumnName="DP_INFO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBMESTORABs">
+            <EntityTypeMapping TypeName="Model.TBMESTORAB">
+              <MappingFragment StoreEntitySet="TBMESTORAB">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MAINID" ColumnName="MAINID" />
+                <ScalarProperty Name="DATE1" ColumnName="DATE1" />
+                <ScalarProperty Name="DATE2" ColumnName="DATE2" />
+                <ScalarProperty Name="ISHJOYI" ColumnName="ISHJOYI" />
+                <ScalarProperty Name="WORKPLACE" ColumnName="WORKPLACE" />
+                <ScalarProperty Name="LAVOZIM" ColumnName="LAVOZIM" />
+                <ScalarProperty Name="EDITDATE" ColumnName="EDITDATE" />
+                <ScalarProperty Name="EDITUSER" ColumnName="EDITUSER" />
+                <ScalarProperty Name="ISHJOYI_RU" ColumnName="ISHJOYI_RU" />
+                <ScalarProperty Name="LAVOZIM_RU" ColumnName="LAVOZIM_RU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBPOVISHKVALs">
+            <EntityTypeMapping TypeName="Model.TBPOVISHKVAL">
+              <MappingFragment StoreEntitySet="TBPOVISHKVAL">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MAINID" ColumnName="MAINID" />
+                <ScalarProperty Name="DATE_PK" ColumnName="DATE_PK" />
+                <ScalarProperty Name="MESTO_PK" ColumnName="MESTO_PK" />
+                <ScalarProperty Name="POSLEDNIY_PK" ColumnName="POSLEDNIY_PK" />
+                <ScalarProperty Name="NUM_SERTIFICAT" ColumnName="NUM_SERTIFICAT" />
+                <ScalarProperty Name="SROK_PALN_PK" ColumnName="SROK_PALN_PK" />
+                <ScalarProperty Name="PEDOBRAZOVANIEPK" ColumnName="PEDOBRAZOVANIEPK" />
+                <ScalarProperty Name="EDITDATE" ColumnName="EDITDATE" />
+                <ScalarProperty Name="EDITUSER" ColumnName="EDITUSER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBQARINDOSHes">
+            <EntityTypeMapping TypeName="Model.TBQARINDOSH">
+              <MappingFragment StoreEntitySet="TBQARINDOSH">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MAINID" ColumnName="MAINID" />
+                <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+                <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+                <ScalarProperty Name="PATRONYMIC" ColumnName="PATRONYMIC" />
+                <ScalarProperty Name="QARINDOSHLIGI" ColumnName="QARINDOSHLIGI" />
+                <ScalarProperty Name="DATAROJ" ColumnName="DATAROJ" />
+                <ScalarProperty Name="BIRTHCOUNTRY" ColumnName="BIRTHCOUNTRY" />
+                <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+                <ScalarProperty Name="REGION" ColumnName="REGION" />
+                <ScalarProperty Name="RAYON" ColumnName="RAYON" />
+                <ScalarProperty Name="YASHASHJOYI" ColumnName="YASHASHJOYI" />
+                <ScalarProperty Name="ISHJOYI" ColumnName="ISHJOYI" />
+                <ScalarProperty Name="DEATH" ColumnName="DEATH" />
+                <ScalarProperty Name="EDITDATE" ColumnName="EDITDATE" />
+                <ScalarProperty Name="EDITUSER" ColumnName="EDITUSER" />
+                <ScalarProperty Name="YASHASHJOYI_RU" ColumnName="YASHASHJOYI_RU" />
+                <ScalarProperty Name="ISHJOYI_RU" ColumnName="ISHJOYI_RU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBSHATs">
+            <EntityTypeMapping TypeName="Model.TBSHAT">
+              <MappingFragment StoreEntitySet="TBSHAT">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OBLAST" ColumnName="OBLAST" />
+                <ScalarProperty Name="RAYON" ColumnName="RAYON" />
+                <ScalarProperty Name="KOLEJ" ColumnName="KOLEJ" />
+                <ScalarProperty Name="KOL_CHAS" ColumnName="KOL_CHAS" />
+                <ScalarProperty Name="DOLJNOST" ColumnName="DOLJNOST" />
+                <ScalarProperty Name="PREDMET" ColumnName="PREDMET" />
+                <ScalarProperty Name="EDITDATE" ColumnName="EDITDATE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBUNIVERs">
+            <EntityTypeMapping TypeName="Model.TBUNIVER">
+              <MappingFragment StoreEntitySet="TBUNIVER">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MAINID" ColumnName="MAINID" />
+                <ScalarProperty Name="GOD_VIPUSKA" ColumnName="GOD_VIPUSKA" />
+                <ScalarProperty Name="OBRAZOVATELNIY_UCHERJ" ColumnName="OBRAZOVATELNIY_UCHERJ" />
+                <ScalarProperty Name="SPECIALNOST_PODIPLOMU" ColumnName="SPECIALNOST_PODIPLOMU" />
+                <ScalarProperty Name="VID_OBUCHENIYA" ColumnName="VID_OBUCHENIYA" />
+                <ScalarProperty Name="PROFESIANAL_OBRAZ" ColumnName="PROFESIANAL_OBRAZ" />
+                <ScalarProperty Name="OB_TYPE" ColumnName="OB_TYPE" />
+                <ScalarProperty Name="SERIYA" ColumnName="SERIYA" />
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="EDITDATE" ColumnName="EDITDATE" />
+                <ScalarProperty Name="EDITUSER" ColumnName="EDITUSER" />
+                <ScalarProperty Name="SPECIALNOST_PODIPLOMU_RU" ColumnName="SPECIALNOST_PODIPLOMU_RU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DBOPERATORs">
+            <EntityTypeMapping TypeName="Model.DBOPERATOR">
+              <MappingFragment StoreEntitySet="DBOPERATOR">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MAINID" ColumnName="MAINID" />
+                <ScalarProperty Name="NAMEUZ" ColumnName="NAMEUZ" />
+                <ScalarProperty Name="NAMERU" ColumnName="NAMERU" />
+                <ScalarProperty Name="VAL" ColumnName="VAL" />
+                <ScalarProperty Name="MASKA" ColumnName="MASKA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

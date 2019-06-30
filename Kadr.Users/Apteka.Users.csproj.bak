@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D17A54FD-19D2-4F13-925C-9F6579058242}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Apteka.Users</RootNamespace>
+    <AssemblyName>Apteka.Users</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\App\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Export.cs" />
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUserAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserAccess.Designer.cs">
+      <DependentUpon>FrmUserAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRoleManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRoleManage.Designer.cs">
+      <DependentUpon>FrmRoleManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FrmUserManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserManage.Designer.cs">
+      <DependentUpon>FrmUserManage.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserAccess.resx">
+      <DependentUpon>FrmUserAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRoleManage.resx">
+      <DependentUpon>FrmRoleManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserManage.resx">
+      <DependentUpon>FrmUserManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Apteka.BarCodeScanner\Apteka.BarCodeScanner.csproj">
+      <Project>{4143D085-38CF-4640-BB05-2FDFFAF94D76}</Project>
+      <Name>Apteka.BarCodeScanner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Apteka.DataModels\Apteka.DataModels.csproj">
+      <Project>{68a20bc7-c306-468b-9fc0-60ba4e45e8f7}</Project>
+      <Name>Apteka.DataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Apteka.DataRepository\Apteka.DataRepository.csproj">
+      <Project>{7BCA535F-495D-4000-B9E0-85704EEB7925}</Project>
+      <Name>Apteka.DataRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Apteka.GlobalVars\Apteka.GlobalVars.csproj">
+      <Project>{04c33dc2-6ad9-4d2e-a532-88d46f8921ef}</Project>
+      <Name>Apteka.GlobalVars</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Apteka.Interfaces\Apteka.Interfaces.csproj">
+      <Project>{17D83C0C-D57A-4BB0-A7E9-7006E87E54F3}</Project>
+      <Name>Apteka.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Apteka.LangResource\Apteka.LangResource.csproj">
+      <Project>{af384ac4-7f18-4735-aea0-767e635f99e7}</Project>
+      <Name>Apteka.LangResource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Apteka.UtilsUI\Apteka.UtilsUI.csproj">
+      <Project>{978F1125-E612-49BD-B64D-747F06CD8F5A}</Project>
+      <Name>Apteka.UtilsUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Apteka.Utils\Apteka.Utils.csproj">
+      <Project>{ccc72c2f-aaa4-4d9b-8479-4b458d54d9e2}</Project>
+      <Name>Apteka.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

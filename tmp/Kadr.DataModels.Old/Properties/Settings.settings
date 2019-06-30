@@ -1,0 +1,46 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Asbt.Data.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;character set=UTF8;data source=127.0.0.1;initial catalog=D:\Work_New\Kadr.net\DataBase\REFERENCE.FDB;user id=sysdba;password=masterkey&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;FirebirdSql.Data.FirebirdClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">character set=UTF8;data source=127.0.0.1;initial catalog=D:\Work_New\Kadr.net\DataBase\REFERENCE.FDB;user id=sysdba;password=masterkey</Value>
+    </Setting>
+    <Setting Name="ConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;character set=UTF8;initial catalog=D:\Work_New\Kadr.net\DataBase\REFERENCE.FDB;data source=localhost;user id=sysdba;password=masterkey&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;FirebirdSql.Data.FirebirdClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">character set=UTF8;initial catalog=D:\Work_New\Kadr.net\DataBase\REFERENCE.FDB;data source=localhost;user id=sysdba;password=masterkey</Value>
+    </Setting>
+    <Setting Name="ConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;initial catalog=D:\Work_New\Kadr.net\DataBase\REFERENCE.FDB;data source=localhost;user id=sysdba;password=masterkey&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;FirebirdSql.Data.FirebirdClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">initial catalog=D:\Work_New\Kadr.net\DataBase\REFERENCE.FDB;data source=localhost;user id=sysdba;password=masterkey</Value>
+    </Setting>
+    <Setting Name="ConnectionString3" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;character set=UNICODE_FSS;data source=localhost;initial catalog=D:\Work_New\Kadr.net\DataBase\REFERENCE.FDB;user id=sysdba;password=masterkey&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;FirebirdSql.Data.FirebirdClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">character set=UNICODE_FSS;data source=localhost;initial catalog=D:\Work_New\Kadr.net\DataBase\REFERENCE.FDB;user id=sysdba;password=masterkey</Value>
+    </Setting>
+    <Setting Name="ConnectionString4" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;character set=UNICODE_FSS;initial catalog=C:\Kadr\REFERENCE.FDB;data source=localhost;user id=sysdba;password=masterkey&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;FirebirdSql.Data.FirebirdClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">character set=UNICODE_FSS;initial catalog=C:\Kadr\REFERENCE.FDB;data source=localhost;user id=sysdba;password=masterkey</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
