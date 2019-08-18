@@ -61,7 +61,7 @@ namespace Kadr.Models
         public virtual DbSet<tbUser> tbUsers { get; set; }
         public virtual DbSet<tbAtestatiya> tbAtestatiyas { get; set; }
         public virtual DbSet<tbDeputy> tbDeputys { get; set; }
-        public virtual DbSet<tbFoto> tbFotos { get; set; }
+        public virtual DbSet<tbPhoto> tbFotos { get; set; }
         public virtual DbSet<tbGosnagradi> tbGosnagradis { get; set; }
         public virtual DbSet<tbMain> tbMains { get; set; }
         public virtual DbSet<tbMestorab> tbMestorabs { get; set; }

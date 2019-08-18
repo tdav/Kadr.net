@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kadr.Kadr.Template {
+namespace Kadr.Template {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Kadr.Kadr.Template {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Asbt.Kadr.Template.XRDesignRibbonControllerResources", typeof(XRDesignRibbonControllerResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Kadr.Template.XRDesignRibbonControllerResources", typeof(XRDesignRibbonControllerResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

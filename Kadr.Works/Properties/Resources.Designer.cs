@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kadr.TexPasport.Properties {
+namespace Asbt.TexPasport.Properties {
     using System;
     
     

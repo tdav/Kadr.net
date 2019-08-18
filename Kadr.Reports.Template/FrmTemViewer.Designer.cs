@@ -1,4 +1,4 @@
-﻿namespace Kadr.Kadr.Template
+﻿namespace Kadr.Template
 {
     partial class FrmTemViewer
     {
@@ -289,9 +289,9 @@
             this.printPreviewBarItem1.Command = DevExpress.XtraPrinting.PrintingSystemCommand.DocumentMap;
             this.printPreviewBarItem1.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem1.Enabled = false;
-            this.printPreviewBarItem1.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_DocumentMap;
+            this.printPreviewBarItem1.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_DocumentMap;
             this.printPreviewBarItem1.Id = 123;
-            this.printPreviewBarItem1.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_DocumentMapLarge;
+            this.printPreviewBarItem1.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_DocumentMapLarge;
             this.printPreviewBarItem1.Name = "printPreviewBarItem1";
             superToolTip1.FixedTooltipWidth = true;
             toolTipTitleItem1.Text = "Document Map";
@@ -405,9 +405,9 @@
             this.printPreviewBarItem2.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Parameters;
             this.printPreviewBarItem2.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem2.Enabled = false;
-            this.printPreviewBarItem2.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Parameters;
+            this.printPreviewBarItem2.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Parameters;
             this.printPreviewBarItem2.Id = 124;
-            this.printPreviewBarItem2.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ParametersLarge;
+            this.printPreviewBarItem2.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ParametersLarge;
             this.printPreviewBarItem2.Name = "printPreviewBarItem2";
             superToolTip2.FixedTooltipWidth = true;
             toolTipTitleItem2.Text = "Parameters";
@@ -425,9 +425,9 @@
             this.printPreviewBarItem3.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Find;
             this.printPreviewBarItem3.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem3.Enabled = false;
-            this.printPreviewBarItem3.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Find;
+            this.printPreviewBarItem3.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Find;
             this.printPreviewBarItem3.Id = 125;
-            this.printPreviewBarItem3.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_FindLarge;
+            this.printPreviewBarItem3.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_FindLarge;
             this.printPreviewBarItem3.Name = "printPreviewBarItem3";
             superToolTip3.FixedTooltipWidth = true;
             toolTipTitleItem3.Text = "Find";
@@ -444,9 +444,9 @@
             this.printPreviewBarItem4.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Customize;
             this.printPreviewBarItem4.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem4.Enabled = false;
-            this.printPreviewBarItem4.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Customize;
+            this.printPreviewBarItem4.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Customize;
             this.printPreviewBarItem4.Id = 126;
-            this.printPreviewBarItem4.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_CustomizeLarge;
+            this.printPreviewBarItem4.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_CustomizeLarge;
             this.printPreviewBarItem4.Name = "printPreviewBarItem4";
             superToolTip4.FixedTooltipWidth = true;
             toolTipTitleItem4.Text = "Options";
@@ -499,9 +499,9 @@
             this.printPreviewBarItem8.Command = DevExpress.XtraPrinting.PrintingSystemCommand.EditPageHF;
             this.printPreviewBarItem8.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem8.Enabled = false;
-            this.printPreviewBarItem8.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHF;
+            this.printPreviewBarItem8.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHF;
             this.printPreviewBarItem8.Id = 130;
-            this.printPreviewBarItem8.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHFLarge;
+            this.printPreviewBarItem8.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHFLarge;
             this.printPreviewBarItem8.Name = "printPreviewBarItem8";
             superToolTip7.FixedTooltipWidth = true;
             toolTipTitleItem7.Text = "Header and Footer";
@@ -519,9 +519,9 @@
             this.printPreviewBarItem9.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Scale;
             this.printPreviewBarItem9.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem9.Enabled = false;
-            this.printPreviewBarItem9.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Scale;
+            this.printPreviewBarItem9.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Scale;
             this.printPreviewBarItem9.Id = 131;
-            this.printPreviewBarItem9.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ScaleLarge;
+            this.printPreviewBarItem9.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ScaleLarge;
             this.printPreviewBarItem9.Name = "printPreviewBarItem9";
             superToolTip8.FixedTooltipWidth = true;
             toolTipTitleItem8.Text = "Scale";
@@ -540,7 +540,7 @@
             this.printPreviewBarItem10.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem10.Down = true;
             this.printPreviewBarItem10.Enabled = false;
-            this.printPreviewBarItem10.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Pointer;
+            this.printPreviewBarItem10.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Pointer;
             this.printPreviewBarItem10.GroupIndex = 1;
             this.printPreviewBarItem10.Id = 132;
             this.printPreviewBarItem10.Name = "printPreviewBarItem10";
@@ -561,7 +561,7 @@
             this.printPreviewBarItem11.Command = DevExpress.XtraPrinting.PrintingSystemCommand.HandTool;
             this.printPreviewBarItem11.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem11.Enabled = false;
-            this.printPreviewBarItem11.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_HandTool;
+            this.printPreviewBarItem11.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_HandTool;
             this.printPreviewBarItem11.GroupIndex = 1;
             this.printPreviewBarItem11.Id = 133;
             this.printPreviewBarItem11.Name = "printPreviewBarItem11";
@@ -582,7 +582,7 @@
             this.printPreviewBarItem12.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Magnifier;
             this.printPreviewBarItem12.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem12.Enabled = false;
-            this.printPreviewBarItem12.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Magnifier;
+            this.printPreviewBarItem12.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Magnifier;
             this.printPreviewBarItem12.GroupIndex = 1;
             this.printPreviewBarItem12.Id = 134;
             this.printPreviewBarItem12.Name = "printPreviewBarItem12";
@@ -604,9 +604,9 @@
             this.printPreviewBarItem13.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ZoomOut;
             this.printPreviewBarItem13.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem13.Enabled = false;
-            this.printPreviewBarItem13.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOut;
+            this.printPreviewBarItem13.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOut;
             this.printPreviewBarItem13.Id = 135;
-            this.printPreviewBarItem13.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOutLarge;
+            this.printPreviewBarItem13.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOutLarge;
             this.printPreviewBarItem13.Name = "printPreviewBarItem13";
             superToolTip12.FixedTooltipWidth = true;
             toolTipTitleItem12.Text = "Zoom Out";
@@ -623,9 +623,9 @@
             this.printPreviewBarItem14.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ZoomIn;
             this.printPreviewBarItem14.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem14.Enabled = false;
-            this.printPreviewBarItem14.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ZoomIn;
+            this.printPreviewBarItem14.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ZoomIn;
             this.printPreviewBarItem14.Id = 136;
-            this.printPreviewBarItem14.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ZoomInLarge;
+            this.printPreviewBarItem14.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ZoomInLarge;
             this.printPreviewBarItem14.Name = "printPreviewBarItem14";
             superToolTip13.FixedTooltipWidth = true;
             toolTipTitleItem13.Text = "Zoom In";
@@ -643,9 +643,9 @@
             this.printPreviewBarItem15.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Zoom;
             this.printPreviewBarItem15.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem15.Enabled = false;
-            this.printPreviewBarItem15.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Zoom;
+            this.printPreviewBarItem15.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Zoom;
             this.printPreviewBarItem15.Id = 137;
-            this.printPreviewBarItem15.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ZoomLarge;
+            this.printPreviewBarItem15.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ZoomLarge;
             this.printPreviewBarItem15.Name = "printPreviewBarItem15";
             superToolTip14.FixedTooltipWidth = true;
             toolTipTitleItem14.Text = "Zoom";
@@ -662,9 +662,9 @@
             this.printPreviewBarItem16.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowFirstPage;
             this.printPreviewBarItem16.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem16.Enabled = false;
-            this.printPreviewBarItem16.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPage;
+            this.printPreviewBarItem16.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPage;
             this.printPreviewBarItem16.Id = 138;
-            this.printPreviewBarItem16.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPageLarge;
+            this.printPreviewBarItem16.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPageLarge;
             this.printPreviewBarItem16.Name = "printPreviewBarItem16";
             superToolTip15.FixedTooltipWidth = true;
             toolTipTitleItem15.Text = "First Page (Ctrl+Home)";
@@ -681,9 +681,9 @@
             this.printPreviewBarItem17.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowPrevPage;
             this.printPreviewBarItem17.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem17.Enabled = false;
-            this.printPreviewBarItem17.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPage;
+            this.printPreviewBarItem17.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPage;
             this.printPreviewBarItem17.Id = 139;
-            this.printPreviewBarItem17.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPageLarge;
+            this.printPreviewBarItem17.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPageLarge;
             this.printPreviewBarItem17.Name = "printPreviewBarItem17";
             superToolTip16.FixedTooltipWidth = true;
             toolTipTitleItem16.Text = "Previous Page (PageUp)";
@@ -700,9 +700,9 @@
             this.printPreviewBarItem18.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowNextPage;
             this.printPreviewBarItem18.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem18.Enabled = false;
-            this.printPreviewBarItem18.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPage;
+            this.printPreviewBarItem18.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPage;
             this.printPreviewBarItem18.Id = 140;
-            this.printPreviewBarItem18.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPageLarge;
+            this.printPreviewBarItem18.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPageLarge;
             this.printPreviewBarItem18.Name = "printPreviewBarItem18";
             superToolTip17.FixedTooltipWidth = true;
             toolTipTitleItem17.Text = "Next Page (PageDown)";
@@ -719,9 +719,9 @@
             this.printPreviewBarItem19.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowLastPage;
             this.printPreviewBarItem19.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem19.Enabled = false;
-            this.printPreviewBarItem19.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPage;
+            this.printPreviewBarItem19.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPage;
             this.printPreviewBarItem19.Id = 141;
-            this.printPreviewBarItem19.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPageLarge;
+            this.printPreviewBarItem19.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPageLarge;
             this.printPreviewBarItem19.Name = "printPreviewBarItem19";
             superToolTip18.FixedTooltipWidth = true;
             toolTipTitleItem18.Text = "Last Page (Ctrl+End)";
@@ -739,9 +739,9 @@
             this.printPreviewBarItem20.Command = DevExpress.XtraPrinting.PrintingSystemCommand.MultiplePages;
             this.printPreviewBarItem20.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem20.Enabled = false;
-            this.printPreviewBarItem20.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePages;
+            this.printPreviewBarItem20.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePages;
             this.printPreviewBarItem20.Id = 142;
-            this.printPreviewBarItem20.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePagesLarge;
+            this.printPreviewBarItem20.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePagesLarge;
             this.printPreviewBarItem20.Name = "printPreviewBarItem20";
             superToolTip19.FixedTooltipWidth = true;
             toolTipTitleItem19.Text = "View Many Pages";
@@ -759,9 +759,9 @@
             this.printPreviewBarItem21.Command = DevExpress.XtraPrinting.PrintingSystemCommand.FillBackground;
             this.printPreviewBarItem21.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem21.Enabled = false;
-            this.printPreviewBarItem21.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_FillBackground;
+            this.printPreviewBarItem21.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_FillBackground;
             this.printPreviewBarItem21.Id = 143;
-            this.printPreviewBarItem21.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_FillBackgroundLarge;
+            this.printPreviewBarItem21.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_FillBackgroundLarge;
             this.printPreviewBarItem21.Name = "printPreviewBarItem21";
             superToolTip20.FixedTooltipWidth = true;
             toolTipTitleItem20.Text = "Background Color";
@@ -778,9 +778,9 @@
             this.printPreviewBarItem22.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Watermark;
             this.printPreviewBarItem22.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem22.Enabled = false;
-            this.printPreviewBarItem22.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Watermark;
+            this.printPreviewBarItem22.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Watermark;
             this.printPreviewBarItem22.Id = 144;
-            this.printPreviewBarItem22.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_WatermarkLarge;
+            this.printPreviewBarItem22.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_WatermarkLarge;
             this.printPreviewBarItem22.Name = "printPreviewBarItem22";
             superToolTip21.FixedTooltipWidth = true;
             toolTipTitleItem21.Text = "Watermark";
@@ -840,9 +840,9 @@
             this.printPreviewBarItem25.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ClosePreview;
             this.printPreviewBarItem25.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem25.Enabled = false;
-            this.printPreviewBarItem25.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
+            this.printPreviewBarItem25.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
             this.printPreviewBarItem25.Id = 147;
-            this.printPreviewBarItem25.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreviewLarge;
+            this.printPreviewBarItem25.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreviewLarge;
             this.printPreviewBarItem25.Name = "printPreviewBarItem25";
             superToolTip24.FixedTooltipWidth = true;
             toolTipTitleItem24.Text = "Close Print Preview";
@@ -860,9 +860,9 @@
             this.printPreviewBarItem26.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PageOrientation;
             this.printPreviewBarItem26.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem26.Enabled = false;
-            this.printPreviewBarItem26.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientation;
+            this.printPreviewBarItem26.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientation;
             this.printPreviewBarItem26.Id = 148;
-            this.printPreviewBarItem26.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientationLarge;
+            this.printPreviewBarItem26.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientationLarge;
             this.printPreviewBarItem26.Name = "printPreviewBarItem26";
             superToolTip25.FixedTooltipWidth = true;
             toolTipTitleItem25.Text = "Page Orientation";
@@ -880,9 +880,9 @@
             this.printPreviewBarItem27.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PaperSize;
             this.printPreviewBarItem27.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem27.Enabled = false;
-            this.printPreviewBarItem27.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PaperSize;
+            this.printPreviewBarItem27.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PaperSize;
             this.printPreviewBarItem27.Id = 149;
-            this.printPreviewBarItem27.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PaperSizeLarge;
+            this.printPreviewBarItem27.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PaperSizeLarge;
             this.printPreviewBarItem27.Name = "printPreviewBarItem27";
             superToolTip26.FixedTooltipWidth = true;
             toolTipTitleItem26.Text = "Page Size";
@@ -900,9 +900,9 @@
             this.printPreviewBarItem28.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PageMargins;
             this.printPreviewBarItem28.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem28.Enabled = false;
-            this.printPreviewBarItem28.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PageMargins;
+            this.printPreviewBarItem28.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PageMargins;
             this.printPreviewBarItem28.Id = 150;
-            this.printPreviewBarItem28.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PageMarginsLarge;
+            this.printPreviewBarItem28.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PageMarginsLarge;
             this.printPreviewBarItem28.Name = "printPreviewBarItem28";
             superToolTip27.FixedTooltipWidth = true;
             toolTipTitleItem27.Text = "Page Margins";
@@ -920,9 +920,9 @@
             this.printPreviewBarItem46.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Open;
             this.printPreviewBarItem46.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem46.Enabled = false;
-            this.printPreviewBarItem46.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Open;
+            this.printPreviewBarItem46.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Open;
             this.printPreviewBarItem46.Id = 168;
-            this.printPreviewBarItem46.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_OpenLarge;
+            this.printPreviewBarItem46.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_OpenLarge;
             this.printPreviewBarItem46.Name = "printPreviewBarItem46";
             superToolTip28.FixedTooltipWidth = true;
             toolTipTitleItem28.Text = "Open (Ctrl + O)";
@@ -939,9 +939,9 @@
             this.printPreviewBarItem47.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Save;
             this.printPreviewBarItem47.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem47.Enabled = false;
-            this.printPreviewBarItem47.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Save;
+            this.printPreviewBarItem47.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Save;
             this.printPreviewBarItem47.Id = 169;
-            this.printPreviewBarItem47.LargeGlyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_SaveLarge;
+            this.printPreviewBarItem47.LargeGlyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_SaveLarge;
             this.printPreviewBarItem47.Name = "printPreviewBarItem47";
             superToolTip29.FixedTooltipWidth = true;
             toolTipTitleItem29.Text = "Save (Ctrl + S)";
@@ -984,7 +984,7 @@
             // 
             this.printPreviewRibbonPageGroup1.AllowTextClipping = false;
             this.printPreviewRibbonPageGroup1.ContextSpecifier = this.documentViewerRibbonController1;
-            this.printPreviewRibbonPageGroup1.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Document;
+            this.printPreviewRibbonPageGroup1.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_Document;
             this.printPreviewRibbonPageGroup1.ItemLinks.Add(this.printPreviewBarItem46);
             this.printPreviewRibbonPageGroup1.ItemLinks.Add(this.printPreviewBarItem47);
             this.printPreviewRibbonPageGroup1.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Document;
@@ -996,7 +996,7 @@
             // 
             this.printPreviewRibbonPageGroup2.AllowTextClipping = false;
             this.printPreviewRibbonPageGroup2.ContextSpecifier = this.documentViewerRibbonController1;
-            this.printPreviewRibbonPageGroup2.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirect;
+            this.printPreviewRibbonPageGroup2.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirect;
             this.printPreviewRibbonPageGroup2.ItemLinks.Add(this.printPreviewBarItem5);
             this.printPreviewRibbonPageGroup2.ItemLinks.Add(this.printPreviewBarItem4);
             this.printPreviewRibbonPageGroup2.ItemLinks.Add(this.printPreviewBarItem2);
@@ -1010,7 +1010,7 @@
             // 
             this.printPreviewRibbonPageGroup7.AllowTextClipping = false;
             this.printPreviewRibbonPageGroup7.ContextSpecifier = this.documentViewerRibbonController1;
-            this.printPreviewRibbonPageGroup7.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ExportFile;
+            this.printPreviewRibbonPageGroup7.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ExportFile;
             this.printPreviewRibbonPageGroup7.ItemLinks.Add(this.printPreviewBarItem23);
             this.printPreviewRibbonPageGroup7.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Export;
             this.printPreviewRibbonPageGroup7.Name = "printPreviewRibbonPageGroup7";
@@ -1021,7 +1021,7 @@
             // 
             this.printPreviewRibbonPageGroup8.AllowTextClipping = false;
             this.printPreviewRibbonPageGroup8.ContextSpecifier = this.documentViewerRibbonController1;
-            this.printPreviewRibbonPageGroup8.Glyph = global::Kadr.Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
+            this.printPreviewRibbonPageGroup8.Glyph = global::Kadr.Template.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
             this.printPreviewRibbonPageGroup8.ItemLinks.Add(this.printPreviewBarItem25);
             this.printPreviewRibbonPageGroup8.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Close;
             this.printPreviewRibbonPageGroup8.Name = "printPreviewRibbonPageGroup8";

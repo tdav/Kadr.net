@@ -4,7 +4,7 @@ using Word = Microsoft.Office.Interop.Word;
 using System.Reflection;
 
 
-namespace Kadr.Kadr.Template
+namespace Kadr.Template
 {
     public class WordApp
     {

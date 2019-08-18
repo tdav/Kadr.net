@@ -163,7 +163,6 @@
             this.barButtonItem1.Caption = "Excel";
             this.barButtonItem1.Hint = "Excel га сақлаш";
             this.barButtonItem1.Id = 28;
-            this.barButtonItem1.LargeGlyph = global::Kadr.Reports.Properties.Resources.microsoft_excel;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExcelOnClick);
             // 

@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Kadr.Database.Views</RootNamespace>
     <AssemblyName>Kadr.Database.Views</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\App\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -42,7 +42,7 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Kadr.Utils">
-      <HintPath>..\dll\Kadr.Utils.dll</HintPath>
+      <HintPath>..\App\Kadr.Utils.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -88,8 +88,8 @@
     <Compile Include="Entity\Dbstruct\Dbstruct.cs" />
     <Compile Include="Entity\Atestatiya\IAtestatiya.cs" />
     <Compile Include="Entity\Atestatiya\Atestatiya.cs" />
-    <Compile Include="Entity\Foto\IFoto.cs" />
-    <Compile Include="Entity\Foto\Foto.cs" />
+    <Compile Include="Entity\Photo\IPhoto.cs" />
+    <Compile Include="Entity\Photo\Photo.cs" />
     <Compile Include="Entity\Sp\ISp.cs" />
     <Compile Include="Entity\Sp\Sp.cs" />
     <Compile Include="Entity\Role\IRole.cs" />

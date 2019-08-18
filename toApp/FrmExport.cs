@@ -3,9 +3,9 @@ using System;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
+using Kadr.GlobalVars;
 using Apteka.Utils;
 using Apteka.Utils.DataBase;
-using Kadr.GlobalVars;
 
 namespace App
 {

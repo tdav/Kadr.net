@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>texpApp</RootNamespace>
     <AssemblyName>Kadr</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
@@ -38,12 +38,12 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>C:\Kadr\</OutputPath>
+    <OutputPath>..\App\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -116,9 +116,6 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Kadr.Utils">
-      <HintPath>..\dll\Kadr.Utils.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Private>False</Private>
@@ -293,6 +290,10 @@
     <ProjectReference Include="..\Kadr.GlobalVars\Kadr.GlobalVars.csproj">
       <Project>{2577191d-5d24-4348-a31e-25a8fa471926}</Project>
       <Name>Kadr.GlobalVars</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kadr.Utils\Kadr.Utils.csproj">
+      <Project>{ccc72c2f-aaa4-4d9b-8479-4b458d54d9e2}</Project>
+      <Name>Kadr.Utils</Name>
     </ProjectReference>
     <ProjectReference Include="..\Kadr.Works\Kadr.Works.csproj">
       <Project>{5ba58341-c292-47ec-adf6-af199dbf65f3}</Project>

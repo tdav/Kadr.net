@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Asbt.Reports</RootNamespace>
     <AssemblyName>Asbt.RemoteReports</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\App\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -77,7 +77,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Kadr.Utils">
-      <HintPath>..\dll\Kadr.Utils.dll</HintPath>
+      <HintPath>..\App\Kadr.Utils.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -128,10 +128,6 @@
     <ProjectReference Include="..\Kadr.DataRepository\Kadr.Database.csproj">
       <Project>{f63616bb-5ef8-4de1-8fc8-5c055ab2c475}</Project>
       <Name>Kadr.Database</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Kadr.PVOnlineWorks\Kard.PVOnlineWorks.csproj">
-      <Project>{f7c3b988-1190-4c6b-a6e1-870fc518fe1b}</Project>
-      <Name>Kard.PVOnlineWorks</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

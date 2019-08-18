@@ -2,7 +2,7 @@
 
 namespace Kadr.Models
 {
-    public partial class tbFoto
+    public partial class tbPhoto
     {
         public int Id { get; set; }
 

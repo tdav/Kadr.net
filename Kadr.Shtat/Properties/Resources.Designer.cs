@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kadr.Shtat.Properties {
+namespace Asbt.Shtat.Properties {
     using System;
     
     

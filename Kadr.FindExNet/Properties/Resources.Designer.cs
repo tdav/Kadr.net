@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kadr.FindExNet.Properties {
+namespace Asbt.FindExNet.Properties {
     using System;
     
     

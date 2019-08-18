@@ -30,8 +30,8 @@ namespace Kadr.FindExNet
 
             Close();
 
-            mainform.bsRes.DataSource = ClassOnlineWorks.GetProcedureDataTable(val, "TEXP.FORM_WORKS.RemoteSqlExec");
-            mainform.TabControl.SelectedTabPageIndex = 1;
+           // mainform.bsRes.DataSource = ClassOnlineWorks.GetProcedureDataTable(val, "TEXP.FORM_WORKS.RemoteSqlExec");
+          //  mainform.TabControl.SelectedTabPageIndex = 1;
         }
 
         private void btnCount_Click(object sender, EventArgs e)
@@ -47,9 +47,8 @@ namespace Kadr.FindExNet
 
             var val = new string[2];
             val[0] = sqlW;
-            var dt = ClassOnlineWorks.GetProcedureDataTable(val, "TEXP.FORM_WORKS.RemoteSqlExec_Count");
-            MessageBox.Show("Қидирув натижаси " + dt.Rows[0][0].ToStr() + " та", "", MessageBoxButtons.OK,
-                MessageBoxIcon.Asterisk);
+           // var dt = ClassOnlineWorks.GetProcedureDataTable(val, "TEXP.FORM_WORKS.RemoteSqlExec_Count");
+          //  MessageBox.Show("Қидирув натижаси " + dt.Rows[0][0].ToStr() + " та", "", MessageBoxButtons.OK,        MessageBoxIcon.Asterisk);
         }
     }
 }

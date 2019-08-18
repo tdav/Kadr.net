@@ -9,48 +9,63 @@ using System.Windows.Forms;
 using Kadr.GlobalVars;
 using Apteka.Utils;
 using Kadr.Database.Views;
+using Kadr.Models.Core;
+using Kadr.Models;
+using System.Collections.Generic;
 
 namespace Kadr.Kadr
 {
     public partial class frmKadrUZ : XtraForm
     {
+        /*
+            private TbMainTableAdapter tm = new TbMainTableAdapter();
+            private TBFOTOTableAdapter tf = new TBFOTOTableAdapter();
+            private TBGOSNAGRADITableAdapter tg = new TBGOSNAGRADITableAdapter();
+            private TBATESTATIYATableAdapter ta = new TBATESTATIYATableAdapter();
+            private TBPOVISHKVALTableAdapter tp = new TBPOVISHKVALTableAdapter();
+            private TBUNIVERTableAdapter tu = new TBUNIVERTableAdapter();
+            private TBMESTORABTableAdapter tr = new TBMESTORABTableAdapter();
+            private TBQARINDOSHTableAdapter tq = new TBQARINDOSHTableAdapter();
+            private TBDEPUTYTableAdapter td = new TBDEPUTYTableAdapter();
+        */
+
+
+        private IUnitOfWork db;
         private dxErrorProvider ep;
 
-        private TbMainTableAdapter tm = new TbMainTableAdapter();
-        private TBFOTOTableAdapter tf = new TBFOTOTableAdapter();
-        private TBGOSNAGRADITableAdapter tg = new TBGOSNAGRADITableAdapter();
-        private TBATESTATIYATableAdapter ta = new TBATESTATIYATableAdapter();
-        private TBPOVISHKVALTableAdapter tp = new TBPOVISHKVALTableAdapter();
-        private TBUNIVERTableAdapter tu = new TBUNIVERTableAdapter();
-        private TBMESTORABTableAdapter tr = new TBMESTORABTableAdapter();
-        private TBQARINDOSHTableAdapter tq = new TBQARINDOSHTableAdapter();
-        private TBDEPUTYTableAdapter td = new TBDEPUTYTableAdapter();
-
-
-
-
         private RecordState recordState;
-        private string IdMain = "";
+        private int IdMain;
 
+        private tbMain curMain;
 
+        private void FrmKadrUZ_Load(object sender, EventArgs e)
+        {
+            db = new UnitOfWork();
+        }
 
         private void peFoto_Properties_EditValueChanged(object sender, EventArgs e)
         {
             Image im = peFoto.Image;
             if (im != null)
             {
-                tf.Insert(-1, IdMain, CImage.ImageToByte(im), DateTime.Now, Vars.UserId.ToInt(), 1);
+                var foto = new tbPhoto();
+                foto.Mainid = IdMain;
+                foto.Foto = CImage.ImageToByte(im);
+                foto.Editdate = DateTime.Now;
+                foto.Edituser = Vars.UserId;
+                foto.Active = 1;
+                db.Photo.Add(foto);
             }
         }
 
-        public frmKadrUZ(string mid, RecordState rs)
+        public frmKadrUZ(int mid, RecordState rs)
         {
             IdMain = mid;
             recordState = rs;
             InitializeComponent();
 
             SetSpTablesValue();
-            Vars.ln.LoadUzbekKeyboardLayout();
+            Vars.KeyboardLang.LoadUzbekKeyboardLayout();
 
             var txt = new PDateEdit();
             txt.ConvertDateEdit(edDDataRoj);
@@ -67,35 +82,17 @@ namespace Kadr.Kadr
 
                 if (recordState == RecordState.rsEdit)
                 {
-                    var dt = tm.GetDataById(IdMain);
-                    bsMain.DataSource = dt;
+                    curMain = db.Main.Get(IdMain);
+                    bsMain.DataSource = curMain;
 
-                    var df = tf.GetDataByMainId(IdMain);
-                    bsFoto.DataSource = df;
-                    //peFoto.Image = df.Rows[0]["FOTO"] != DBNull.Value
-                    //    ? CImage.ByteArrayToImage(df.Rows[0]["FOTO"] as byte[])
-                    //    : null;
-
-
-                    var dg = tg.GetDataByMainId(IdMain);
-                    bsGosNagradi.DataSource = dg;
-
-                    var da = ta.GetDataByMainId(IdMain);
-                    bsAtestaciya.DataSource = da;
-                    var dp = tp.GetDataByMainId(IdMain);
-                    bsPovisheniyaKVL.DataSource = dp;
-
-                    var du = tu.GetDataByMainId(IdMain);
-                    bsDiplom.DataSource = du;
-
-                    var dr = tr.GetDataByMainId(IdMain);
-                    bsMestoRaboti.DataSource = dr;
-
-                    var dq = tq.GetDataByMainId(IdMain);
-                    bsQarindosh.DataSource = dq;
-
-                    var dd = td.GetDataByMainId(IdMain);
-                    bsDeputy.DataSource = dd;
+                    bsFoto.DataSource = curMain.Photo;
+                    bsGosNagradi.DataSource = curMain.GosnagradiList;
+                    bsAtestaciya.DataSource = curMain.AtestatiyaList;
+                    bsPovisheniyaKVL.DataSource = curMain.PovishkvalList;
+                    bsDiplom.DataSource = curMain.UniverList;
+                    bsMestoRaboti.DataSource = curMain.MestorabList;
+                    bsQarindosh.DataSource = curMain.QarindoshList;
+                    bsDeputy.DataSource = curMain.DeputyList;
 
                 }
                 #endregion
@@ -104,32 +101,36 @@ namespace Kadr.Kadr
                 #region Insert
 
                 {
-                    var dm = new Kadr.Data.KdnDataSet.TbMainDataTable();
-                    var rm = dm.NewTbMainRow();
-                    rm.ID = IdMain;
-
-                    rm.ST_REGION = Vars.Oblast;
+                    curMain = new tbMain();
+                    curMain.Id = IdMain;
+                    curMain.StRegion = Vars.Oblast;
                     cbOblast.EditValue = Vars.Oblast;
-                    rm.ST_RAYON = Vars.Rayon;
-                    rm.ST_VIDUCHEREJDENIYA = Vars.Turi;
+                    curMain.StRayon= Vars.Rayon;
+                    curMain.StViducherejdeniya= Vars.Turi;
                     cbVidUcherejdeniya.EditValue = Vars.Turi;
+                    curMain.Kolorlic= Vars.Ucherejdeniya;
+
+                    bsMain.DataSource = curMain;
+                    curMain.Photo = new tbPhoto();
+                    bsFoto.DataSource = curMain.Photo;
+
+                    curMain.GosnagradiList = new List<tbGosnagradi>();
+                    curMain.AtestatiyaList = new List<tbAtestatiya>();
+                    curMain.PovishkvalList = new List<tbPovishkval>();
+                    curMain.MestorabList     = new List<tbMestorab>();
+                    curMain.QarindoshList = new List<tbQarindosh>();
+                    curMain.DeputyList       = new List<tbDeputy>();
+                    curMain.UniverList       = new List<tbUniver>();
+
+                    bsGosNagradi.DataSource = curMain.GosnagradiList;
+                    bsAtestaciya.DataSource = curMain.AtestatiyaList;
+                    bsPovisheniyaKVL.DataSource = curMain.PovishkvalList;
+                    bsDiplom.DataSource = curMain.UniverList;
+                    bsMestoRaboti.DataSource = curMain.MestorabList;
+                    bsQarindosh.DataSource = curMain.QarindoshList;
+                    bsDeputy.DataSource = curMain.DeputyList;
+                    
                     // cbUcherejdeniya.Properties.DataSource = DicoDB.SelectSQL("select ID, NAME" + GlobalVars.Lang + " as NAME from  SA_KOLLEJ WHERE TURI =" + GlobalVars.Turi.ToStr());
-                    rm.KOLORLIC = Vars.Ucherejdeniya;
-
-                    dm.Rows.Add(rm);
-                    bsMain.DataSource = dm;
-                    var df = new Kadr.Data.KdnDataSet.TBFOTODataTable();
-                    var drf = df.NewTBFOTORow();
-                    df.Rows.Add(drf);
-                    bsFoto.DataSource = df;
-
-                    bsGosNagradi.DataSource = new Kadr.Data.KdnDataSet.TBGOSNAGRADIDataTable();
-                    bsAtestaciya.DataSource = new Kadr.Data.KdnDataSet.TBATESTATIYADataTable();
-                    bsPovisheniyaKVL.DataSource = new Kadr.Data.KdnDataSet.TBPOVISHKVALDataTable();
-                    bsDiplom.DataSource = new Kadr.Data.KdnDataSet.TBUNIVERDataTable();
-                    bsMestoRaboti.DataSource = new Kadr.Data.KdnDataSet.TBMESTORABDataTable();
-                    bsQarindosh.DataSource = new Kadr.Data.KdnDataSet.TBQARINDOSHDataTable();
-                    bsDeputy.DataSource = new Kadr.Data.KdnDataSet.TBDEPUTYDataTable();
                 }
 
                 #endregion
@@ -137,7 +138,6 @@ namespace Kadr.Kadr
             catch (Exception ee)
             {
                 CLog.Write(ee.GetAllMessages());
-
             }
         }
 
@@ -273,98 +273,13 @@ namespace Kadr.Kadr
         {
 
             bsMain.EndEdit();
-            Kadr.Data.KdnDataSet.TbMainDataTable dt = bsMain.DataSource as Kadr.Data.KdnDataSet.TbMainDataTable;
-            tm.IU_DT(dt);
 
-            bsFoto.EndEdit();
-            DataRowView df = bsFoto.Current as DataRowView;
-            if (df != null && df.DataView.Table.Rows.Count > 0)
+            if (recordState == RecordState.rsNew)
             {
-                DataRow dataRow = df.Row;
-                if (dataRow.RowState == DataRowState.Added || dataRow.RowState == DataRowState.Modified)
-                    tf.IU_DT(dataRow, IdMain);
+                db.Main.Add(curMain);
             }
 
-            bsGosNagradi.EndEdit();
-            DataRowView dg = bsGosNagradi.Current as System.Data.DataRowView;
-            if (dg != null)
-                foreach (DataRow r in dg.DataView.Table.Rows)
-                {
-                    if (r.RowState == DataRowState.Added || r.RowState == DataRowState.Modified)
-                    {
-                        tg.IU_DT(r, IdMain);
-                    }
-                }
-
-            bsAtestaciya.EndEdit();
-            DataRowView da = bsAtestaciya.Current as DataRowView;
-            if (da != null)
-                foreach (DataRow r in da.DataView.Table.Rows)
-                {
-                    if (r.RowState == DataRowState.Added || r.RowState == DataRowState.Modified)
-                    {
-                        ta.IU_DT(r, IdMain);
-                    }
-                }
-
-
-            bsPovisheniyaKVL.EndEdit();
-            DataRowView dp = bsPovisheniyaKVL.Current as DataRowView;
-            if (dp != null)
-                foreach (DataRow r in dp.DataView.Table.Rows)
-                {
-                    if (r.RowState == DataRowState.Added || r.RowState == DataRowState.Modified)
-                    {
-                        tp.IU_DT(r, IdMain);
-                    }
-                }
-
-            bsDiplom.EndEdit();
-            DataRowView dd = bsDiplom.Current as DataRowView;
-            if (dd != null)
-                foreach (DataRow r in dd.DataView.Table.Rows)
-                {
-                    if (r.RowState == DataRowState.Added || r.RowState == DataRowState.Modified)
-                    {
-                        tu.IU_DT(r, IdMain);
-                    }
-                }
-
-            bsMestoRaboti.EndEdit();
-            DataRowView dm = bsMestoRaboti.Current as DataRowView;
-            if (dm != null)
-                foreach (DataRow r in dm.DataView.Table.Rows)
-                {
-                    if (r.RowState == DataRowState.Added || r.RowState == DataRowState.Modified)
-                    {
-                        tr.IU_DT(r, IdMain);
-                    }
-                }
-
-            bsQarindosh.EndEdit();
-            DataRowView dq = bsQarindosh.Current as DataRowView;
-            if (dq != null)
-                foreach (DataRow r in dq.DataView.Table.Rows)
-                {
-                    if (r.RowState == DataRowState.Added || r.RowState == DataRowState.Modified)
-                    {
-                        tq.IU_DT(r, IdMain);
-                    }
-                }
-
-
-            bsDeputy.EndEdit();
-            DataRowView ddr = bsDeputy.Current as DataRowView;
-            if (ddr != null)
-                foreach (DataRow r in ddr.DataView.Table.Rows)
-                {
-                    if (r.RowState == DataRowState.Added || r.RowState == DataRowState.Modified)
-                    {
-                        td.IU_DT(r, IdMain);
-                    }
-                }
-
-
+            db.Complete();
             DialogResult = DialogResult.OK;
         }
 
@@ -376,44 +291,44 @@ namespace Kadr.Kadr
 
         private void gridViewMestoRaboti_RowDeleting(object sender, RowDeletingEventArgs e)
         {
-            var r = gridViewMestoRaboti.GetRow(e.RowHandle) as DataRowView;
-            tr.TBMESTORAB_DEL(r["ID"].ToInt());
+            var r = gridViewMestoRaboti.GetRow(e.RowHandle) as tbMestorab;
+            curMain.MestorabList.Remove(r);
         }
 
         private void gridViewQarindosh_RowDeleting(object sender, RowDeletingEventArgs e)
         {
-            var r = gridViewQarindosh.GetRow(e.RowHandle) as DataRowView;
-            tq.TBQARINDOSH_DEL(r["ID"].ToInt());
+            var r = gridViewQarindosh.GetRow(e.RowHandle) as tbQarindosh;
+            curMain.QarindoshList.Remove(r);
         }
 
         private void gridViewDiplom_RowDeleting(object sender, RowDeletingEventArgs e)
         {
-            var r = gridViewDiplom.GetRow(e.RowHandle) as DataRowView;
-            tu.TBUNIVER_DEL(r["ID"].ToInt());
+            var r = gridViewDiplom.GetRow(e.RowHandle) as tbUniver;
+            curMain.UniverList.Remove(r);
         }
 
         private void gridViewPovishKv_RowDeleting(object sender, RowDeletingEventArgs e)
         {
-            var r = gridViewPovishKv.GetRow(e.RowHandle) as DataRowView;
-            tp.TBPOVISHKVAL_DEL(r["ID"].ToInt());
+            var r = gridViewPovishKv.GetRow(e.RowHandle) as tbPovishkval;
+            curMain.PovishkvalList.Remove(r);
         }
 
         private void gridViewAtestaciya_RowDeleting(object sender, RowDeletingEventArgs e)
         {
-            var r = gridViewAtestaciya.GetRow(e.RowHandle) as DataRowView;
-            ta.TBATESTATIYA_DEL(r["ID"].ToInt());
+            var r = gridViewAtestaciya.GetRow(e.RowHandle) as tbAtestatiya;
+            curMain.AtestatiyaList.Remove(r);
         }
 
         private void gridViewGosNagradi_RowDeleting(object sender, RowDeletingEventArgs e)
         {
-            var r = gridViewGosNagradi.GetRow(e.RowHandle) as DataRowView;
-            tg.TBGOSNAGRADI_DEL(r["ID"].ToInt());
+            var r = gridViewGosNagradi.GetRow(e.RowHandle) as tbGosnagradi;
+            curMain.GosnagradiList.Remove(r);
         }
 
-        private void gridView1_RowDeleting(object sender, RowDeletingEventArgs e)
+        private void gridViewDeputy_RowDeleting(object sender, RowDeletingEventArgs e)
         {
-            var r = gridViewGosNagradi.GetRow(e.RowHandle) as DataRowView;
-            tg.TBGOSNAGRADI_DEL(r["ID"].ToInt());
+            var r = gridViewGosNagradi.GetRow(e.RowHandle) as tbDeputy;
+            curMain.DeputyList.Remove(r);
         }
 
         #endregion
@@ -450,12 +365,12 @@ namespace Kadr.Kadr
 
         private void OnEnterLat(object sender, EventArgs e)
         {
-            Vars.ln.LoadEnglishKeyboardLayout();
+            Vars.KeyboardLang.LoadEnglishKeyboardLayout();
         }
 
         private void OnEnterCir(object sender, EventArgs e)
         {
-            Vars.ln.LoadUzbekKeyboardLayout();
+            Vars.KeyboardLang.LoadUzbekKeyboardLayout();
         }
 
         private void cbObjLang_EditValueChanged(object sender, EventArgs e)
@@ -517,6 +432,8 @@ namespace Kadr.Kadr
         {
 
         }
+
+
     }
 
 }

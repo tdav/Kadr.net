@@ -20,5 +20,10 @@ namespace Kadr.Models
 
         [StringLength(400)]
         public string NazvanieRu { get; set; }
+
+        public tbGosnagradi()
+        {
+
+        }
     }
 }

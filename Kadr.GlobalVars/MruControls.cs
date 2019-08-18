@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Apteka.Utils.Serialization;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using Kadr.GlobalVars;
+using Kadr.Utils.Serializable;
 
 namespace Kadr.Data
 {
@@ -38,12 +40,13 @@ namespace Kadr.Data
 
     public static class MruControls
     {
+        private const string filename = "\\MruControlsVal.json";
         public static void LoadItems(MRUEdit c)
         {
             try
             {
-                if (!File.Exists(Vars.CurPath + "\\MruControlsVal.xml")) return;
-                var gs = CSerializer.ObjectXMLSerializer<GlobaleStorge>.Load(Vars.CurPath + "\\MruControlsVal.xml");
+                if (!File.Exists(Vars.CurPath + filename)) return;
+                var gs = CSerializer<GlobaleStorge>.Load(Vars.CurPath + filename);
                 var item = gs.StValues.FirstOrDefault(x => x.ControlName == c.Name);
                 if (item != null)
                 {
@@ -60,10 +63,10 @@ namespace Kadr.Data
         {
             try
             {
-                if (File.Exists(Vars.CurPath + "\\MruControlsVal.xml"))
+                if (File.Exists(Vars.CurPath + filename))
                 {
                     var gs =
-                        CSerializer.ObjectXMLSerializer<GlobaleStorge>.Load(Vars.CurPath + "\\MruControlsVal.xml");
+                        CSerializer<GlobaleStorge>.Load(Vars.CurPath + filename);
                     var item = gs.StValues.FirstOrDefault(x => x.ControlName == c.Name);
                     if (item != null)
                     {
@@ -71,16 +74,16 @@ namespace Kadr.Data
                     }
                     else
                     {
-                        gs.StValues.Add(new MruStorge {ControlName = c.Name, Values = c.Properties.Items.ToList()});
+                        gs.StValues.Add(new MruStorge { ControlName = c.Name, Values = c.Properties.Items.ToList() });
                     }
-                    CSerializer.ObjectXMLSerializer<GlobaleStorge>.Save(gs, Vars.CurPath + "\\MruControlsVal.xml");
+                    CSerializer<GlobaleStorge>.Save(gs, Vars.CurPath + filename);
                 }
                 else
                 {
                     var gs = new GlobaleStorge();
                     gs.StValues = new List<MruStorge>();
-                    gs.StValues.Add(new MruStorge {ControlName = c.Name, Values = c.Properties.Items.ToList()});
-                    CSerializer.ObjectXMLSerializer<GlobaleStorge>.Save(gs, Vars.CurPath + "\\MruControlsVal.xml");
+                    gs.StValues.Add(new MruStorge { ControlName = c.Name, Values = c.Properties.Items.ToList() });
+                    CSerializer<GlobaleStorge>.Save(gs, Vars.CurPath + filename);
                 }
             }
             catch (Exception)

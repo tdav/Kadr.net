@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kadr.Reports.Properties {
+namespace Asbt.Reports.Properties {
     using System;
     
     

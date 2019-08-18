@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Kadr.Models
@@ -263,5 +264,14 @@ namespace Kadr.Models
         public string PrichinaRu { get; set; }
 
         public string DpInfo { get; set; }
+        
+        public tbPhoto Photo { get; set; }
+        public IList<tbGosnagradi> GosnagradiList { get; set; }
+        public IList<tbAtestatiya> AtestatiyaList { get; set; }
+        public IList<tbPovishkval> PovishkvalList { get; set; }
+        public IList<tbMestorab> MestorabList { get; set; }
+        public IList<tbQarindosh> QarindoshList { get; set; }
+        public IList<tbDeputy> DeputyList { get; set; }
+        public IList<tbUniver> UniverList { get; set; }
     }
 }

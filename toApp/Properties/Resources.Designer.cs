@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace App.Properties {
+namespace texpApp.Properties {
     using System;
     
     

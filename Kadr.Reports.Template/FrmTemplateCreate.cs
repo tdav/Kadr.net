@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Kadr.Kadr.Template
+namespace Kadr.Template
 {
     public partial class FrmTemplateCreate : Form
     {

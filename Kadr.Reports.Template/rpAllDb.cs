@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using DevExpress.XtraReports.UI;
 
-namespace Kadr.Kadr.Template
+namespace Kadr.Template
 {
     public partial class rpAllDb : XtraReport
     {

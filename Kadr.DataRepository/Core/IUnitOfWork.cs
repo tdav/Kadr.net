@@ -15,7 +15,7 @@ namespace Kadr.Models.Core
         IAtestatiyaRepository Atestatiya { get; }
         IDbstructRepository Dbstruct { get; }
         IDeputyRepository Deputy { get; }
-        IFotoRepository Foto { get; }
+        IPhotoRepository Photo { get; }
         IGosnagradiRepository Gosnagradi { get; }
         IMainRepository Main { get; }
         IMestorabRepository Mestorab { get; }

@@ -24,7 +24,7 @@ namespace Kadr.Models.Core
         public IAtestatiyaRepository Atestatiya { get; }
         public IDbstructRepository Dbstruct { get; }
         public IDeputyRepository Deputy { get; }
-        public IFotoRepository Foto { get; }
+        public IPhotoRepository Photo { get; }
         public IGosnagradiRepository Gosnagradi { get; }
         public IMainRepository Main { get; }
         public IMestorabRepository Mestorab { get; }
@@ -49,7 +49,8 @@ namespace Kadr.Models.Core
             Atestatiya = new AtestatiyaRepository(_context);
             Dbstruct = new DbstructRepository(_context);
             Deputy = new DeputyRepository(_context);
-            Foto = new FotoRepository(_context);
+
+            Photo = new PhotoRepository(_context);
             Gosnagradi = new GosnagradiRepository(_context);
             Mestorab = new MestorabRepository(_context);
             Operator = new OperatorRepository(_context);

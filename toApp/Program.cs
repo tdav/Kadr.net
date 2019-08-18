@@ -15,17 +15,6 @@ namespace App
         [STAThread]
         private static void Main(string[] args)
         {
-            var cl = Environment.GetCommandLineArgs();
-            if (cl.Length > 1)
-                if (cl[1] == "debug")
-                    Vars.IsDebug = true;
-
-            if (Environment.OSVersion.Version > Version.Parse("6.1.0.0"))
-            {
-                WindowsFormsSettings.ForceDirectXPaint();
-                WindowsFormsSettings.EnableFormSkins();
-            }
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 

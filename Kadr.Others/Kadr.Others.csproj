@@ -242,33 +242,25 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Apteka.BarCodeScanner\Apteka.BarCodeScanner.csproj">
-      <Project>{4143d085-38cf-4640-bb05-2fdffaf94d76}</Project>
-      <Name>Apteka.BarCodeScanner</Name>
+    <ProjectReference Include="..\Kadr.DataRepository\Kadr.Database.csproj">
+      <Project>{f63616bb-5ef8-4de1-8fc8-5c055ab2c475}</Project>
+      <Name>Kadr.Database</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Apteka.DataModels\Apteka.DataModels.csproj">
-      <Project>{68a20bc7-c306-468b-9fc0-60ba4e45e8f7}</Project>
-      <Name>Apteka.DataModels</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Apteka.DataRepository\Apteka.DataRepository.csproj">
-      <Project>{7BCA535F-495D-4000-B9E0-85704EEB7925}</Project>
-      <Name>Apteka.DataRepository</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Apteka.GlobalVars\Apteka.GlobalVars.csproj">
-      <Project>{04C33DC2-6AD9-4D2E-A532-88D46F8921EF}</Project>
-      <Name>Apteka.GlobalVars</Name>
+    <ProjectReference Include="..\Kadr.GlobalVars\Kadr.GlobalVars.csproj">
+      <Project>{2577191d-5d24-4348-a31e-25a8fa471926}</Project>
+      <Name>Kadr.GlobalVars</Name>
     </ProjectReference>
     <ProjectReference Include="..\Kadr.LangResource\Kadr.LangResource.csproj">
       <Project>{af384ac4-7f18-4735-aea0-767e635f99e7}</Project>
-      <Name>Apteka.LangResource</Name>
+      <Name>Kadr.LangResource</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Kadr.UtilsUI\Apteka.UtilsUI.csproj">
+    <ProjectReference Include="..\Kadr.UtilsUI\Kadr.UtilsUI.csproj">
       <Project>{978f1125-e612-49bd-b64d-747f06cd8f5a}</Project>
-      <Name>Apteka.UtilsUI</Name>
+      <Name>Kadr.UtilsUI</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Apteka.Utils\Apteka.Utils.csproj">
+    <ProjectReference Include="..\Kadr.Utils\Kadr.Utils.csproj">
       <Project>{ccc72c2f-aaa4-4d9b-8479-4b458d54d9e2}</Project>
-      <Name>Apteka.Utils</Name>
+      <Name>Kadr.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

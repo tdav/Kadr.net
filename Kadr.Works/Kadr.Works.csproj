@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Asbt.TexPasport</RootNamespace>
     <AssemblyName>Asbt.Works</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Client\</OutputPath>
+    <OutputPath>..\App\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -103,7 +103,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Kadr.Utils">
-      <HintPath>..\dll\Kadr.Utils.dll</HintPath>
+      <HintPath>..\App\Kadr.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -188,7 +188,7 @@
       <Name>Kadr.LangResource</Name>
     </ProjectReference>
     <ProjectReference Include="..\Kadr.Reports.Template\Kard.Reports.Template.csproj">
-      <Project>{17d0f563-4358-49bd-9d29-830fc8e75c82}</Project>
+      <Project>{17D0F563-4358-49BD-9D29-830FC8E75C82}</Project>
       <Name>Kard.Reports.Template</Name>
     </ProjectReference>
     <ProjectReference Include="..\Kadr.UtilsUI\Kadr.UtilsUI.csproj">

@@ -1,4 +1,4 @@
-﻿namespace Kadr.Kadr.Template
+﻿namespace Kadr.Template
 {
     partial class FrmTemplateCreate
     {

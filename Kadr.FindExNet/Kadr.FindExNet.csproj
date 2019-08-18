@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Asbt.FindExNet</RootNamespace>
     <AssemblyName>Asbt.FindExNet</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Client\</OutputPath>
+    <OutputPath>..\App\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -109,10 +109,6 @@
     <ProjectReference Include="..\Kadr.GlobalVars\Kadr.GlobalVars.csproj">
       <Project>{2577191d-5d24-4348-a31e-25a8fa471926}</Project>
       <Name>Kadr.GlobalVars</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Kadr.PVOnlineWorks\Kard.PVOnlineWorks.csproj">
-      <Project>{f7c3b988-1190-4c6b-a6e1-870fc518fe1b}</Project>
-      <Name>Kard.PVOnlineWorks</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -30,13 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKadrUZ));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.Utils.ContextButton contextButton1 = new DevExpress.Utils.ContextButton();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.Utils.ContextButton contextButton2 = new DevExpress.Utils.ContextButton();
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.dxValidation = new Kadr.CommonControls.PValidation();
             this.dxError = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.tabTegishli = new DevExpress.XtraTab.XtraTabControl();
             this.tbJismoniy = new DevExpress.XtraTab.XtraTabPage();
@@ -129,7 +128,7 @@
             this.xtraTabPage10 = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bsDeputy = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridViewDeputy = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -275,7 +274,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
             this.groupControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabTegishli)).BeginInit();
             this.tabTegishli.SuspendLayout();
@@ -373,7 +371,7 @@
             this.xtraTabPage10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDeputy)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewDeputy)).BeginInit();
             this.xtraTabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grDiplom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDiplom)).BeginInit();
@@ -491,10 +489,10 @@
             this.groupControl6.Controls.Add(this.btnClose);
             this.groupControl6.Controls.Add(this.btnSave);
             this.groupControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl6.Location = new System.Drawing.Point(0, 717);
+            this.groupControl6.Location = new System.Drawing.Point(0, 735);
             this.groupControl6.Name = "groupControl6";
             this.groupControl6.ShowCaption = false;
-            this.groupControl6.Size = new System.Drawing.Size(1239, 48);
+            this.groupControl6.Size = new System.Drawing.Size(1257, 48);
             this.groupControl6.TabIndex = 8;
             this.groupControl6.Text = "АМТ";
             // 
@@ -543,7 +541,7 @@
             this.tabTegishli.Name = "tabTegishli";
             this.tabTegishli.PaintStyleName = "Skin";
             this.tabTegishli.SelectedTabPage = this.tbJismoniy;
-            this.tabTegishli.Size = new System.Drawing.Size(1239, 717);
+            this.tabTegishli.Size = new System.Drawing.Size(1257, 735);
             this.tabTegishli.TabIndex = 1;
             this.tabTegishli.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tbJismoniy,
@@ -557,7 +555,7 @@
             this.tbJismoniy.Controls.Add(this.xtraTabControl1);
             this.tbJismoniy.Controls.Add(this.plMain);
             this.tbJismoniy.Name = "tbJismoniy";
-            this.tbJismoniy.Size = new System.Drawing.Size(1233, 689);
+            this.tbJismoniy.Size = new System.Drawing.Size(1251, 707);
             this.tbJismoniy.Text = "    Карточка        ";
             // 
             // layoutControl4
@@ -573,7 +571,7 @@
             this.layoutControl4.Location = new System.Drawing.Point(0, 253);
             this.layoutControl4.Name = "layoutControl4";
             this.layoutControl4.Root = this.layoutControlGroup8;
-            this.layoutControl4.Size = new System.Drawing.Size(1233, 119);
+            this.layoutControl4.Size = new System.Drawing.Size(1251, 137);
             this.layoutControl4.TabIndex = 2;
             this.layoutControl4.Text = "Вилоят";
             // 
@@ -582,7 +580,7 @@
             this.cbImiyUnvoni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbImiyUnvoni.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "SCSTATUS", true));
             this.cbImiyUnvoni.EnterMoveNextControl = true;
-            this.cbImiyUnvoni.Location = new System.Drawing.Point(936, 54);
+            this.cbImiyUnvoni.Location = new System.Drawing.Point(948, 54);
             this.cbImiyUnvoni.Name = "cbImiyUnvoni";
             this.cbImiyUnvoni.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbImiyUnvoni.Properties.Appearance.Options.UseFont = true;
@@ -600,7 +598,7 @@
             this.cbImiyUnvoni.Properties.ShowHeader = false;
             this.cbImiyUnvoni.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbImiyUnvoni.Properties.ValueMember = "ID";
-            this.cbImiyUnvoni.Size = new System.Drawing.Size(285, 24);
+            this.cbImiyUnvoni.Size = new System.Drawing.Size(291, 24);
             this.cbImiyUnvoni.StyleController = this.layoutControl4;
             this.cbImiyUnvoni.TabIndex = 2;
             // 
@@ -609,7 +607,7 @@
             this.cbImiyDaraja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbImiyDaraja.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "SCDEGREE", true));
             this.cbImiyDaraja.EnterMoveNextControl = true;
-            this.cbImiyDaraja.Location = new System.Drawing.Point(510, 54);
+            this.cbImiyDaraja.Location = new System.Drawing.Point(516, 54);
             this.cbImiyDaraja.Name = "cbImiyDaraja";
             this.cbImiyDaraja.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbImiyDaraja.Properties.Appearance.Options.UseFont = true;
@@ -627,7 +625,7 @@
             this.cbImiyDaraja.Properties.ShowHeader = false;
             this.cbImiyDaraja.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbImiyDaraja.Properties.ValueMember = "ID";
-            this.cbImiyDaraja.Size = new System.Drawing.Size(338, 24);
+            this.cbImiyDaraja.Size = new System.Drawing.Size(344, 24);
             this.cbImiyDaraja.StyleController = this.layoutControl4;
             this.cbImiyDaraja.TabIndex = 2;
             // 
@@ -654,7 +652,7 @@
             this.cbMalumoti.Properties.ShowHeader = false;
             this.cbMalumoti.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbMalumoti.Properties.ValueMember = "ID";
-            this.cbMalumoti.Size = new System.Drawing.Size(326, 24);
+            this.cbMalumoti.Size = new System.Drawing.Size(332, 24);
             this.cbMalumoti.StyleController = this.layoutControl4;
             this.cbMalumoti.TabIndex = 2;
             // 
@@ -667,7 +665,7 @@
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.Location = new System.Drawing.Point(12, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1209, 14);
+            this.labelControl1.Size = new System.Drawing.Size(1227, 14);
             this.labelControl1.StyleController = this.layoutControl4;
             this.labelControl1.TabIndex = 7;
             this.labelControl1.Text = "Место рождения";
@@ -676,7 +674,7 @@
             // 
             this.cbMesRojObl.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "BIRTHREGION", true));
             this.cbMesRojObl.EnterMoveNextControl = true;
-            this.cbMesRojObl.Location = new System.Drawing.Point(510, 30);
+            this.cbMesRojObl.Location = new System.Drawing.Point(516, 30);
             this.cbMesRojObl.Name = "cbMesRojObl";
             this.cbMesRojObl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -688,7 +686,7 @@
             this.cbMesRojObl.Properties.ShowHeader = false;
             this.cbMesRojObl.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbMesRojObl.Properties.ValueMember = "ID";
-            this.cbMesRojObl.Size = new System.Drawing.Size(338, 20);
+            this.cbMesRojObl.Size = new System.Drawing.Size(344, 20);
             this.cbMesRojObl.StyleController = this.layoutControl4;
             this.cbMesRojObl.TabIndex = 6;
             // 
@@ -708,7 +706,7 @@
             this.cbMesRojCountry.Properties.ShowHeader = false;
             this.cbMesRojCountry.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbMesRojCountry.Properties.ValueMember = "ID";
-            this.cbMesRojCountry.Size = new System.Drawing.Size(326, 20);
+            this.cbMesRojCountry.Size = new System.Drawing.Size(332, 20);
             this.cbMesRojCountry.StyleController = this.layoutControl4;
             this.cbMesRojCountry.TabIndex = 5;
             // 
@@ -716,7 +714,7 @@
             // 
             this.cbMesRojRayon.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "BIRTHTOWN", true));
             this.cbMesRojRayon.EnterMoveNextControl = true;
-            this.cbMesRojRayon.Location = new System.Drawing.Point(936, 30);
+            this.cbMesRojRayon.Location = new System.Drawing.Point(948, 30);
             this.cbMesRojRayon.Name = "cbMesRojRayon";
             this.cbMesRojRayon.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -728,7 +726,7 @@
             this.cbMesRojRayon.Properties.ShowHeader = false;
             this.cbMesRojRayon.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbMesRojRayon.Properties.ValueMember = "ID";
-            this.cbMesRojRayon.Size = new System.Drawing.Size(285, 20);
+            this.cbMesRojRayon.Size = new System.Drawing.Size(291, 20);
             this.cbMesRojRayon.StyleController = this.layoutControl4;
             this.cbMesRojRayon.TabIndex = 4;
             // 
@@ -745,15 +743,15 @@
             this.layoutControlItem51,
             this.layoutControlItem52});
             this.layoutControlGroup8.Name = "layoutControlGroup8";
-            this.layoutControlGroup8.Size = new System.Drawing.Size(1233, 119);
+            this.layoutControlGroup8.Size = new System.Drawing.Size(1251, 137);
             this.layoutControlGroup8.TextVisible = false;
             // 
             // layoutControlItem21
             // 
             this.layoutControlItem21.Control = this.cbMesRojRayon;
-            this.layoutControlItem21.Location = new System.Drawing.Point(840, 18);
+            this.layoutControlItem21.Location = new System.Drawing.Point(852, 18);
             this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(373, 24);
+            this.layoutControlItem21.Size = new System.Drawing.Size(379, 24);
             this.layoutControlItem21.Text = "Район";
             this.layoutControlItem21.TextSize = new System.Drawing.Size(81, 13);
             // 
@@ -762,16 +760,16 @@
             this.layoutControlItem22.Control = this.cbMesRojCountry;
             this.layoutControlItem22.Location = new System.Drawing.Point(0, 18);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(414, 24);
+            this.layoutControlItem22.Size = new System.Drawing.Size(420, 24);
             this.layoutControlItem22.Text = "Государство";
             this.layoutControlItem22.TextSize = new System.Drawing.Size(81, 13);
             // 
             // layoutControlItem24
             // 
             this.layoutControlItem24.Control = this.cbMesRojObl;
-            this.layoutControlItem24.Location = new System.Drawing.Point(414, 18);
+            this.layoutControlItem24.Location = new System.Drawing.Point(420, 18);
             this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(426, 24);
+            this.layoutControlItem24.Size = new System.Drawing.Size(432, 24);
             this.layoutControlItem24.Text = "Область";
             this.layoutControlItem24.TextSize = new System.Drawing.Size(81, 13);
             // 
@@ -780,7 +778,7 @@
             this.layoutControlItem25.Control = this.labelControl1;
             this.layoutControlItem25.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(1213, 18);
+            this.layoutControlItem25.Size = new System.Drawing.Size(1231, 18);
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem25.TextVisible = false;
             // 
@@ -789,35 +787,35 @@
             this.layoutControlItem50.Control = this.cbMalumoti;
             this.layoutControlItem50.Location = new System.Drawing.Point(0, 42);
             this.layoutControlItem50.Name = "layoutControlItem50";
-            this.layoutControlItem50.Size = new System.Drawing.Size(414, 57);
+            this.layoutControlItem50.Size = new System.Drawing.Size(420, 75);
             this.layoutControlItem50.Text = "Образование";
             this.layoutControlItem50.TextSize = new System.Drawing.Size(81, 13);
             // 
             // layoutControlItem51
             // 
             this.layoutControlItem51.Control = this.cbImiyDaraja;
-            this.layoutControlItem51.Location = new System.Drawing.Point(414, 42);
+            this.layoutControlItem51.Location = new System.Drawing.Point(420, 42);
             this.layoutControlItem51.Name = "layoutControlItem51";
-            this.layoutControlItem51.Size = new System.Drawing.Size(426, 57);
+            this.layoutControlItem51.Size = new System.Drawing.Size(432, 75);
             this.layoutControlItem51.Text = "Учёная степень";
             this.layoutControlItem51.TextSize = new System.Drawing.Size(81, 13);
             // 
             // layoutControlItem52
             // 
             this.layoutControlItem52.Control = this.cbImiyUnvoni;
-            this.layoutControlItem52.Location = new System.Drawing.Point(840, 42);
+            this.layoutControlItem52.Location = new System.Drawing.Point(852, 42);
             this.layoutControlItem52.Name = "layoutControlItem52";
-            this.layoutControlItem52.Size = new System.Drawing.Size(373, 57);
+            this.layoutControlItem52.Size = new System.Drawing.Size(379, 75);
             this.layoutControlItem52.Text = "Учёное звание";
             this.layoutControlItem52.TextSize = new System.Drawing.Size(81, 13);
             // 
             // xtraTabControl1
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 372);
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 390);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage5;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1233, 317);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1251, 317);
             this.xtraTabControl1.TabIndex = 14;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage5,
@@ -832,7 +830,7 @@
             // 
             this.xtraTabPage5.Controls.Add(this.groupControl2);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(1227, 289);
+            this.xtraTabPage5.Size = new System.Drawing.Size(1245, 289);
             this.xtraTabPage5.Text = "Дополнительная  информация";
             // 
             // groupControl2
@@ -842,7 +840,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.ShowCaption = false;
-            this.groupControl2.Size = new System.Drawing.Size(1227, 289);
+            this.groupControl2.Size = new System.Drawing.Size(1245, 289);
             this.groupControl2.TabIndex = 12;
             // 
             // layoutControl1
@@ -870,7 +868,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(419, 543, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1223, 285);
+            this.layoutControl1.Size = new System.Drawing.Size(1241, 285);
             this.layoutControl1.TabIndex = 16;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -893,7 +891,7 @@
             this.cbVladetYazik.Properties.ShowButtons = false;
             this.cbVladetYazik.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbVladetYazik.Properties.ValueMember = "ID";
-            this.cbVladetYazik.Size = new System.Drawing.Size(587, 24);
+            this.cbVladetYazik.Size = new System.Drawing.Size(599, 24);
             this.cbVladetYazik.StyleController = this.layoutControl1;
             this.cbVladetYazik.TabIndex = 16;
             // 
@@ -902,7 +900,7 @@
             this.cbVZnanKomputer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbVZnanKomputer.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "ZANYA_KOMPUTERA", true));
             this.cbVZnanKomputer.EnterMoveNextControl = true;
-            this.cbVZnanKomputer.Location = new System.Drawing.Point(946, 96);
+            this.cbVZnanKomputer.Location = new System.Drawing.Point(958, 96);
             this.cbVZnanKomputer.Name = "cbVZnanKomputer";
             this.cbVZnanKomputer.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbVZnanKomputer.Properties.Appearance.Options.UseFont = true;
@@ -920,7 +918,7 @@
             this.cbVZnanKomputer.Properties.ShowHeader = false;
             this.cbVZnanKomputer.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbVZnanKomputer.Properties.ValueMember = "ID";
-            this.cbVZnanKomputer.Size = new System.Drawing.Size(265, 24);
+            this.cbVZnanKomputer.Size = new System.Drawing.Size(271, 24);
             this.cbVZnanKomputer.StyleController = this.layoutControl1;
             this.cbVZnanKomputer.TabIndex = 16;
             // 
@@ -929,13 +927,13 @@
             this.textEdit14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit14.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "PRICHINA", true));
             this.textEdit14.EnterMoveNextControl = true;
-            this.textEdit14.Location = new System.Drawing.Point(528, 141);
+            this.textEdit14.Location = new System.Drawing.Point(534, 141);
             this.textEdit14.Name = "textEdit14";
             this.textEdit14.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textEdit14.Properties.Appearance.Options.UseFont = true;
             this.textEdit14.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit14.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit14.Size = new System.Drawing.Size(683, 24);
+            this.textEdit14.Size = new System.Drawing.Size(695, 24);
             this.textEdit14.StyleController = this.layoutControl1;
             this.textEdit14.TabIndex = 16;
             // 
@@ -962,7 +960,7 @@
             this.cbV_DannoyOP.Properties.ShowHeader = false;
             this.cbV_DannoyOP.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbV_DannoyOP.Properties.ValueMember = "ID";
-            this.cbV_DannoyOP.Size = new System.Drawing.Size(192, 24);
+            this.cbV_DannoyOP.Size = new System.Drawing.Size(198, 24);
             this.cbV_DannoyOP.StyleController = this.layoutControl1;
             this.cbV_DannoyOP.TabIndex = 16;
             // 
@@ -971,14 +969,14 @@
             this.textEdit13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit13.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "NUMDIPLOM_PED_PERE", true));
             this.textEdit13.EnterMoveNextControl = true;
-            this.textEdit13.Location = new System.Drawing.Point(542, 237);
+            this.textEdit13.Location = new System.Drawing.Point(548, 237);
             this.textEdit13.Name = "textEdit13";
             this.textEdit13.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textEdit13.Properties.Appearance.Options.UseFont = true;
             this.textEdit13.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit13.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit13.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit13.Size = new System.Drawing.Size(258, 24);
+            this.textEdit13.Size = new System.Drawing.Size(264, 24);
             this.textEdit13.StyleController = this.layoutControl1;
             this.textEdit13.TabIndex = 16;
             // 
@@ -998,7 +996,7 @@
             this.edDProhojPP.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.edDProhojPP.Properties.Mask.EditMask = "00/00/0000";
             this.edDProhojPP.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
-            this.edDProhojPP.Size = new System.Drawing.Size(183, 24);
+            this.edDProhojPP.Size = new System.Drawing.Size(189, 24);
             this.edDProhojPP.StyleController = this.layoutControl1;
             this.edDProhojPP.TabIndex = 16;
             // 
@@ -1007,7 +1005,7 @@
             this.cbPedPerepodgotovka.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbPedPerepodgotovka.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "PED_PEREPOD", true));
             this.cbPedPerepodgotovka.EnterMoveNextControl = true;
-            this.cbPedPerepodgotovka.Location = new System.Drawing.Point(542, 209);
+            this.cbPedPerepodgotovka.Location = new System.Drawing.Point(548, 209);
             this.cbPedPerepodgotovka.Name = "cbPedPerepodgotovka";
             this.cbPedPerepodgotovka.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbPedPerepodgotovka.Properties.Appearance.Options.UseFont = true;
@@ -1025,7 +1023,7 @@
             this.cbPedPerepodgotovka.Properties.ShowHeader = false;
             this.cbPedPerepodgotovka.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbPedPerepodgotovka.Properties.ValueMember = "ID";
-            this.cbPedPerepodgotovka.Size = new System.Drawing.Size(258, 24);
+            this.cbPedPerepodgotovka.Size = new System.Drawing.Size(264, 24);
             this.cbPedPerepodgotovka.StyleController = this.layoutControl1;
             this.cbPedPerepodgotovka.TabIndex = 3;
             // 
@@ -1034,7 +1032,7 @@
             this.cbGdeProhodolPP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbGdeProhodolPP.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "PED_PEREPOD_GDE", true));
             this.cbGdeProhodolPP.EnterMoveNextControl = true;
-            this.cbGdeProhodolPP.Location = new System.Drawing.Point(970, 209);
+            this.cbGdeProhodolPP.Location = new System.Drawing.Point(982, 209);
             this.cbGdeProhodolPP.Name = "cbGdeProhodolPP";
             this.cbGdeProhodolPP.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbGdeProhodolPP.Properties.Appearance.Options.UseFont = true;
@@ -1052,7 +1050,7 @@
             this.cbGdeProhodolPP.Properties.ShowHeader = false;
             this.cbGdeProhodolPP.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbGdeProhodolPP.Properties.ValueMember = "ID";
-            this.cbGdeProhodolPP.Size = new System.Drawing.Size(229, 24);
+            this.cbGdeProhodolPP.Size = new System.Drawing.Size(235, 24);
             this.cbGdeProhodolPP.StyleController = this.layoutControl1;
             this.cbGdeProhodolPP.TabIndex = 3;
             // 
@@ -1079,7 +1077,7 @@
             this.cbPedObrazovanie.Properties.ShowHeader = false;
             this.cbPedObrazovanie.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbPedObrazovanie.Properties.ValueMember = "ID";
-            this.cbPedObrazovanie.Size = new System.Drawing.Size(183, 24);
+            this.cbPedObrazovanie.Size = new System.Drawing.Size(189, 24);
             this.cbPedObrazovanie.StyleController = this.layoutControl1;
             this.cbPedObrazovanie.TabIndex = 3;
             // 
@@ -1106,7 +1104,7 @@
             this.cbHarbiyUnvoni.Properties.ShowHeader = false;
             this.cbHarbiyUnvoni.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbHarbiyUnvoni.Properties.ValueMember = "ID";
-            this.cbHarbiyUnvoni.Size = new System.Drawing.Size(248, 24);
+            this.cbHarbiyUnvoni.Size = new System.Drawing.Size(254, 24);
             this.cbHarbiyUnvoni.StyleController = this.layoutControl1;
             this.cbHarbiyUnvoni.TabIndex = 1;
             // 
@@ -1115,14 +1113,14 @@
             this.textEdit10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit10.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "NUM_PRIKAZA", true));
             this.textEdit10.EnterMoveNextControl = true;
-            this.textEdit10.Location = new System.Drawing.Point(922, 12);
+            this.textEdit10.Location = new System.Drawing.Point(934, 12);
             this.textEdit10.Name = "textEdit10";
             this.textEdit10.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textEdit10.Properties.Appearance.Options.UseFont = true;
             this.textEdit10.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit10.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit10.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit10.Size = new System.Drawing.Size(289, 24);
+            this.textEdit10.Size = new System.Drawing.Size(295, 24);
             this.textEdit10.StyleController = this.layoutControl1;
             this.textEdit10.TabIndex = 4;
             // 
@@ -1131,7 +1129,7 @@
             this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "VSEGO_KOL_CHASOV", true));
             this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(922, 68);
+            this.textEdit1.Location = new System.Drawing.Point(934, 68);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
@@ -1139,7 +1137,7 @@
             this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.textEdit1.Size = new System.Drawing.Size(289, 24);
+            this.textEdit1.Size = new System.Drawing.Size(295, 24);
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 4;
             // 
@@ -1148,7 +1146,7 @@
             this.cbPo_Statu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbPo_Statu.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "PO_SHTATU", true));
             this.cbPo_Statu.EnterMoveNextControl = true;
-            this.cbPo_Statu.Location = new System.Drawing.Point(476, 40);
+            this.cbPo_Statu.Location = new System.Drawing.Point(482, 40);
             this.cbPo_Statu.Name = "cbPo_Statu";
             this.cbPo_Statu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbPo_Statu.Properties.Appearance.Options.UseFont = true;
@@ -1166,7 +1164,7 @@
             this.cbPo_Statu.Properties.ShowHeader = false;
             this.cbPo_Statu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbPo_Statu.Properties.ValueMember = "ID";
-            this.cbPo_Statu.Size = new System.Drawing.Size(336, 24);
+            this.cbPo_Statu.Size = new System.Drawing.Size(342, 24);
             this.cbPo_Statu.StyleController = this.layoutControl1;
             this.cbPo_Statu.TabIndex = 2;
             // 
@@ -1175,14 +1173,14 @@
             this.textEdit15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit15.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "DAN_DOLJ_STAJ", true));
             this.textEdit15.EnterMoveNextControl = true;
-            this.textEdit15.Location = new System.Drawing.Point(476, 68);
+            this.textEdit15.Location = new System.Drawing.Point(482, 68);
             this.textEdit15.Name = "textEdit15";
             this.textEdit15.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textEdit15.Properties.Appearance.Options.UseFont = true;
             this.textEdit15.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit15.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit15.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit15.Size = new System.Drawing.Size(336, 24);
+            this.textEdit15.Size = new System.Drawing.Size(342, 24);
             this.textEdit15.StyleController = this.layoutControl1;
             this.textEdit15.TabIndex = 4;
             // 
@@ -1191,14 +1189,14 @@
             this.textEdit12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit12.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "OBSHIY_STAJ", true));
             this.textEdit12.EnterMoveNextControl = true;
-            this.textEdit12.Location = new System.Drawing.Point(922, 40);
+            this.textEdit12.Location = new System.Drawing.Point(934, 40);
             this.textEdit12.Name = "textEdit12";
             this.textEdit12.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textEdit12.Properties.Appearance.Options.UseFont = true;
             this.textEdit12.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit12.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit12.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit12.Size = new System.Drawing.Size(289, 24);
+            this.textEdit12.Size = new System.Drawing.Size(295, 24);
             this.textEdit12.StyleController = this.layoutControl1;
             this.textEdit12.TabIndex = 4;
             // 
@@ -1214,7 +1212,7 @@
             this.textEdit17.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit17.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit17.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit17.Size = new System.Drawing.Size(248, 24);
+            this.textEdit17.Size = new System.Drawing.Size(254, 24);
             this.textEdit17.StyleController = this.layoutControl1;
             this.textEdit17.TabIndex = 5;
             // 
@@ -1223,7 +1221,7 @@
             this.cbDoljnost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbDoljnost.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "VID_DOLJNOST", true));
             this.cbDoljnost.EnterMoveNextControl = true;
-            this.cbDoljnost.Location = new System.Drawing.Point(476, 12);
+            this.cbDoljnost.Location = new System.Drawing.Point(482, 12);
             this.cbDoljnost.Name = "cbDoljnost";
             this.cbDoljnost.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbDoljnost.Properties.Appearance.Options.UseFont = true;
@@ -1240,7 +1238,7 @@
             this.cbDoljnost.Properties.ShowHeader = false;
             this.cbDoljnost.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbDoljnost.Properties.ValueMember = "ID";
-            this.cbDoljnost.Size = new System.Drawing.Size(336, 24);
+            this.cbDoljnost.Size = new System.Drawing.Size(342, 24);
             this.cbDoljnost.StyleController = this.layoutControl1;
             this.cbDoljnost.TabIndex = 5;
             // 
@@ -1260,7 +1258,7 @@
             this.edDDatePrikaza.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.edDDatePrikaza.Properties.Mask.EditMask = "00/00/0000";
             this.edDDatePrikaza.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
-            this.edDDatePrikaza.Size = new System.Drawing.Size(248, 24);
+            this.edDDatePrikaza.Size = new System.Drawing.Size(254, 24);
             this.edDDatePrikaza.StyleController = this.layoutControl1;
             this.edDDatePrikaza.TabIndex = 3;
             // 
@@ -1287,7 +1285,7 @@
             this.layoutControlItem15,
             this.layoutControlItem16});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1223, 285);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1241, 285);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -1298,7 +1296,7 @@
             this.layoutControlItem1.CustomizationFormText = "Ученый степень";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(358, 28);
+            this.layoutControlItem1.Size = new System.Drawing.Size(364, 28);
             this.layoutControlItem1.Text = "Военный звания";
             this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(101, 13);
@@ -1310,9 +1308,9 @@
             this.layoutControlItem2.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem2.Control = this.cbDoljnost;
             this.layoutControlItem2.CustomizationFormText = "Должности";
-            this.layoutControlItem2.Location = new System.Drawing.Point(358, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(364, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(446, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(452, 28);
             this.layoutControlItem2.Text = "Должность";
             this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(101, 13);
@@ -1324,9 +1322,9 @@
             this.layoutControlItem3.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem3.Control = this.textEdit10;
             this.layoutControlItem3.CustomizationFormText = "№ приказа";
-            this.layoutControlItem3.Location = new System.Drawing.Point(804, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(816, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(399, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(405, 28);
             this.layoutControlItem3.Text = "Приказа №";
             this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(101, 13);
@@ -1340,7 +1338,7 @@
             this.layoutControlItem4.CustomizationFormText = "Дата приказа";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(358, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(364, 28);
             this.layoutControlItem4.Text = "Дата приказа";
             this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(101, 13);
@@ -1352,9 +1350,9 @@
             this.layoutControlItem5.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem5.Control = this.cbPo_Statu;
             this.layoutControlItem5.CustomizationFormText = "По штату";
-            this.layoutControlItem5.Location = new System.Drawing.Point(358, 28);
+            this.layoutControlItem5.Location = new System.Drawing.Point(364, 28);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(446, 28);
+            this.layoutControlItem5.Size = new System.Drawing.Size(452, 28);
             this.layoutControlItem5.Text = "По штату";
             this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(101, 13);
@@ -1366,9 +1364,9 @@
             this.layoutControlItem6.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem6.Control = this.textEdit12;
             this.layoutControlItem6.CustomizationFormText = "Общий стаж";
-            this.layoutControlItem6.Location = new System.Drawing.Point(804, 28);
+            this.layoutControlItem6.Location = new System.Drawing.Point(816, 28);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(399, 28);
+            this.layoutControlItem6.Size = new System.Drawing.Size(405, 28);
             this.layoutControlItem6.Text = "Общий стаж";
             this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(101, 13);
@@ -1382,7 +1380,7 @@
             this.layoutControlItem7.CustomizationFormText = "Пед. стаж";
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(358, 28);
+            this.layoutControlItem7.Size = new System.Drawing.Size(364, 28);
             this.layoutControlItem7.Text = "Педагог. стаж";
             this.layoutControlItem7.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(101, 13);
@@ -1394,9 +1392,9 @@
             this.layoutControlItem8.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem8.Control = this.textEdit15;
             this.layoutControlItem8.CustomizationFormText = "Стаж по должности";
-            this.layoutControlItem8.Location = new System.Drawing.Point(358, 56);
+            this.layoutControlItem8.Location = new System.Drawing.Point(364, 56);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(446, 28);
+            this.layoutControlItem8.Size = new System.Drawing.Size(452, 28);
             this.layoutControlItem8.Text = "Стаж по должности";
             this.layoutControlItem8.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem8.TextSize = new System.Drawing.Size(101, 13);
@@ -1408,9 +1406,9 @@
             this.layoutControlItem9.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem9.Control = this.textEdit1;
             this.layoutControlItem9.CustomizationFormText = "Всего кол. часов";
-            this.layoutControlItem9.Location = new System.Drawing.Point(804, 56);
+            this.layoutControlItem9.Location = new System.Drawing.Point(816, 56);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(399, 28);
+            this.layoutControlItem9.Size = new System.Drawing.Size(405, 28);
             this.layoutControlItem9.Text = "Всего кол. часов";
             this.layoutControlItem9.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(101, 13);
@@ -1429,7 +1427,7 @@
             this.layoutControlItem13});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 167);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1203, 98);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1221, 98);
             this.layoutControlGroup2.Text = "Педагогические переподготовка  (ПП)";
             // 
             // layoutControlItem10
@@ -1440,7 +1438,7 @@
             this.layoutControlItem10.CustomizationFormText = "Педагогические образование";
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(343, 28);
+            this.layoutControlItem10.Size = new System.Drawing.Size(349, 28);
             this.layoutControlItem10.Text = "Педагогические образование";
             this.layoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem10.TextSize = new System.Drawing.Size(151, 13);
@@ -1452,9 +1450,9 @@
             this.layoutControlItem11.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem11.Control = this.cbPedPerepodgotovka;
             this.layoutControlItem11.CustomizationFormText = "Педагогические переподготовка";
-            this.layoutControlItem11.Location = new System.Drawing.Point(343, 0);
+            this.layoutControlItem11.Location = new System.Drawing.Point(349, 0);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(437, 28);
+            this.layoutControlItem11.Size = new System.Drawing.Size(443, 28);
             this.layoutControlItem11.Text = "Педагогические переподготовка";
             this.layoutControlItem11.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem11.TextSize = new System.Drawing.Size(170, 13);
@@ -1466,9 +1464,9 @@
             this.layoutControlItem12.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem12.Control = this.cbGdeProhodolPP;
             this.layoutControlItem12.CustomizationFormText = "Где проходил  переподготовка";
-            this.layoutControlItem12.Location = new System.Drawing.Point(780, 0);
+            this.layoutControlItem12.Location = new System.Drawing.Point(792, 0);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(399, 56);
+            this.layoutControlItem12.Size = new System.Drawing.Size(405, 56);
             this.layoutControlItem12.Text = "Где проходил  переподготовка";
             this.layoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem12.TextSize = new System.Drawing.Size(161, 13);
@@ -1480,9 +1478,9 @@
             this.layoutControlItem14.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem14.Control = this.textEdit13;
             this.layoutControlItem14.CustomizationFormText = "№ диплома ПП";
-            this.layoutControlItem14.Location = new System.Drawing.Point(343, 28);
+            this.layoutControlItem14.Location = new System.Drawing.Point(349, 28);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(437, 28);
+            this.layoutControlItem14.Size = new System.Drawing.Size(443, 28);
             this.layoutControlItem14.Text = "№ диплома ПП";
             this.layoutControlItem14.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem14.TextSize = new System.Drawing.Size(170, 20);
@@ -1496,7 +1494,7 @@
             this.layoutControlItem13.CustomizationFormText = "Дата прохождения ПП";
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(343, 28);
+            this.layoutControlItem13.Size = new System.Drawing.Size(349, 28);
             this.layoutControlItem13.Text = "Дата прохождения ПП";
             this.layoutControlItem13.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem13.TextSize = new System.Drawing.Size(151, 20);
@@ -1512,7 +1510,7 @@
             this.layoutControlItem18.CustomizationFormText = "В данной отчетом периоде";
             this.layoutControlItem18.Location = new System.Drawing.Point(0, 129);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(373, 28);
+            this.layoutControlItem18.Size = new System.Drawing.Size(379, 28);
             this.layoutControlItem18.Text = "В данной отчетом периоде";
             this.layoutControlItem18.TextSize = new System.Drawing.Size(174, 14);
             // 
@@ -1524,9 +1522,9 @@
             this.layoutControlItem19.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem19.Control = this.textEdit14;
             this.layoutControlItem19.CustomizationFormText = "Причина";
-            this.layoutControlItem19.Location = new System.Drawing.Point(373, 129);
+            this.layoutControlItem19.Location = new System.Drawing.Point(379, 129);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(830, 28);
+            this.layoutControlItem19.Size = new System.Drawing.Size(842, 28);
             this.layoutControlItem19.Text = "Ишдан бўшаш сабаби";
             this.layoutControlItem19.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem19.TextSize = new System.Drawing.Size(138, 14);
@@ -1538,7 +1536,7 @@
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 112);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(1203, 17);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(1221, 17);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
@@ -1547,7 +1545,7 @@
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 157);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(1203, 10);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(1221, 10);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem15
@@ -1557,7 +1555,7 @@
             this.layoutControlItem15.Control = this.cbVladetYazik;
             this.layoutControlItem15.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(804, 28);
+            this.layoutControlItem15.Size = new System.Drawing.Size(816, 28);
             this.layoutControlItem15.Text = " Какими иностранными языками владеет";
             this.layoutControlItem15.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem15.TextSize = new System.Drawing.Size(208, 13);
@@ -1568,9 +1566,9 @@
             this.layoutControlItem16.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layoutControlItem16.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem16.Control = this.cbVZnanKomputer;
-            this.layoutControlItem16.Location = new System.Drawing.Point(804, 84);
+            this.layoutControlItem16.Location = new System.Drawing.Point(816, 84);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(399, 28);
+            this.layoutControlItem16.Size = new System.Drawing.Size(405, 28);
             this.layoutControlItem16.Text = "Знание компьютер. тех.";
             this.layoutControlItem16.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem16.TextSize = new System.Drawing.Size(125, 13);
@@ -1580,7 +1578,7 @@
             // 
             this.xtraTabPage6.Controls.Add(this.layoutControl2);
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(1221, 289);
+            this.xtraTabPage6.Size = new System.Drawing.Size(1239, 289);
             this.xtraTabPage6.Text = "Предметы преподавания";
             // 
             // layoutControl2
@@ -1599,16 +1597,16 @@
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup3;
-            this.layoutControl2.Size = new System.Drawing.Size(1221, 289);
+            this.layoutControl2.Size = new System.Drawing.Size(1239, 289);
             this.layoutControl2.TabIndex = 20;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // textEdit5
             // 
             this.textEdit5.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "KOL_CHAS_PRED_DP_PREDMET", true));
-            this.textEdit5.Location = new System.Drawing.Point(871, 154);
+            this.textEdit5.Location = new System.Drawing.Point(880, 154);
             this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(326, 20);
+            this.textEdit5.Size = new System.Drawing.Size(335, 20);
             this.textEdit5.StyleController = this.layoutControl2;
             this.textEdit5.TabIndex = 18;
             // 
@@ -1617,7 +1615,7 @@
             this.textEdit4.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "KOL_CHAS_PRED_OS_PREDMET", true));
             this.textEdit4.Location = new System.Drawing.Point(272, 154);
             this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(323, 20);
+            this.textEdit4.Size = new System.Drawing.Size(332, 20);
             this.textEdit4.StyleController = this.layoutControl2;
             this.textEdit4.TabIndex = 17;
             // 
@@ -1644,7 +1642,7 @@
             this.cbPP_Os_Spec.Properties.ShowHeader = false;
             this.cbPP_Os_Spec.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbPP_Os_Spec.Properties.ValueMember = "ID";
-            this.cbPP_Os_Spec.Size = new System.Drawing.Size(323, 24);
+            this.cbPP_Os_Spec.Size = new System.Drawing.Size(332, 24);
             this.cbPP_Os_Spec.StyleController = this.layoutControl2;
             this.cbPP_Os_Spec.TabIndex = 2;
             // 
@@ -1671,7 +1669,7 @@
             this.cbPP_Os_Yazik.Properties.ShowHeader = false;
             this.cbPP_Os_Yazik.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbPP_Os_Yazik.Properties.ValueMember = "ID";
-            this.cbPP_Os_Yazik.Size = new System.Drawing.Size(323, 24);
+            this.cbPP_Os_Yazik.Size = new System.Drawing.Size(332, 24);
             this.cbPP_Os_Yazik.StyleController = this.layoutControl2;
             this.cbPP_Os_Yazik.TabIndex = 2;
             // 
@@ -1698,7 +1696,7 @@
             this.cbPP_Os.Properties.ShowHeader = false;
             this.cbPP_Os.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbPP_Os.Properties.ValueMember = "ID";
-            this.cbPP_Os.Size = new System.Drawing.Size(323, 24);
+            this.cbPP_Os.Size = new System.Drawing.Size(332, 24);
             this.cbPP_Os.StyleController = this.layoutControl2;
             this.cbPP_Os.TabIndex = 2;
             // 
@@ -1725,7 +1723,7 @@
             this.cbVidPP_OsPredmet.Properties.ShowHeader = false;
             this.cbVidPP_OsPredmet.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbVidPP_OsPredmet.Properties.ValueMember = "ID";
-            this.cbVidPP_OsPredmet.Size = new System.Drawing.Size(323, 24);
+            this.cbVidPP_OsPredmet.Size = new System.Drawing.Size(332, 24);
             this.cbVidPP_OsPredmet.StyleController = this.layoutControl2;
             this.cbVidPP_OsPredmet.TabIndex = 16;
             // 
@@ -1734,7 +1732,7 @@
             this.cbPP_Dp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbPP_Dp.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "NAIM_PRED_DP_PREDMET", true));
             this.cbPP_Dp.EnterMoveNextControl = true;
-            this.cbPP_Dp.Location = new System.Drawing.Point(871, 70);
+            this.cbPP_Dp.Location = new System.Drawing.Point(880, 70);
             this.cbPP_Dp.Name = "cbPP_Dp";
             this.cbPP_Dp.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbPP_Dp.Properties.Appearance.Options.UseFont = true;
@@ -1752,7 +1750,7 @@
             this.cbPP_Dp.Properties.ShowHeader = false;
             this.cbPP_Dp.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbPP_Dp.Properties.ValueMember = "ID";
-            this.cbPP_Dp.Size = new System.Drawing.Size(326, 24);
+            this.cbPP_Dp.Size = new System.Drawing.Size(335, 24);
             this.cbPP_Dp.StyleController = this.layoutControl2;
             this.cbPP_Dp.TabIndex = 2;
             // 
@@ -1761,7 +1759,7 @@
             this.cbPP_Dp_Yazik.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbPP_Dp_Yazik.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "YAZIK_DP_PREPODAET", true));
             this.cbPP_Dp_Yazik.EnterMoveNextControl = true;
-            this.cbPP_Dp_Yazik.Location = new System.Drawing.Point(871, 98);
+            this.cbPP_Dp_Yazik.Location = new System.Drawing.Point(880, 98);
             this.cbPP_Dp_Yazik.Name = "cbPP_Dp_Yazik";
             this.cbPP_Dp_Yazik.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbPP_Dp_Yazik.Properties.Appearance.Options.UseFont = true;
@@ -1779,7 +1777,7 @@
             this.cbPP_Dp_Yazik.Properties.ShowHeader = false;
             this.cbPP_Dp_Yazik.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbPP_Dp_Yazik.Properties.ValueMember = "ID";
-            this.cbPP_Dp_Yazik.Size = new System.Drawing.Size(326, 24);
+            this.cbPP_Dp_Yazik.Size = new System.Drawing.Size(335, 24);
             this.cbPP_Dp_Yazik.StyleController = this.layoutControl2;
             this.cbPP_Dp_Yazik.TabIndex = 2;
             // 
@@ -1788,7 +1786,7 @@
             this.cbPP_Dp_Spec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbPP_Dp_Spec.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "SPEC_DP_PREDMET", true));
             this.cbPP_Dp_Spec.EnterMoveNextControl = true;
-            this.cbPP_Dp_Spec.Location = new System.Drawing.Point(871, 126);
+            this.cbPP_Dp_Spec.Location = new System.Drawing.Point(880, 126);
             this.cbPP_Dp_Spec.Name = "cbPP_Dp_Spec";
             this.cbPP_Dp_Spec.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbPP_Dp_Spec.Properties.Appearance.Options.UseFont = true;
@@ -1806,7 +1804,7 @@
             this.cbPP_Dp_Spec.Properties.ShowHeader = false;
             this.cbPP_Dp_Spec.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbPP_Dp_Spec.Properties.ValueMember = "ID";
-            this.cbPP_Dp_Spec.Size = new System.Drawing.Size(326, 24);
+            this.cbPP_Dp_Spec.Size = new System.Drawing.Size(335, 24);
             this.cbPP_Dp_Spec.StyleController = this.layoutControl2;
             this.cbPP_Dp_Spec.TabIndex = 16;
             // 
@@ -1815,7 +1813,7 @@
             this.cbVidPP_DpPredmet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbVidPP_DpPredmet.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "VID_PRED_DP_PREDMET", true));
             this.cbVidPP_DpPredmet.EnterMoveNextControl = true;
-            this.cbVidPP_DpPredmet.Location = new System.Drawing.Point(871, 42);
+            this.cbVidPP_DpPredmet.Location = new System.Drawing.Point(880, 42);
             this.cbVidPP_DpPredmet.Name = "cbVidPP_DpPredmet";
             this.cbVidPP_DpPredmet.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbVidPP_DpPredmet.Properties.Appearance.Options.UseFont = true;
@@ -1833,7 +1831,7 @@
             this.cbVidPP_DpPredmet.Properties.ShowHeader = false;
             this.cbVidPP_DpPredmet.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbVidPP_DpPredmet.Properties.ValueMember = "ID";
-            this.cbVidPP_DpPredmet.Size = new System.Drawing.Size(326, 24);
+            this.cbVidPP_DpPredmet.Size = new System.Drawing.Size(335, 24);
             this.cbVidPP_DpPredmet.StyleController = this.layoutControl2;
             this.cbVidPP_DpPredmet.TabIndex = 16;
             // 
@@ -1846,7 +1844,7 @@
             this.layoutControlGroup4,
             this.layoutControlGroup5});
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1221, 289);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1239, 289);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlGroup4
@@ -1862,7 +1860,7 @@
             this.layoutControlItem56});
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(599, 269);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(608, 269);
             this.layoutControlGroup4.Text = "Основного предмет";
             // 
             // layoutControlItem17
@@ -1872,7 +1870,7 @@
             this.layoutControlItem17.Control = this.cbVidPP_OsPredmet;
             this.layoutControlItem17.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(575, 28);
+            this.layoutControlItem17.Size = new System.Drawing.Size(584, 28);
             this.layoutControlItem17.Text = "Вид преподоваемого дополнительного предмет";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(245, 13);
             // 
@@ -1883,7 +1881,7 @@
             this.layoutControlItem53.Control = this.cbPP_Os;
             this.layoutControlItem53.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem53.Name = "layoutControlItem53";
-            this.layoutControlItem53.Size = new System.Drawing.Size(575, 28);
+            this.layoutControlItem53.Size = new System.Drawing.Size(584, 28);
             this.layoutControlItem53.Text = "Преподоваемого дополнительного предмет";
             this.layoutControlItem53.TextSize = new System.Drawing.Size(245, 13);
             // 
@@ -1894,7 +1892,7 @@
             this.layoutControlItem54.Control = this.cbPP_Os_Yazik;
             this.layoutControlItem54.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem54.Name = "layoutControlItem54";
-            this.layoutControlItem54.Size = new System.Drawing.Size(575, 28);
+            this.layoutControlItem54.Size = new System.Drawing.Size(584, 28);
             this.layoutControlItem54.Text = "Язык перподает";
             this.layoutControlItem54.TextSize = new System.Drawing.Size(245, 13);
             // 
@@ -1905,7 +1903,7 @@
             this.layoutControlItem55.Control = this.cbPP_Os_Spec;
             this.layoutControlItem55.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem55.Name = "layoutControlItem55";
-            this.layoutControlItem55.Size = new System.Drawing.Size(575, 28);
+            this.layoutControlItem55.Size = new System.Drawing.Size(584, 28);
             this.layoutControlItem55.Text = "Специалист по дпнному предмет";
             this.layoutControlItem55.TextSize = new System.Drawing.Size(245, 13);
             // 
@@ -1916,7 +1914,7 @@
             this.layoutControlItem56.Control = this.textEdit4;
             this.layoutControlItem56.Location = new System.Drawing.Point(0, 112);
             this.layoutControlItem56.Name = "layoutControlItem56";
-            this.layoutControlItem56.Size = new System.Drawing.Size(575, 115);
+            this.layoutControlItem56.Size = new System.Drawing.Size(584, 115);
             this.layoutControlItem56.Text = "Количество часов";
             this.layoutControlItem56.TextSize = new System.Drawing.Size(245, 13);
             // 
@@ -1931,9 +1929,9 @@
             this.layoutControlItem29,
             this.layoutControlItem20,
             this.layoutControlItem57});
-            this.layoutControlGroup5.Location = new System.Drawing.Point(599, 0);
+            this.layoutControlGroup5.Location = new System.Drawing.Point(608, 0);
             this.layoutControlGroup5.Name = "layoutControlGroup5";
-            this.layoutControlGroup5.Size = new System.Drawing.Size(602, 269);
+            this.layoutControlGroup5.Size = new System.Drawing.Size(611, 269);
             this.layoutControlGroup5.Text = "Дополнительного предмет";
             // 
             // layoutControlItem26
@@ -1944,7 +1942,7 @@
             this.layoutControlItem26.CustomizationFormText = "Вид преподоваемого дополнительного предмет";
             this.layoutControlItem26.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(578, 28);
+            this.layoutControlItem26.Size = new System.Drawing.Size(587, 28);
             this.layoutControlItem26.Text = "Вид преподоваемого дополнительного предмет";
             this.layoutControlItem26.TextSize = new System.Drawing.Size(245, 13);
             // 
@@ -1956,7 +1954,7 @@
             this.layoutControlItem27.CustomizationFormText = "Преподоваемого дополнительного предмет";
             this.layoutControlItem27.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(578, 28);
+            this.layoutControlItem27.Size = new System.Drawing.Size(587, 28);
             this.layoutControlItem27.Text = "Преподоваемого дополнительного предмет";
             this.layoutControlItem27.TextSize = new System.Drawing.Size(245, 13);
             // 
@@ -1968,7 +1966,7 @@
             this.layoutControlItem29.CustomizationFormText = "Язык перподает";
             this.layoutControlItem29.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem29.Name = "layoutControlItem29";
-            this.layoutControlItem29.Size = new System.Drawing.Size(578, 28);
+            this.layoutControlItem29.Size = new System.Drawing.Size(587, 28);
             this.layoutControlItem29.Text = "Язык перподает";
             this.layoutControlItem29.TextSize = new System.Drawing.Size(245, 13);
             // 
@@ -1980,7 +1978,7 @@
             this.layoutControlItem20.CustomizationFormText = "Специалист по дпнному предмет";
             this.layoutControlItem20.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(578, 28);
+            this.layoutControlItem20.Size = new System.Drawing.Size(587, 28);
             this.layoutControlItem20.Text = "Специалист по дпнному предмет";
             this.layoutControlItem20.TextSize = new System.Drawing.Size(245, 13);
             // 
@@ -1991,7 +1989,7 @@
             this.layoutControlItem57.Control = this.textEdit5;
             this.layoutControlItem57.Location = new System.Drawing.Point(0, 112);
             this.layoutControlItem57.Name = "layoutControlItem57";
-            this.layoutControlItem57.Size = new System.Drawing.Size(578, 115);
+            this.layoutControlItem57.Size = new System.Drawing.Size(587, 115);
             this.layoutControlItem57.Text = "Количество часов";
             this.layoutControlItem57.TextSize = new System.Drawing.Size(245, 13);
             // 
@@ -1999,7 +1997,7 @@
             // 
             this.xtraTabPage10.Controls.Add(this.gridControl1);
             this.xtraTabPage10.Name = "xtraTabPage10";
-            this.xtraTabPage10.Size = new System.Drawing.Size(1221, 289);
+            this.xtraTabPage10.Size = new System.Drawing.Size(1245, 289);
             this.xtraTabPage10.Text = "Партийность";
             // 
             // gridControl1
@@ -2008,28 +2006,28 @@
             this.gridControl1.DataSource = this.bsDeputy;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.MainView = this.gridViewDeputy;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1221, 289);
+            this.gridControl1.Size = new System.Drawing.Size(1245, 289);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridViewDeputy});
             // 
-            // gridView1
+            // gridViewDeputy
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewDeputy.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn33,
             this.gridColumn34,
             this.gridColumn35});
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.NewItemRowText = "Янги маълумот киритиш учун";
-            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.RowDeleting += new DevExpress.Data.RowDeletingEventHandler(this.gridView1_RowDeleting);
+            this.gridViewDeputy.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridViewDeputy.GridControl = this.gridControl1;
+            this.gridViewDeputy.Name = "gridViewDeputy";
+            this.gridViewDeputy.NewItemRowText = "Янги маълумот киритиш учун";
+            this.gridViewDeputy.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridViewDeputy.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.gridViewDeputy.OptionsView.ShowGroupPanel = false;
+            this.gridViewDeputy.RowDeleting += new DevExpress.Data.RowDeletingEventHandler(this.gridViewDeputy_RowDeleting);
             // 
             // gridColumn33
             // 
@@ -2062,7 +2060,7 @@
             // 
             this.xtraTabPage7.Controls.Add(this.grDiplom);
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(1221, 289);
+            this.xtraTabPage7.Size = new System.Drawing.Size(1245, 289);
             this.xtraTabPage7.Text = "Дипломы, сертификаты";
             // 
             // grDiplom
@@ -2079,7 +2077,7 @@
             this.cbObrazovatelUcherejneniya,
             this.cbYesNo,
             this.cbVidObucheniya});
-            this.grDiplom.Size = new System.Drawing.Size(1221, 289);
+            this.grDiplom.Size = new System.Drawing.Size(1245, 289);
             this.grDiplom.TabIndex = 2;
             this.grDiplom.UseEmbeddedNavigator = true;
             this.grDiplom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2270,7 +2268,7 @@
             // 
             this.xtraTabPage4.Controls.Add(this.grPovishKv);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(1221, 289);
+            this.xtraTabPage4.Size = new System.Drawing.Size(1239, 289);
             this.xtraTabPage4.Text = "Повышение квалификации  (ПК)";
             // 
             // grPovishKv
@@ -2278,16 +2276,16 @@
             this.grPovishKv.Cursor = System.Windows.Forms.Cursors.Default;
             this.grPovishKv.DataSource = this.bsPovisheniyaKVL;
             this.grPovishKv.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.grPovishKv.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.grPovishKv.Location = new System.Drawing.Point(0, 0);
             this.grPovishKv.MainView = this.gridViewPovishKv;
             this.grPovishKv.Name = "grPovishKv";
             this.grPovishKv.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cbMestoProhojPK,
             this.cbPedObrazovaniePK});
-            this.grPovishKv.Size = new System.Drawing.Size(1221, 289);
+            this.grPovishKv.Size = new System.Drawing.Size(1239, 289);
             this.grPovishKv.TabIndex = 1;
             this.grPovishKv.UseEmbeddedNavigator = true;
             this.grPovishKv.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2402,7 +2400,7 @@
             // 
             this.xtraTabPage8.Controls.Add(this.grAtestaciya);
             this.xtraTabPage8.Name = "xtraTabPage8";
-            this.xtraTabPage8.Size = new System.Drawing.Size(1221, 289);
+            this.xtraTabPage8.Size = new System.Drawing.Size(1239, 289);
             this.xtraTabPage8.Text = "Атестатиция";
             // 
             // grAtestaciya
@@ -2417,7 +2415,7 @@
             this.cbAtestatRes,
             this.cbDoljnostPosAtestat,
             this.cbPrivlichenKAtestat});
-            this.grAtestaciya.Size = new System.Drawing.Size(1221, 289);
+            this.grAtestaciya.Size = new System.Drawing.Size(1239, 289);
             this.grAtestaciya.TabIndex = 1;
             this.grAtestaciya.UseEmbeddedNavigator = true;
             this.grAtestaciya.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2538,7 +2536,7 @@
             // 
             this.xtraTabPage9.Controls.Add(this.grGosNagradi);
             this.xtraTabPage9.Name = "xtraTabPage9";
-            this.xtraTabPage9.Size = new System.Drawing.Size(1221, 289);
+            this.xtraTabPage9.Size = new System.Drawing.Size(1239, 289);
             this.xtraTabPage9.Text = "Государственные награды";
             // 
             // grGosNagradi
@@ -2551,7 +2549,7 @@
             this.grGosNagradi.Name = "grGosNagradi";
             this.grGosNagradi.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cbGosNagrada});
-            this.grGosNagradi.Size = new System.Drawing.Size(1221, 289);
+            this.grGosNagradi.Size = new System.Drawing.Size(1239, 289);
             this.grGosNagradi.TabIndex = 2;
             this.grGosNagradi.UseEmbeddedNavigator = true;
             this.grGosNagradi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2612,7 +2610,7 @@
             this.plMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.plMain.Location = new System.Drawing.Point(0, 0);
             this.plMain.Name = "plMain";
-            this.plMain.Size = new System.Drawing.Size(1233, 253);
+            this.plMain.Size = new System.Drawing.Size(1251, 253);
             this.plMain.TabIndex = 11;
             // 
             // layoutControl3
@@ -2645,7 +2643,7 @@
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(200, 175, 250, 350);
             this.layoutControl3.Root = this.layoutControlGroup6;
-            this.layoutControl3.Size = new System.Drawing.Size(1027, 249);
+            this.layoutControl3.Size = new System.Drawing.Size(1045, 249);
             this.layoutControl3.TabIndex = 1;
             this.layoutControl3.Text = "layoutControl3";
             // 
@@ -2654,7 +2652,7 @@
             this.cbMesJitRayon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbMesJitRayon.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "RAYON_PROPISKA", true));
             this.cbMesJitRayon.EnterMoveNextControl = true;
-            this.cbMesJitRayon.Location = new System.Drawing.Point(765, 178);
+            this.cbMesJitRayon.Location = new System.Drawing.Point(777, 178);
             this.cbMesJitRayon.Name = "cbMesJitRayon";
             this.cbMesJitRayon.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbMesJitRayon.Properties.Appearance.Options.UseFont = true;
@@ -2672,7 +2670,7 @@
             this.cbMesJitRayon.Properties.ShowHeader = false;
             this.cbMesJitRayon.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbMesJitRayon.Properties.ValueMember = "ID";
-            this.cbMesJitRayon.Size = new System.Drawing.Size(250, 24);
+            this.cbMesJitRayon.Size = new System.Drawing.Size(256, 24);
             this.cbMesJitRayon.StyleController = this.layoutControl3;
             this.cbMesJitRayon.TabIndex = 3;
             // 
@@ -2681,14 +2679,14 @@
             this.textEdit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "HONADON_PROPISKA", true));
             this.textEdit2.EnterMoveNextControl = true;
-            this.textEdit2.Location = new System.Drawing.Point(931, 206);
+            this.textEdit2.Location = new System.Drawing.Point(946, 206);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textEdit2.Properties.Appearance.Options.UseFont = true;
             this.textEdit2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit2.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit2.Size = new System.Drawing.Size(84, 24);
+            this.textEdit2.Size = new System.Drawing.Size(87, 24);
             this.textEdit2.StyleController = this.layoutControl3;
             this.textEdit2.TabIndex = 7;
             // 
@@ -2697,14 +2695,14 @@
             this.textEdit8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit8.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "UY_PROPISKA", true));
             this.textEdit8.EnterMoveNextControl = true;
-            this.textEdit8.Location = new System.Drawing.Point(765, 206);
+            this.textEdit8.Location = new System.Drawing.Point(777, 206);
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textEdit8.Properties.Appearance.Options.UseFont = true;
             this.textEdit8.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit8.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit8.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit8.Size = new System.Drawing.Size(107, 24);
+            this.textEdit8.Size = new System.Drawing.Size(110, 24);
             this.textEdit8.StyleController = this.layoutControl3;
             this.textEdit8.TabIndex = 6;
             // 
@@ -2720,7 +2718,7 @@
             this.textEdit3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit3.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit3.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit3.Size = new System.Drawing.Size(221, 24);
+            this.textEdit3.Size = new System.Drawing.Size(227, 24);
             this.textEdit3.StyleController = this.layoutControl3;
             this.textEdit3.TabIndex = 4;
             // 
@@ -2747,7 +2745,7 @@
             this.cbMesJitCountry.Properties.ShowHeader = false;
             this.cbMesJitCountry.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbMesJitCountry.Properties.ValueMember = "ID";
-            this.cbMesJitCountry.Size = new System.Drawing.Size(221, 24);
+            this.cbMesJitCountry.Size = new System.Drawing.Size(227, 24);
             this.cbMesJitCountry.StyleController = this.layoutControl3;
             this.cbMesJitCountry.TabIndex = 1;
             this.cbMesJitCountry.EditValueChanged += new System.EventHandler(this.cbMesJitCountry_EditValueChanged);
@@ -2757,14 +2755,14 @@
             this.textEdit9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit9.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "KUCHA_PROPISKA", true));
             this.textEdit9.EnterMoveNextControl = true;
-            this.textEdit9.Location = new System.Drawing.Point(407, 206);
+            this.textEdit9.Location = new System.Drawing.Point(413, 206);
             this.textEdit9.Name = "textEdit9";
             this.textEdit9.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textEdit9.Properties.Appearance.Options.UseFont = true;
             this.textEdit9.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit9.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit9.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit9.Size = new System.Drawing.Size(269, 24);
+            this.textEdit9.Size = new System.Drawing.Size(275, 24);
             this.textEdit9.StyleController = this.layoutControl3;
             this.textEdit9.TabIndex = 5;
             // 
@@ -2773,7 +2771,7 @@
             this.cbSemeyniyPolojeniya.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbSemeyniyPolojeniya.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "MARRIED", true));
             this.cbSemeyniyPolojeniya.EnterMoveNextControl = true;
-            this.cbSemeyniyPolojeniya.Location = new System.Drawing.Point(860, 132);
+            this.cbSemeyniyPolojeniya.Location = new System.Drawing.Point(872, 132);
             this.cbSemeyniyPolojeniya.Name = "cbSemeyniyPolojeniya";
             this.cbSemeyniyPolojeniya.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbSemeyniyPolojeniya.Properties.Appearance.Options.UseFont = true;
@@ -2791,7 +2789,7 @@
             this.cbSemeyniyPolojeniya.Properties.ShowHeader = false;
             this.cbSemeyniyPolojeniya.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbSemeyniyPolojeniya.Properties.ValueMember = "ID";
-            this.cbSemeyniyPolojeniya.Size = new System.Drawing.Size(155, 24);
+            this.cbSemeyniyPolojeniya.Size = new System.Drawing.Size(161, 24);
             this.cbSemeyniyPolojeniya.StyleController = this.layoutControl3;
             this.cbSemeyniyPolojeniya.TabIndex = 33;
             // 
@@ -2800,7 +2798,7 @@
             this.cbNat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbNat.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "NATIONALITY", true));
             this.cbNat.EnterMoveNextControl = true;
-            this.cbNat.Location = new System.Drawing.Point(559, 132);
+            this.cbNat.Location = new System.Drawing.Point(565, 132);
             this.cbNat.Name = "cbNat";
             this.cbNat.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbNat.Properties.Appearance.Options.UseFont = true;
@@ -2818,7 +2816,7 @@
             this.cbNat.Properties.ShowHeader = false;
             this.cbNat.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbNat.Properties.ValueMember = "ID";
-            this.cbNat.Size = new System.Drawing.Size(184, 24);
+            this.cbNat.Size = new System.Drawing.Size(190, 24);
             this.cbNat.StyleController = this.layoutControl3;
             this.cbNat.TabIndex = 33;
             // 
@@ -2827,7 +2825,7 @@
             this.cbMesJitOblast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbMesJitOblast.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "REGION_PROPISKA", true));
             this.cbMesJitOblast.EnterMoveNextControl = true;
-            this.cbMesJitOblast.Location = new System.Drawing.Point(407, 178);
+            this.cbMesJitOblast.Location = new System.Drawing.Point(413, 178);
             this.cbMesJitOblast.Name = "cbMesJitOblast";
             this.cbMesJitOblast.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbMesJitOblast.Properties.Appearance.Options.UseFont = true;
@@ -2845,7 +2843,7 @@
             this.cbMesJitOblast.Properties.ShowHeader = false;
             this.cbMesJitOblast.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbMesJitOblast.Properties.ValueMember = "ID";
-            this.cbMesJitOblast.Size = new System.Drawing.Size(269, 24);
+            this.cbMesJitOblast.Size = new System.Drawing.Size(275, 24);
             this.cbMesJitOblast.StyleController = this.layoutControl3;
             this.cbMesJitOblast.TabIndex = 2;
             this.cbMesJitOblast.EditValueChanged += new System.EventHandler(this.cbMesJitOblast_EditValueChanged);
@@ -2855,14 +2853,14 @@
             this.edIsmi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edIsmi.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "LASTNAME", true));
             this.edIsmi.EnterMoveNextControl = true;
-            this.edIsmi.Location = new System.Drawing.Point(397, 95);
+            this.edIsmi.Location = new System.Drawing.Point(403, 95);
             this.edIsmi.Name = "edIsmi";
             this.edIsmi.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.edIsmi.Properties.Appearance.Options.UseFont = true;
             this.edIsmi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.edIsmi.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.edIsmi.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.edIsmi.Size = new System.Drawing.Size(289, 24);
+            this.edIsmi.Size = new System.Drawing.Size(295, 24);
             this.edIsmi.StyleController = this.layoutControl3;
             this.edIsmi.TabIndex = 26;
             // 
@@ -2871,7 +2869,7 @@
             this.cbUcherejdeniya.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbUcherejdeniya.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "KOLORLIC", true));
             this.cbUcherejdeniya.EnterMoveNextControl = true;
-            this.cbUcherejdeniya.Location = new System.Drawing.Point(245, 58);
+            this.cbUcherejdeniya.Location = new System.Drawing.Point(248, 58);
             this.cbUcherejdeniya.Name = "cbUcherejdeniya";
             this.cbUcherejdeniya.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbUcherejdeniya.Properties.Appearance.Options.UseFont = true;
@@ -2889,7 +2887,7 @@
             this.cbUcherejdeniya.Properties.ShowHeader = false;
             this.cbUcherejdeniya.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbUcherejdeniya.Properties.ValueMember = "ID";
-            this.cbUcherejdeniya.Size = new System.Drawing.Size(178, 24);
+            this.cbUcherejdeniya.Size = new System.Drawing.Size(181, 24);
             this.cbUcherejdeniya.StyleController = this.layoutControl3;
             this.cbUcherejdeniya.TabIndex = 35;
             // 
@@ -2898,7 +2896,7 @@
             this.cbSex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbSex.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "SEX", true));
             this.cbSex.EnterMoveNextControl = true;
-            this.cbSex.Location = new System.Drawing.Point(269, 132);
+            this.cbSex.Location = new System.Drawing.Point(272, 132);
             this.cbSex.Name = "cbSex";
             this.cbSex.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbSex.Properties.Appearance.Options.UseFont = true;
@@ -2916,7 +2914,7 @@
             this.cbSex.Properties.ShowHeader = false;
             this.cbSex.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbSex.Properties.ValueMember = "ID";
-            this.cbSex.Size = new System.Drawing.Size(188, 24);
+            this.cbSex.Size = new System.Drawing.Size(191, 24);
             this.cbSex.StyleController = this.layoutControl3;
             this.cbSex.TabIndex = 31;
             // 
@@ -2925,14 +2923,14 @@
             this.edOtch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edOtch.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "PATRONYMIC", true));
             this.edOtch.EnterMoveNextControl = true;
-            this.edOtch.Location = new System.Drawing.Point(745, 95);
+            this.edOtch.Location = new System.Drawing.Point(757, 95);
             this.edOtch.Name = "edOtch";
             this.edOtch.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.edOtch.Properties.Appearance.Options.UseFont = true;
             this.edOtch.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.edOtch.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.edOtch.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.edOtch.Size = new System.Drawing.Size(270, 24);
+            this.edOtch.Size = new System.Drawing.Size(276, 24);
             this.edOtch.StyleController = this.layoutControl3;
             this.edOtch.TabIndex = 27;
             // 
@@ -2959,7 +2957,7 @@
             this.cbObjLang.Properties.ShowHeader = false;
             this.cbObjLang.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbObjLang.Properties.ValueMember = "ID";
-            this.cbObjLang.Size = new System.Drawing.Size(164, 24);
+            this.cbObjLang.Size = new System.Drawing.Size(167, 24);
             this.cbObjLang.StyleController = this.layoutControl3;
             this.cbObjLang.TabIndex = 1;
             this.cbObjLang.EditValueChanged += new System.EventHandler(this.cbObjLang_EditValueChanged);
@@ -2969,14 +2967,14 @@
             this.textEdit7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit7.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "HOMEPHONE", true));
             this.textEdit7.EnterMoveNextControl = true;
-            this.textEdit7.Location = new System.Drawing.Point(315, 30);
+            this.textEdit7.Location = new System.Drawing.Point(318, 30);
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textEdit7.Properties.Appearance.Options.UseFont = true;
             this.textEdit7.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit7.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit7.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit7.Size = new System.Drawing.Size(108, 24);
+            this.textEdit7.Size = new System.Drawing.Size(111, 24);
             this.textEdit7.StyleController = this.layoutControl3;
             this.textEdit7.TabIndex = 6;
             // 
@@ -2985,7 +2983,7 @@
             this.cbOblast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbOblast.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "ST_REGION", true));
             this.cbOblast.EnterMoveNextControl = true;
-            this.cbOblast.Location = new System.Drawing.Point(482, 30);
+            this.cbOblast.Location = new System.Drawing.Point(488, 30);
             this.cbOblast.Name = "cbOblast";
             this.cbOblast.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbOblast.Properties.Appearance.Options.UseFont = true;
@@ -3003,7 +3001,7 @@
             this.cbOblast.Properties.ShowHeader = false;
             this.cbOblast.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbOblast.Properties.ValueMember = "ID";
-            this.cbOblast.Size = new System.Drawing.Size(237, 24);
+            this.cbOblast.Size = new System.Drawing.Size(243, 24);
             this.cbOblast.StyleController = this.layoutControl3;
             this.cbOblast.TabIndex = 2;
             this.cbOblast.EditValueChanged += new System.EventHandler(this.cbOblast_EditValueChanged);
@@ -3013,7 +3011,7 @@
             this.cbRayon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbRayon.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "ST_RAYON", true));
             this.cbRayon.EnterMoveNextControl = true;
-            this.cbRayon.Location = new System.Drawing.Point(778, 30);
+            this.cbRayon.Location = new System.Drawing.Point(790, 30);
             this.cbRayon.Name = "cbRayon";
             this.cbRayon.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbRayon.Properties.Appearance.Options.UseFont = true;
@@ -3031,7 +3029,7 @@
             this.cbRayon.Properties.ShowHeader = false;
             this.cbRayon.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbRayon.Properties.ValueMember = "ID";
-            this.cbRayon.Size = new System.Drawing.Size(237, 24);
+            this.cbRayon.Size = new System.Drawing.Size(243, 24);
             this.cbRayon.StyleController = this.layoutControl3;
             this.cbRayon.TabIndex = 3;
             // 
@@ -3053,7 +3051,7 @@
             this.edDDataRoj.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.edDDataRoj.Properties.MaxLength = 10;
             this.edDDataRoj.Properties.ValidateOnEnterKey = true;
-            this.edDDataRoj.Size = new System.Drawing.Size(144, 24);
+            this.edDDataRoj.Size = new System.Drawing.Size(147, 24);
             this.edDDataRoj.StyleController = this.layoutControl3;
             this.edDDataRoj.TabIndex = 5;
             // 
@@ -3069,7 +3067,7 @@
             this.edFam.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.edFam.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.edFam.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.edFam.Size = new System.Drawing.Size(271, 24);
+            this.edFam.Size = new System.Drawing.Size(277, 24);
             this.edFam.StyleController = this.layoutControl3;
             this.edFam.TabIndex = 25;
             // 
@@ -3078,7 +3076,7 @@
             this.cbCITIZEN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbCITIZEN.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "VID_GRAJDANSTVO", true));
             this.cbCITIZEN.EnterMoveNextControl = true;
-            this.cbCITIZEN.Location = new System.Drawing.Point(500, 58);
+            this.cbCITIZEN.Location = new System.Drawing.Point(506, 58);
             this.cbCITIZEN.Name = "cbCITIZEN";
             this.cbCITIZEN.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbCITIZEN.Properties.Appearance.Options.UseFont = true;
@@ -3096,7 +3094,7 @@
             this.cbCITIZEN.Properties.ShowHeader = false;
             this.cbCITIZEN.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbCITIZEN.Properties.ValueMember = "ID";
-            this.cbCITIZEN.Size = new System.Drawing.Size(219, 24);
+            this.cbCITIZEN.Size = new System.Drawing.Size(225, 24);
             this.cbCITIZEN.StyleController = this.layoutControl3;
             this.cbCITIZEN.TabIndex = 21;
             // 
@@ -3123,7 +3121,7 @@
             this.cbVidUcherejdeniya.Properties.ShowHeader = false;
             this.cbVidUcherejdeniya.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cbVidUcherejdeniya.Properties.ValueMember = "ID";
-            this.cbVidUcherejdeniya.Size = new System.Drawing.Size(133, 24);
+            this.cbVidUcherejdeniya.Size = new System.Drawing.Size(136, 24);
             this.cbVidUcherejdeniya.StyleController = this.layoutControl3;
             this.cbVidUcherejdeniya.TabIndex = 1;
             this.cbVidUcherejdeniya.EditValueChanged += new System.EventHandler(this.cbVidUcherejdeniya_EditValueChanged);
@@ -3133,7 +3131,7 @@
             this.edPaspSer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edPaspSer.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "PASS_SERIES", true));
             this.edPaspSer.EnterMoveNextControl = true;
-            this.edPaspSer.Location = new System.Drawing.Point(824, 58);
+            this.edPaspSer.Location = new System.Drawing.Point(836, 58);
             this.edPaspSer.Name = "edPaspSer";
             this.edPaspSer.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.edPaspSer.Properties.Appearance.Options.UseFont = true;
@@ -3142,7 +3140,7 @@
             this.edPaspSer.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.edPaspSer.Properties.Mask.EditMask = "[A-Z]+";
             this.edPaspSer.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.edPaspSer.Size = new System.Drawing.Size(61, 24);
+            this.edPaspSer.Size = new System.Drawing.Size(64, 24);
             this.edPaspSer.StyleController = this.layoutControl3;
             this.edPaspSer.TabIndex = 19;
             this.edPaspSer.Enter += new System.EventHandler(this.OnEnterLat);
@@ -3153,7 +3151,7 @@
             this.edPaspNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.edPaspNum.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "PASS_NUMBER", true));
             this.edPaspNum.EnterMoveNextControl = true;
-            this.edPaspNum.Location = new System.Drawing.Point(889, 58);
+            this.edPaspNum.Location = new System.Drawing.Point(904, 58);
             this.edPaspNum.Name = "edPaspNum";
             this.edPaspNum.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.edPaspNum.Properties.Appearance.Options.UseFont = true;
@@ -3162,7 +3160,7 @@
             this.edPaspNum.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.edPaspNum.Properties.Mask.EditMask = "\\d+";
             this.edPaspNum.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.edPaspNum.Size = new System.Drawing.Size(126, 24);
+            this.edPaspNum.Size = new System.Drawing.Size(129, 24);
             this.edPaspNum.StyleController = this.layoutControl3;
             this.edPaspNum.TabIndex = 20;
             // 
@@ -3200,7 +3198,7 @@
             this.layoutControlItem49,
             this.simpleLabelItem4});
             this.layoutControlGroup6.Name = "Root";
-            this.layoutControlGroup6.Size = new System.Drawing.Size(1027, 249);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(1045, 249);
             this.layoutControlGroup6.TextVisible = false;
             // 
             // layoutControlItem23
@@ -3213,7 +3211,7 @@
             this.layoutControlItem23.CustomizationFormText = "Киритилган тил";
             this.layoutControlItem23.Location = new System.Drawing.Point(0, 18);
             this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(233, 28);
+            this.layoutControlItem23.Size = new System.Drawing.Size(236, 28);
             this.layoutControlItem23.Text = "Язык ввода";
             this.layoutControlItem23.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem23.TextSize = new System.Drawing.Size(60, 13);
@@ -3223,9 +3221,9 @@
             // 
             this.layoutControlItem28.Control = this.textEdit7;
             this.layoutControlItem28.CustomizationFormText = "Карточка №";
-            this.layoutControlItem28.Location = new System.Drawing.Point(233, 18);
+            this.layoutControlItem28.Location = new System.Drawing.Point(236, 18);
             this.layoutControlItem28.Name = "layoutControlItem28";
-            this.layoutControlItem28.Size = new System.Drawing.Size(182, 28);
+            this.layoutControlItem28.Size = new System.Drawing.Size(185, 28);
             this.layoutControlItem28.Text = "Карточка №";
             this.layoutControlItem28.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem28.TextSize = new System.Drawing.Size(65, 13);
@@ -3237,9 +3235,9 @@
             this.layoutControlItem30.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem30.Control = this.cbOblast;
             this.layoutControlItem30.CustomizationFormText = "Вилоят";
-            this.layoutControlItem30.Location = new System.Drawing.Point(415, 18);
+            this.layoutControlItem30.Location = new System.Drawing.Point(421, 18);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(296, 28);
+            this.layoutControlItem30.Size = new System.Drawing.Size(302, 28);
             this.layoutControlItem30.Text = "Область";
             this.layoutControlItem30.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem30.TextSize = new System.Drawing.Size(50, 20);
@@ -3251,9 +3249,9 @@
             this.layoutControlItem31.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem31.Control = this.cbRayon;
             this.layoutControlItem31.CustomizationFormText = "Туман";
-            this.layoutControlItem31.Location = new System.Drawing.Point(711, 18);
+            this.layoutControlItem31.Location = new System.Drawing.Point(723, 18);
             this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(296, 28);
+            this.layoutControlItem31.Size = new System.Drawing.Size(302, 28);
             this.layoutControlItem31.Text = "Район";
             this.layoutControlItem31.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem31.TextSize = new System.Drawing.Size(50, 20);
@@ -3265,7 +3263,7 @@
             this.layoutControlItem32.CustomizationFormText = "Вид учереждения";
             this.layoutControlItem32.Location = new System.Drawing.Point(0, 46);
             this.layoutControlItem32.Name = "layoutControlItem32";
-            this.layoutControlItem32.Size = new System.Drawing.Size(233, 28);
+            this.layoutControlItem32.Size = new System.Drawing.Size(236, 28);
             this.layoutControlItem32.Text = "Вид учереждения";
             this.layoutControlItem32.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem32.TextSize = new System.Drawing.Size(91, 13);
@@ -3275,9 +3273,9 @@
             // 
             this.cbNazvanieUcherejdeniya.Control = this.cbUcherejdeniya;
             this.cbNazvanieUcherejdeniya.CustomizationFormText = "cbNazvanieUcherejdeniya";
-            this.cbNazvanieUcherejdeniya.Location = new System.Drawing.Point(233, 46);
+            this.cbNazvanieUcherejdeniya.Location = new System.Drawing.Point(236, 46);
             this.cbNazvanieUcherejdeniya.Name = "cbNazvanieUcherejdeniya";
-            this.cbNazvanieUcherejdeniya.Size = new System.Drawing.Size(182, 28);
+            this.cbNazvanieUcherejdeniya.Size = new System.Drawing.Size(185, 28);
             this.cbNazvanieUcherejdeniya.TextSize = new System.Drawing.Size(0, 0);
             this.cbNazvanieUcherejdeniya.TextVisible = false;
             // 
@@ -3287,9 +3285,9 @@
             this.layoutControlItem33.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem33.Control = this.cbCITIZEN;
             this.layoutControlItem33.CustomizationFormText = "Фукаролиги";
-            this.layoutControlItem33.Location = new System.Drawing.Point(415, 46);
+            this.layoutControlItem33.Location = new System.Drawing.Point(421, 46);
             this.layoutControlItem33.Name = "layoutControlItem33";
-            this.layoutControlItem33.Size = new System.Drawing.Size(296, 28);
+            this.layoutControlItem33.Size = new System.Drawing.Size(302, 28);
             this.layoutControlItem33.Text = "Гражданство";
             this.layoutControlItem33.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem33.TextSize = new System.Drawing.Size(68, 13);
@@ -3299,9 +3297,9 @@
             // 
             this.layoutControlItem34.Control = this.edPaspSer;
             this.layoutControlItem34.CustomizationFormText = "Паспорт: Серия №";
-            this.layoutControlItem34.Location = new System.Drawing.Point(711, 46);
+            this.layoutControlItem34.Location = new System.Drawing.Point(723, 46);
             this.layoutControlItem34.Name = "layoutControlItem34";
-            this.layoutControlItem34.Size = new System.Drawing.Size(166, 28);
+            this.layoutControlItem34.Size = new System.Drawing.Size(169, 28);
             this.layoutControlItem34.Text = "Паспорт: Серия №";
             this.layoutControlItem34.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem34.TextSize = new System.Drawing.Size(96, 13);
@@ -3311,9 +3309,9 @@
             // 
             this.layoutControlItem35.Control = this.edPaspNum;
             this.layoutControlItem35.CustomizationFormText = "layoutControlItem35";
-            this.layoutControlItem35.Location = new System.Drawing.Point(877, 46);
+            this.layoutControlItem35.Location = new System.Drawing.Point(892, 46);
             this.layoutControlItem35.Name = "layoutControlItem35";
-            this.layoutControlItem35.Size = new System.Drawing.Size(130, 28);
+            this.layoutControlItem35.Size = new System.Drawing.Size(133, 28);
             this.layoutControlItem35.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem35.TextVisible = false;
             // 
@@ -3325,7 +3323,7 @@
             this.layoutControlItem36.CustomizationFormText = "Фамилия";
             this.layoutControlItem36.Location = new System.Drawing.Point(0, 83);
             this.layoutControlItem36.Name = "layoutControlItem36";
-            this.layoutControlItem36.Size = new System.Drawing.Size(330, 28);
+            this.layoutControlItem36.Size = new System.Drawing.Size(336, 28);
             this.layoutControlItem36.Text = "Фамилия";
             this.layoutControlItem36.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem36.TextSize = new System.Drawing.Size(50, 20);
@@ -3337,9 +3335,9 @@
             this.layoutControlItem37.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem37.Control = this.edIsmi;
             this.layoutControlItem37.CustomizationFormText = "Исми";
-            this.layoutControlItem37.Location = new System.Drawing.Point(330, 83);
+            this.layoutControlItem37.Location = new System.Drawing.Point(336, 83);
             this.layoutControlItem37.Name = "layoutControlItem37";
-            this.layoutControlItem37.Size = new System.Drawing.Size(348, 28);
+            this.layoutControlItem37.Size = new System.Drawing.Size(354, 28);
             this.layoutControlItem37.Text = "Имя";
             this.layoutControlItem37.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem37.TextSize = new System.Drawing.Size(50, 20);
@@ -3351,9 +3349,9 @@
             this.layoutControlItem38.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem38.Control = this.edOtch;
             this.layoutControlItem38.CustomizationFormText = "Шарифи";
-            this.layoutControlItem38.Location = new System.Drawing.Point(678, 83);
+            this.layoutControlItem38.Location = new System.Drawing.Point(690, 83);
             this.layoutControlItem38.Name = "layoutControlItem38";
-            this.layoutControlItem38.Size = new System.Drawing.Size(329, 28);
+            this.layoutControlItem38.Size = new System.Drawing.Size(335, 28);
             this.layoutControlItem38.Text = "Отчество";
             this.layoutControlItem38.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem38.TextSize = new System.Drawing.Size(50, 20);
@@ -3367,7 +3365,7 @@
             this.simpleLabelItem1.CustomizationFormText = " ";
             this.simpleLabelItem1.Location = new System.Drawing.Point(0, 111);
             this.simpleLabelItem1.Name = "simpleLabelItem1";
-            this.simpleLabelItem1.Size = new System.Drawing.Size(1007, 9);
+            this.simpleLabelItem1.Size = new System.Drawing.Size(1025, 9);
             this.simpleLabelItem1.Text = " ";
             this.simpleLabelItem1.TextSize = new System.Drawing.Size(145, 5);
             // 
@@ -3379,7 +3377,7 @@
             this.simpleLabelItem2.CustomizationFormText = " ";
             this.simpleLabelItem2.Location = new System.Drawing.Point(0, 74);
             this.simpleLabelItem2.Name = "simpleLabelItem2";
-            this.simpleLabelItem2.Size = new System.Drawing.Size(1007, 9);
+            this.simpleLabelItem2.Size = new System.Drawing.Size(1025, 9);
             this.simpleLabelItem2.Text = " ";
             this.simpleLabelItem2.TextSize = new System.Drawing.Size(145, 5);
             // 
@@ -3389,7 +3387,7 @@
             this.layoutControlItem39.CustomizationFormText = "Туғилган сана";
             this.layoutControlItem39.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem39.Name = "layoutControlItem39";
-            this.layoutControlItem39.Size = new System.Drawing.Size(233, 28);
+            this.layoutControlItem39.Size = new System.Drawing.Size(236, 28);
             this.layoutControlItem39.Text = "Дата рождения";
             this.layoutControlItem39.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem39.TextSize = new System.Drawing.Size(80, 13);
@@ -3399,9 +3397,9 @@
             // 
             this.layoutControlItem40.Control = this.cbSex;
             this.layoutControlItem40.CustomizationFormText = "Пол";
-            this.layoutControlItem40.Location = new System.Drawing.Point(233, 120);
+            this.layoutControlItem40.Location = new System.Drawing.Point(236, 120);
             this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(216, 28);
+            this.layoutControlItem40.Size = new System.Drawing.Size(219, 28);
             this.layoutControlItem40.Text = "Пол";
             this.layoutControlItem40.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem40.TextSize = new System.Drawing.Size(19, 13);
@@ -3413,9 +3411,9 @@
             this.layoutControlItem41.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem41.Control = this.cbNat;
             this.layoutControlItem41.CustomizationFormText = "Национальность";
-            this.layoutControlItem41.Location = new System.Drawing.Point(449, 120);
+            this.layoutControlItem41.Location = new System.Drawing.Point(455, 120);
             this.layoutControlItem41.Name = "layoutControlItem41";
-            this.layoutControlItem41.Size = new System.Drawing.Size(286, 28);
+            this.layoutControlItem41.Size = new System.Drawing.Size(292, 28);
             this.layoutControlItem41.Text = "Национальность";
             this.layoutControlItem41.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem41.TextSize = new System.Drawing.Size(93, 14);
@@ -3425,9 +3423,9 @@
             // 
             this.layoutControlItem42.Control = this.cbSemeyniyPolojeniya;
             this.layoutControlItem42.CustomizationFormText = "Семейное положения";
-            this.layoutControlItem42.Location = new System.Drawing.Point(735, 120);
+            this.layoutControlItem42.Location = new System.Drawing.Point(747, 120);
             this.layoutControlItem42.Name = "layoutControlItem42";
-            this.layoutControlItem42.Size = new System.Drawing.Size(272, 28);
+            this.layoutControlItem42.Size = new System.Drawing.Size(278, 28);
             this.layoutControlItem42.Text = "Семейное положения";
             this.layoutControlItem42.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem42.TextSize = new System.Drawing.Size(108, 13);
@@ -3443,7 +3441,7 @@
             this.simpleLabelItem3.CustomizationFormText = "Манзил";
             this.simpleLabelItem3.Location = new System.Drawing.Point(0, 148);
             this.simpleLabelItem3.Name = "simpleLabelItem3";
-            this.simpleLabelItem3.Size = new System.Drawing.Size(1007, 18);
+            this.simpleLabelItem3.Size = new System.Drawing.Size(1025, 18);
             this.simpleLabelItem3.Text = "Манзил";
             this.simpleLabelItem3.TextSize = new System.Drawing.Size(145, 14);
             // 
@@ -3455,7 +3453,7 @@
             this.layoutControlItem43.CustomizationFormText = "Давлат";
             this.layoutControlItem43.Location = new System.Drawing.Point(0, 166);
             this.layoutControlItem43.Name = "layoutControlItem43";
-            this.layoutControlItem43.Size = new System.Drawing.Size(310, 28);
+            this.layoutControlItem43.Size = new System.Drawing.Size(316, 28);
             this.layoutControlItem43.Text = "Государство";
             this.layoutControlItem43.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem43.TextSize = new System.Drawing.Size(80, 20);
@@ -3467,9 +3465,9 @@
             this.layoutControlItem44.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem44.Control = this.cbMesJitOblast;
             this.layoutControlItem44.CustomizationFormText = "Вилоят";
-            this.layoutControlItem44.Location = new System.Drawing.Point(310, 166);
+            this.layoutControlItem44.Location = new System.Drawing.Point(316, 166);
             this.layoutControlItem44.Name = "layoutControlItem44";
-            this.layoutControlItem44.Size = new System.Drawing.Size(358, 28);
+            this.layoutControlItem44.Size = new System.Drawing.Size(364, 28);
             this.layoutControlItem44.Text = "Область";
             this.layoutControlItem44.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem44.TextSize = new System.Drawing.Size(80, 20);
@@ -3481,9 +3479,9 @@
             this.layoutControlItem45.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem45.Control = this.cbMesJitRayon;
             this.layoutControlItem45.CustomizationFormText = "Туман";
-            this.layoutControlItem45.Location = new System.Drawing.Point(668, 166);
+            this.layoutControlItem45.Location = new System.Drawing.Point(680, 166);
             this.layoutControlItem45.Name = "layoutControlItem45";
-            this.layoutControlItem45.Size = new System.Drawing.Size(339, 28);
+            this.layoutControlItem45.Size = new System.Drawing.Size(345, 28);
             this.layoutControlItem45.Text = "Район";
             this.layoutControlItem45.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem45.TextSize = new System.Drawing.Size(80, 20);
@@ -3497,7 +3495,7 @@
             this.layoutControlItem46.CustomizationFormText = "Киш./Шахар";
             this.layoutControlItem46.Location = new System.Drawing.Point(0, 194);
             this.layoutControlItem46.Name = "layoutControlItem46";
-            this.layoutControlItem46.Size = new System.Drawing.Size(310, 35);
+            this.layoutControlItem46.Size = new System.Drawing.Size(316, 35);
             this.layoutControlItem46.Text = "Киш./Город";
             this.layoutControlItem46.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem46.TextSize = new System.Drawing.Size(80, 20);
@@ -3509,9 +3507,9 @@
             this.layoutControlItem47.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem47.Control = this.textEdit9;
             this.layoutControlItem47.CustomizationFormText = "Кўча";
-            this.layoutControlItem47.Location = new System.Drawing.Point(310, 194);
+            this.layoutControlItem47.Location = new System.Drawing.Point(316, 194);
             this.layoutControlItem47.Name = "layoutControlItem47";
-            this.layoutControlItem47.Size = new System.Drawing.Size(358, 35);
+            this.layoutControlItem47.Size = new System.Drawing.Size(364, 35);
             this.layoutControlItem47.Text = "Улица";
             this.layoutControlItem47.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem47.TextSize = new System.Drawing.Size(80, 20);
@@ -3523,9 +3521,9 @@
             this.layoutControlItem48.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem48.Control = this.textEdit8;
             this.layoutControlItem48.CustomizationFormText = "Уй";
-            this.layoutControlItem48.Location = new System.Drawing.Point(668, 194);
+            this.layoutControlItem48.Location = new System.Drawing.Point(680, 194);
             this.layoutControlItem48.Name = "layoutControlItem48";
-            this.layoutControlItem48.Size = new System.Drawing.Size(196, 35);
+            this.layoutControlItem48.Size = new System.Drawing.Size(199, 35);
             this.layoutControlItem48.Text = "Дом";
             this.layoutControlItem48.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem48.TextSize = new System.Drawing.Size(80, 20);
@@ -3537,9 +3535,9 @@
             this.layoutControlItem49.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.layoutControlItem49.Control = this.textEdit2;
             this.layoutControlItem49.CustomizationFormText = "Хонадон";
-            this.layoutControlItem49.Location = new System.Drawing.Point(864, 194);
+            this.layoutControlItem49.Location = new System.Drawing.Point(879, 194);
             this.layoutControlItem49.Name = "layoutControlItem49";
-            this.layoutControlItem49.Size = new System.Drawing.Size(143, 35);
+            this.layoutControlItem49.Size = new System.Drawing.Size(146, 35);
             this.layoutControlItem49.Text = "Квартира";
             this.layoutControlItem49.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem49.TextSize = new System.Drawing.Size(50, 20);
@@ -3555,7 +3553,7 @@
             this.simpleLabelItem4.CustomizationFormText = "Основные информация";
             this.simpleLabelItem4.Location = new System.Drawing.Point(0, 0);
             this.simpleLabelItem4.Name = "simpleLabelItem4";
-            this.simpleLabelItem4.Size = new System.Drawing.Size(1007, 18);
+            this.simpleLabelItem4.Size = new System.Drawing.Size(1025, 18);
             this.simpleLabelItem4.Text = "Основная информация";
             this.simpleLabelItem4.TextSize = new System.Drawing.Size(145, 14);
             // 
@@ -3577,9 +3575,9 @@
             this.peFoto.Properties.AllowFocused = false;
             this.peFoto.Properties.Appearance.BackColor = System.Drawing.Color.Black;
             this.peFoto.Properties.Appearance.Options.UseBackColor = true;
-            contextButton1.Id = new System.Guid("ebaae961-eed1-4249-aadb-eb1f63bdf510");
-            contextButton1.Name = "ContextButton";
-            this.peFoto.Properties.ContextButtons.Add(contextButton1);
+            contextButton2.Id = new System.Guid("ebaae961-eed1-4249-aadb-eb1f63bdf510");
+            contextButton2.Name = "ContextButton";
+            this.peFoto.Properties.ContextButtons.Add(contextButton2);
             this.peFoto.Properties.NullText = " ";
             this.peFoto.Properties.PictureInterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
             this.peFoto.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
@@ -3594,7 +3592,7 @@
             // 
             this.xtraTabPage1.Controls.Add(this.grMestoRab);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1227, 683);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1245, 701);
             this.xtraTabPage1.Text = "Трудовая деятельность";
             // 
             // grMestoRab
@@ -3605,7 +3603,7 @@
             this.grMestoRab.Location = new System.Drawing.Point(0, 0);
             this.grMestoRab.MainView = this.gridViewMestoRaboti;
             this.grMestoRab.Name = "grMestoRab";
-            this.grMestoRab.Size = new System.Drawing.Size(1227, 683);
+            this.grMestoRab.Size = new System.Drawing.Size(1245, 701);
             this.grMestoRab.TabIndex = 2;
             this.grMestoRab.UseEmbeddedNavigator = true;
             this.grMestoRab.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -3666,7 +3664,7 @@
             // 
             this.xtraTabPage2.Controls.Add(this.grQaridosh);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1227, 683);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1245, 701);
             this.xtraTabPage2.Text = "Близкие родственники";
             // 
             // grQaridosh
@@ -3683,7 +3681,7 @@
             this.cbDavlatQ,
             this.cbOblastQ,
             this.cbRayonQ});
-            this.grQaridosh.Size = new System.Drawing.Size(1227, 683);
+            this.grQaridosh.Size = new System.Drawing.Size(1245, 701);
             this.grQaridosh.TabIndex = 2;
             this.grQaridosh.UseEmbeddedNavigator = true;
             this.grQaridosh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -3909,7 +3907,7 @@
             // 
             this.xtraTabPage3.Controls.Add(this.memoEdit1);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1227, 683);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1245, 701);
             this.xtraTabPage3.Text = "Дополнительная  информация";
             // 
             // memoEdit1
@@ -3920,7 +3918,7 @@
             this.memoEdit1.Name = "memoEdit1";
             this.memoEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.memoEdit1.Properties.Appearance.Options.UseFont = true;
-            this.memoEdit1.Size = new System.Drawing.Size(1227, 683);
+            this.memoEdit1.Size = new System.Drawing.Size(1245, 701);
             this.memoEdit1.TabIndex = 0;
             // 
             // layoutControlGroup7
@@ -3938,7 +3936,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1239, 765);
+            this.ClientSize = new System.Drawing.Size(1257, 783);
             this.ControlBox = false;
             this.Controls.Add(this.tabTegishli);
             this.Controls.Add(this.groupControl6);
@@ -3951,11 +3949,11 @@
             this.Name = "frmKadrUZ";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Кадр";
+            this.Load += new System.EventHandler(this.FrmKadrUZ_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmTexp_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
             this.groupControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabTegishli)).EndInit();
             this.tabTegishli.ResumeLayout(false);
@@ -4053,7 +4051,7 @@
             this.xtraTabPage10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDeputy)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewDeputy)).EndInit();
             this.xtraTabPage7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grDiplom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDiplom)).EndInit();
@@ -4385,7 +4383,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem52;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage10;
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewDeputy;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;

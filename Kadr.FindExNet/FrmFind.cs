@@ -381,7 +381,7 @@ namespace Kadr.FindExNet
 
             var val = new string[2];
             val[0] = sqlW;
-            bsRes.DataSource = ClassOnlineWorks.GetProcedureDataTable(val, "TEXP.FORM_WORKS.RemoteSqlExec");
+          //  bsRes.DataSource = ClassOnlineWorks.GetProcedureDataTable(val, "TEXP.FORM_WORKS.RemoteSqlExec");
             TabControl.SelectedTabPageIndex = 1;
         }
 
@@ -398,9 +398,8 @@ namespace Kadr.FindExNet
 
             var val = new string[2];
             val[0] = sqlW;
-            var dt = ClassOnlineWorks.GetProcedureDataTable(val, "TEXP.FORM_WORKS.RemoteSqlExec_Count");
-            MessageBox.Show("Қидирув натижаси " + dt.Rows[0][0].ToStr() + " та", "", MessageBoxButtons.OK,
-                MessageBoxIcon.Asterisk);
+          //  var dt = ClassOnlineWorks.GetProcedureDataTable(val, "TEXP.FORM_WORKS.RemoteSqlExec_Count");
+         //   MessageBox.Show("Қидирув натижаси " + dt.Rows[0][0].ToStr() + " та", "", MessageBoxButtons.OK,                MessageBoxIcon.Asterisk);
         }
 
         private void btnExport_ItemClick(object sender, ItemClickEventArgs e)

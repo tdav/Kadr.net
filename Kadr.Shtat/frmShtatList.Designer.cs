@@ -49,7 +49,6 @@
             this.cbGrdRayon = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.bindingSource1 = new System.Windows.Forms.BindingSource();
-            this.kdnDataSet1 = new Kadr.Data.KdnDataSet();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colOBLAST = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbOblastgr = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -63,7 +62,6 @@
             this.colPREDMET = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbFangr = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colEDITDATE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.tbshatTableAdapter1 = new Kadr.Data.KdnDataSetTableAdapters.TBSHATTableAdapter();
             this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -76,7 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbGrdRayon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kdnDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbOblastgr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbRayongr)).BeginInit();
@@ -302,17 +299,6 @@
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "TBSHAT";
-            this.bindingSource1.DataSource = this.kdnDataSet1;
-            this.bindingSource1.Sort = "";
-            // 
-            // kdnDataSet1
-            // 
-            this.kdnDataSet1.DataSetName = "KdnDataSet";
-            this.kdnDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -467,10 +453,6 @@
             this.colEDITDATE.VisibleIndex = 6;
             this.colEDITDATE.Width = 80;
             // 
-            // tbshatTableAdapter1
-            // 
-            this.tbshatTableAdapter1.ClearBeforeFill = true;
-            // 
             // btnEdit
             // 
             this.btnEdit.Caption = "Ўзгартириш";
@@ -507,7 +489,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbGrdRayon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kdnDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbOblastgr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbRayongr)).EndInit();
@@ -536,7 +517,6 @@
         private DevExpress.XtraGrid.GridControl gridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private Data.KdnDataSet kdnDataSet1;
         private DevExpress.XtraGrid.Columns.GridColumn colOBLAST;
         private DevExpress.XtraGrid.Columns.GridColumn colRAYON;
         private DevExpress.XtraGrid.Columns.GridColumn colKOLEJ;
@@ -544,7 +524,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDOLJNOST;
         private DevExpress.XtraGrid.Columns.GridColumn colPREDMET;
         private DevExpress.XtraGrid.Columns.GridColumn colEDITDATE;
-        private Data.KdnDataSetTableAdapters.TBSHATTableAdapter tbshatTableAdapter1;
         private DevExpress.XtraBars.BarEditItem cbOblastbe;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit cbOblast;
         private DevExpress.XtraBars.BarEditItem cbRayonbe;

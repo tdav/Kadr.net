@@ -264,7 +264,7 @@ namespace Kadr.Shtat
             // 
             // bsMain
             // 
-            this.bsMain.DataSource = typeof(Kadr.Data.KdnDataSet.TBSHATDataTable);
+         //   this.bsMain.DataSource = typeof(Kadr.Data.KdnDataSet.TBSHATDataTable);
             this.bsMain.Sort = "";
             // 
             // frmShtat

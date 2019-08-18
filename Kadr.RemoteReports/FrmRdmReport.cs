@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 using Kadr.CommonControls;
 using DevExpress.Data;
@@ -13,8 +11,8 @@ using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
-using Apteka.Utils;
 using Kadr.Database.Views;
+using Apteka.Utils;
 
 namespace Kadr.Reports
 {
@@ -278,19 +276,19 @@ namespace Kadr.Reports
 
         private void btnRunOnClick(object sender, ItemClickEventArgs e)
         {
-            var dBegin = DateTime.Now;
-            var Params = GetParams();
-            if (Params == null) return;
-            var dtReport = new DataTable();
-            dtReport = ClassOnlineWorks.GetProcedureDataTable(Params.ToArray(), ProcedureName);
-            if (dtReport != null)
-            {
-                gcReport.DataSource = dtReport;
-            }
-            else
-            {
-                MessageBox.Show("Маълумот йўқ...", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //var dBegin = DateTime.Now;
+            //var Params = GetParams();
+            //if (Params == null) return;
+            //var dtReport = new DataTable();
+            //dtReport = ClassOnlineWorks.GetProcedureDataTable(Params.ToArray(), ProcedureName);
+            //if (dtReport != null)
+            //{
+            //    gcReport.DataSource = dtReport;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Маълумот йўқ...", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
 
         private void btnExcelOnClick(object sender, ItemClickEventArgs e)

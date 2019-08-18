@@ -5,7 +5,7 @@ using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraReports.UI;
 
-namespace Kadr.Kadr.Template
+namespace Kadr.Template
 {
     public partial class FrmTemViewer : RibbonForm
     {

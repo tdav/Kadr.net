@@ -67,7 +67,6 @@
             // 
             // pictureEdit2
             // 
-            this.pictureEdit2.EditValue = global::App.Properties.Resources.contacts_ne;
             this.pictureEdit2.Location = new System.Drawing.Point(105, 22);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.AllowFocused = false;

@@ -1,5 +1,4 @@
 ﻿using Kadr.CommonControls;
-using Kadr.Kadr.Template;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
@@ -16,6 +15,9 @@ using Kadr.Utils;
 using Kadr.Database.Views;
 using Kadr.GlobalVars;
 using Apteka.Utils;
+using Kadr.Models;
+using Kadr.Models.Core;
+using Kadr.Template;
 
 namespace Kadr.Kadr
 {
@@ -24,6 +26,7 @@ namespace Kadr.Kadr
         public delegate void DelegateOnCloseChildForm(object sender);
         public string gridViewStyle = "";
         private int GridShowArm = 1; //Texp=1 Pasp=2, localTexp=3
+        private IUnitOfWork db;
 
         public frmKadrList()
         {
@@ -31,6 +34,8 @@ namespace Kadr.Kadr
 
 
             CLang.Init(this);
+
+            db = new UnitOfWork();
 
             var txt = new PDateEdit();
             txt.ConvertDateEdit(edTugDate1);
@@ -61,12 +66,12 @@ namespace Kadr.Kadr
 
         private void OnEnterAndToLat(object sender, EventArgs e)
         {
-            Vars.ln.LoadEnglishKeyboardLayout();
+            Vars.KeyboardLang.LoadEnglishKeyboardLayout();
         }
 
         private void OnEnterAndToRus(object sender, EventArgs e)
         {
-            Vars.ln.LoadUzbekKeyboardLayout();
+            Vars.KeyboardLang.LoadUzbekKeyboardLayout();
         }
 
         private bool IsTexpGridState()
@@ -142,8 +147,7 @@ namespace Kadr.Kadr
             }
             return null;
         }
-
-
+        
         private string GetFindExp()
         {
             var val = new List<string>();
@@ -240,7 +244,7 @@ namespace Kadr.Kadr
 
         private void btnNew_ItemClick(object sender, ItemClickEventArgs e)
         {
-            using (var box = new frmKadrUZ(Guid.NewGuid().ToString("N").ToUpper(), RecordState.rsNew))
+            using (var box = new frmKadrUZ(-1, RecordState.rsNew))
             {
                 box.ShowDialog(this);
             }
@@ -248,12 +252,10 @@ namespace Kadr.Kadr
 
         private void btnEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var iii = GetSelectedIndex();
-            if (iii >= 0)
+            var r = gridView1.GetFocusedRow() as tbMain;
+            if (r != null)
             {
-                var rec = GetTexpSelectedRow(iii);
-                var mid = rec["ID"].ToStr();
-                using (var box = new frmKadrUZ(mid, RecordState.rsEdit))
+                using (var box = new frmKadrUZ(r.Id, RecordState.rsEdit))
                 {
                     box.ShowDialog(this);
                 }
@@ -266,22 +268,19 @@ namespace Kadr.Kadr
 
         private void btnDel_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var iii = GetSelectedIndex();
-            if (iii >= 0)
-            {
-                var rec = GetTexpSelectedRow(iii);
-                var id = rec["ID"].ToStr();
-                using (TbMainTableAdapter tm = new TbMainTableAdapter())
-                {
-                    tm.TBMAIN_DEL(id);
-                    btnFindTexpGlobal.PerformClick();
-                }
+            var r = gridView1.GetFocusedRow() as tbMain;
+            if (r != null)
+            { 
+                
 
             }
         }
+
         private void btnExport_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Kadr.MessageManager.GridExportClass.ExportGrid(gridControl);
+            var file = CDialog.SaveDialog();
+            if (file != "")
+                gridView1.ExportToXlsx(file);
         }
 
         private void btnClear_ItemClick(object sender, ItemClickEventArgs e)
@@ -774,13 +773,14 @@ namespace Kadr.Kadr
 
         private string GetTillar(string toStr, string lang)
         {
+            //TODO 1
             var ba = DicoDB.SelectSQL("select NAMEUZ, NAMERU from SA_LANGS where id in (" + toStr + ")");
             if (ba == null) return (lang == "UZ" ? "йўқ" : "не имеет");
 
             if (lang == "UZ")
-                return ba.JoinRows("NAMEUZ");
+                return "";// ba. JoinRows("NAMEUZ");
             else
-                return ba.JoinRows("NAMERU");
+                return "";// ba.JoinRows("NAMERU");
         }
 
         private string GetIlmiyDaraja(string toStr, string lang)

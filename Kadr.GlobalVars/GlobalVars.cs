@@ -6,7 +6,7 @@ namespace Kadr.GlobalVars
 {
     public class Vars
     {
-        public static CLanguage ln = new CLanguage();
+        public static CLanguage KeyboardLang = new CLanguage();
         public static int UserId { get; set; }
         public static string UserName { get; set; }
         public static string UserAccess { get; set; }
